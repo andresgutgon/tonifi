@@ -1,6 +1,7 @@
 module.exports = {
+  pathPrefix: '/tonifi',
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Toni Figuera',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
