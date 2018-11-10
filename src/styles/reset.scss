@@ -2,10 +2,24 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  @media only screen and (max-width: 480px) {
+    font-size: 100%;
+  }
 }
+
 body {
   margin: 0;
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: georgia, serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
 article,
 aside,
 details,
@@ -26,6 +40,7 @@ progress,
 video {
   display: inline-block;
 }
+
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -33,6 +48,7 @@ audio:not([controls]) {
 progress {
   vertical-align: baseline;
 }
+
 [hidden],
 template {
   display: none;
@@ -40,37 +56,40 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  &:active,
+  &:hover {
+    outline-width: 0;
+  }
 }
-a:active,
-a:hover {
-  outline-width: 0;
-}
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted;
 }
-b,
-strong {
+
+b, strong {
   font-weight: inherit;
   font-weight: bolder;
 }
 dfn {
   font-style: italic;
 }
+
 h1 {
   font-size: 2em;
   margin: .67em 0;
 }
+
 mark {
   background-color: #ff0;
   color: #000;
 }
+
 small {
   font-size: 80%;
 }
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -78,16 +97,17 @@ sup {
 }
 sub {
   bottom: -.25em;
-}
-sup {
   top: -.5em;
 }
+
 img {
   border-style: none;
 }
+
 svg:not(:root) {
   overflow: hidden;
 }
+
 code,
 kbd,
 pre,
@@ -195,17 +215,6 @@ html {
 }
 *:after {
   box-sizing: inherit;
-}
-body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 img {
   max-width: 100%;
@@ -616,9 +625,4 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
 }

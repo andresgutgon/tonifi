@@ -1,0 +1,14 @@
+@import 'reset.scss';
+@import 'font.scss';
+
+html, body {
+  height: 100%;
+}
+// Hack to make page 100% height
+// Issue: https://github.com/gatsbyjs/gatsby/issues/7310
+#___gatsby {
+  height: 100%;
+  > [role=group] {
+    height: 100%;
+  }
+}

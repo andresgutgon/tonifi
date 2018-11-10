@@ -1,0 +1,17 @@
+@import './variables.scss';
+
+@mixin mq-tablet-portrait-up {
+  @media (min-width: #{$mq-tablet-portrait-up}) { @content; }
+}
+
+@mixin mq-tablet-landscape-up {
+  @media (min-width: #{$mq-tablet-landscape-up}) { @content; }
+}
+
+@mixin mq-desktop-up {
+  @media (min-width: #{$mq-desktop-up}) { @content; }
+}
+
+@mixin mq-big-desktop-up {
+  @media (min-width: #{$mq-big-desktop-up}) { @content; }
+}

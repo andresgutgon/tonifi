@@ -1,15 +1,37 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
+import Home from '../components/Home'
 
-/* <Link to="/page-2/">Go to page 2</Link> */
-const IndexPage = () => (
-  <Layout>
-    <h1>En construccion</h1>
-    <p>Pagina personal de Toni Figuera</p>
-  </Layout>
+const IndexPage = (props) => (
+  <Home {...props} />
 )
 
 export default IndexPage
+
+export const fluidImage = graphql`
+fragment fluidImage on File {
+  childImageSharp {
+    fluid(maxWidth: 1000) {
+      ...GatsbyImageSharpFluid
+    }
+  }
+}
+`
+
+export const pageQuery = graphql`
+  query {
+    one: file(relativePath: { eq: "home/toni-figuera-1.jpg" }) {
+      ...fluidImage
+    },
+    two: file(relativePath: { eq: "home/toni-figuera-2.jpg" }) {
+      ...fluidImage
+    },
+    three: file(relativePath: { eq: "home/toni-figuera-3.jpg" }) {
+      ...fluidImage
+    },
+    four: file(relativePath: { eq: "home/toni-figuera-4.jpg" }) {
+      ...fluidImage
+    }
+  }
+`

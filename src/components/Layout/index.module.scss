@@ -1,0 +1,52 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+$inner-padding: 4rem;
+.layout {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+
+  &.fullExpanded {
+    height: 100%;
+    display: flex;
+  }
+  .sidebar {
+    background-color: white;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    padding: $inner-padding;
+    padding-top: $inner-padding / 2;
+    &Inner {
+      width: 100%;
+      @include mq-tablet-portrait-up {
+        max-width: 80%;
+      }
+    }
+  }
+
+  @include mq-tablet-portrait-up {
+    background-color: $gray-light-8;
+    flex-direction: row;
+    .sidebar {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 30%;
+      border-right: 1px solid rgba($gray-dark-9, .06);
+      height: 100vh;
+    }
+
+    .content {
+      padding-top: $inner-padding;
+      margin-left: 30%;
+      width: 70%;
+    }
+  }
+}
