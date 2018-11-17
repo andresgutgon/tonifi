@@ -8,5 +8,6 @@ module.exports = {
   surname,
   siteTitle: fullName,
   copyright: `© ${year} ${fullName}`,
-  pathPrefix: '/tonifi'
+  pathPrefix: '/tonifi',
+  fonts: 'Playfair+Display:400,700|Source+Sans+Pro:300,400,600'
 }

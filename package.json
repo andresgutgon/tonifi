@@ -9,10 +9,13 @@
   },
   "scripts": {
     "format": "prettier --write \"src/**/*.js\"",
+    "cleanCache": "rm -rf .cache/*",
+    "cleanDevelop": "npm run cleanCache && gatsby develop",
+    "cleanStart": "npm run cleanDevelop",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "build": "npm run cleanCache && gatsby build --prefix-paths",
+    "deploy": "npm run build && gh-pages -d public"
   },
   "devDependencies": {
     "gh-pages": "^2.0.1",
@@ -24,7 +27,6 @@
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.11",
-    "gatsby-plugin-prefetch-google-fonts": "^1.0.11",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sass": "^2.0.4",
     "gatsby-plugin-sharp": "^2.0.7",

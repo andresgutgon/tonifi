@@ -6,7 +6,8 @@ module.exports = {
     name: config.name,
     surname: config.surname,
     title: config.siteTitle,
-    copyright: config.copyright
+    copyright: config.copyright,
+    fonts: config.fonts
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -39,23 +40,6 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Playfair Display',
-            variants: ['400', '700'],
-            subset: 'latin'
-          },
-          {
-            family: 'Source Sans Pro',
-            variants: ['300', '400', '600'],
-            subset: 'latin'
-          }
-        ]
-      }
     }
-  ],
+  ]
 }

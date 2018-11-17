@@ -12,6 +12,7 @@ import '../../styles/index.scss'
 import styles from './index.module.scss'
 const cx = classNames.bind(styles)
 
+const GOOGLE_FONTS_SITE = 'https://fonts.googleapis.com/css?family='
 const Layout = ({ fullExpanded = false, children }) => (
   <StaticQuery
     query={graphql`
@@ -22,6 +23,7 @@ const Layout = ({ fullExpanded = false, children }) => (
             name
             surname
             copyright
+            fonts
           }
         }
       }
@@ -36,6 +38,10 @@ const Layout = ({ fullExpanded = false, children }) => (
           ]}
         >
           <html lang="es" />
+          <link
+            href={`${GOOGLE_FONTS_SITE}${data.site.siteMetadata.fonts}`}
+            rel='stylesheet'
+          />
         </Helmet>
         <div className={cx('layout', { fullExpanded })} >
           <div className={styles.sidebar}>
