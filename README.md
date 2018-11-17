@@ -31,3 +31,7 @@ This is the Google app URL to put on Contact form: `https://script.google.com/ma
 
 ### Issues
 [pathPrefix does not work](https://github.com/gatsbyjs/gatsby/issues/2440). We need `pathPrefix` for deploying to Github pages. Let's see with custom domain if it's needed. If not need remove `cleanCache` task from package.json.
+
+
+### SEO
+https://reactgo.com/gatsbyblog/seogatsby/

@@ -1,0 +1,26 @@
+{
+  "images": [
+    {
+      "title": "Mirada al frente con camiseta blanca con rayas",
+      "alt": "camiseta blanca rayas",
+      "src": "../../images/home/camiseta-blanca-rayas.jpg",
+      "full": true
+    },
+    {
+      "title": "Mirada al frente con camisa azul",
+      "alt": "camisa azul",
+      "src": "../../images/home/camisa-azul.jpg"
+    },
+    {
+      "title": "Mirada a camara",
+      "alt": "mirando a camara",
+      "src": "../../images/home/mirando-a-camara.jpg"
+    },
+    {
+      "title": "Sonriendo",
+      "alt": "Sonriendo",
+      "src": "../../images/home/sonriendo.jpg",
+      "full": true
+    }
+  ]
+}
