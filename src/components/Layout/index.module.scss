@@ -2,6 +2,7 @@
 @import '../../styles/mixins.scss';
 
 $inner-padding: 4rem;
+$inner-padding-vw: 2vw;
 .layout {
   display: flex;
   flex-direction: column;
@@ -21,7 +22,9 @@ $inner-padding: 4rem;
     display: flex;
     justify-content: center;
     padding: $inner-padding;
+    padding: $inner-padding-vw;
     padding-top: $inner-padding / 2;
+    padding-top: $inner-padding-vw / 2;
     &Inner {
       width: 100%;
       @include mq-tablet-portrait-up {

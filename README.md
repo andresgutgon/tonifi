@@ -18,8 +18,8 @@ npm run deploy
 - [x] Boostrap GatsbyJs project and deploy to gh-page
 - [x] Initial style the page with Sass and custom font
 - [x] Data in JSON for image galleries
-- [ ] Image Gallery layout 1 and 2 cols
-- [ ] Image Gallery modal view image
+- [x] Image Gallery layout 1 and 2 cols
+- [x] Image Gallery modal view image
 - [ ] Mobile menu
 - [ ] Upload C.V. Pdf
 - [ ] Sidebar footer with Instagran Link and Download C.V.

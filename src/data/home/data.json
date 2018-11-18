@@ -19,7 +19,17 @@
     {
       "title": "Sonriendo",
       "alt": "Sonriendo",
-      "src": "../../images/home/sonriendo.jpg",
+      "src": "../../images/home/sonriendo.jpg"
+    },
+    {
+      "title": "Mirada al frente con camisa azul",
+      "alt": "camisa azul",
+      "src": "../../images/home/camisa-azul.jpg"
+    },
+    {
+      "title": "Mirada a camara",
+      "alt": "mirando a camara",
+      "src": "../../images/home/mirando-a-camara.jpg",
       "full": true
     }
   ]
