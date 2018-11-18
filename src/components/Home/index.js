@@ -1,16 +1,11 @@
 import React from 'react'
-import Img from 'gatsby-image'
 
 import Layout from '../Layout'
+import Gallery from '../Gallery'
 
-const Home = (props) => (
+const Home = ({ images }) => (
   <Layout>
-    {props.images.map((image, index) =>
-      <Img
-        key={index}
-        fluid={image.src.childImageSharp.fluid}
-      />
-    )}
+    <Gallery images={images} />
   </Layout>
 )
 

@@ -5,3 +5,10 @@
  */
 
 // You can delete this file if you're not using it
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+	if (stage === 'develop') {
+		actions.setWebpackConfig({
+			devtool: 'cheap-module-source-map'
+		});
+	}
+};

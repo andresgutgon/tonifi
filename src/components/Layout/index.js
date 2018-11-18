@@ -6,7 +6,8 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Sidebar from '../Sidebar'
 
-// Load reset and global styles
+// Load global styles
+import 'react-image-lightbox/style.css'
 import '../../styles/index.scss'
 
 import styles from './index.module.scss'
