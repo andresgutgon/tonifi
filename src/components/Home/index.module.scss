@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+.intro {
+  font-family: $fs-sans-serif;
+  font-size: 1em;
+  line-height: 1.8;
+  color: $gray-light-4;
+  text-align: center;
+  margin: 0;
+}

@@ -1,0 +1,520 @@
+{
+  "contact": {
+    "phone": "606 97 97 35",
+    "email": "tonifiguera@hotmail.com"
+  },
+  "languages": ["Castellano", "Catalan", "Ingles"],
+  "work": [
+    {
+      "category": "Teatro",
+      "image": "teatro.jpg",
+      "items": [
+        {
+          "title": "Espejismo 53: Arrojarse al vacío",
+          "author": "Albert Pijuan y LaminimaL",
+          "played": [
+            { "entity_id": "festival_santiago_off" }
+          ]
+        },
+        {
+          "title": "Apocalypse/Uploaded",
+          "author": "Albert Pijuan y LaminimaL",
+          "played": [
+            { "entity_id": "fira_tarrega" },
+            { "entity_id": "frinje_madrid" }
+          ]
+        },
+        {
+          "title": "Jekyll & Hide, musical (Gira)",
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
+          "title": "La supervivència de les lluernes",
+          "author": "LaminimaL",
+          "played": [
+            { "entity_id": "fira_tarrega" },
+            { "entity_id": "frinje_madrid" },
+            {
+              "entity_id": "teatre_romea",
+              "tags": ["Temporada"]
+            }
+          ]
+        },
+        {
+          "title": "The Crimes on the rue morgue, musical. (Gira)",
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
+          "title": "Fam de llibertat",
+          "author": "Marcel Vilarós i Alberto Reche",
+          "played": [
+            { "entity_id": "blanc_i_negre" }
+          ]
+        },
+        {
+          "title": "El suïcidi de l’Elefant Hipotecat",
+          "author": "LaminimaL",
+          "played": [
+            {
+              "entity_id": "sala_tantarantana",
+              "premiere": true,
+              "tags": ["Temporada"]
+            },
+            { "entity_id": "sala_seca_espai_brosa" },
+            { "entity_id": "sala_barts"}
+          ]
+        },
+        {
+          "title": "The Phantom of the Opera, musical (Gira)",
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
+          "title": "La Grandesa d’ésser un entre tants",
+          "author": "David Eudave i LaminimaL",
+          "played": [
+            { "entity_id": "sala_beckett" }
+          ]
+        },
+        {
+          "title": "Dràcula, musical (Gira)",
+          "author": "Bram Stoker",
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
+          "title": "El teló de pedra",
+          "author": "Marcel Vilarós",
+          "played": [
+            { "entity_id": "blanc_i_negre" }
+          ]
+        },
+        {
+          "title": "Frankenstein, musical (Gira)",
+          "author": "Mary Shelly",
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
+          "title": "La mort no és el final",
+          "author": "Marcel Vilarós Alberto Reche",
+          "played": [
+            { "entity_id": "blanc_i_negre" }
+          ]
+        },
+        {
+          "title": "L'Hostalera",
+          "author": "Carlo Goldoni",
+          "production": "Mondocane Producciones",
+          "played": [
+            { "entity_id": "sala_muntaner" }
+          ]
+        },
+        {
+          "title": "Qui té por de la Virginia Woolf?",
+          "author": "Edward Albee.",
+          "played": [
+            { "entity_id": "teatre_del_sol" }
+          ]
+        },
+        {
+          "title": "Mar i Cel (gira)",
+          "author": "Àngel Guimerà",
+          "production": "Mondocane Producciones"
+        },
+        {
+          "title": "Bent",
+          "author": "Martin Sheerman",
+          "company_id": "de_la_crem_produccions",
+          "played": [
+            { "entity_id": "versus_teatre" }
+          ]
+        },
+        {
+          "title": "Pòker",
+          "author": "Glòria Marín",
+          "company_id": "de_la_crem_produccions"
+        }
+      ]
+    },
+    {
+      "category": "Teatro familiar",
+      "image": "teatro.jpg",
+      "items": [
+        {
+          "title": "Les aventures d'Aladí (Gira)",
+          "company_id": "teatritus",
+          "played": [
+            { "entity_id": "teatre_apolo" }
+          ]
+        },
+        {
+          "title": "El petit Dalí (Gira)",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "teatre_romea" },
+            { "entity_id": "teatre_poliorama" }
+          ]
+        },
+        {
+          "title": "Les mascotes del Tibidabo fan la volta al món",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "parc_tibidabo" }
+          ]
+        },
+        {
+          "title": "Les aventures de les mascotes del Tibidabo",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "parc_tibidabo" }
+          ]
+        },
+        {
+          "title": "Tibinet",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "parc_tibidabo" }
+          ]
+        },
+        {
+          "title": "The Magic Books (Gira)",
+          "played": [
+            { "entity_id": "polizon_teatro" }
+          ]
+        },
+        {
+          "title": "El Follet Valent (Gira)",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "teatre_poliorama" }
+          ]
+        },
+        {
+          "title": "La Clau Somiada",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "parc_tibidabo" }
+          ]
+        },
+        {
+          "title": "The Fruits (Gira)",
+          "played": [
+            { "entity_id": "polizon_teatro" }
+          ]
+        },
+        {
+          "title": "Papanotes (Gira)",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "teatre_poliorama" }
+          ]
+        },
+        {
+          "title": "Pirats, els joglars flotants (Gira)",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "teatre_poliorama" }
+          ]
+        },
+        {
+          "title": "Tibi, el Follet de Collserola",
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "parc_tibidabo" }
+          ]
+        },
+        {
+          "title": "La Ventafocs (Gira)",
+          "company_id": "catacrac"
+        },
+        {
+          "title": "Monstres i altres bèsties (Gira)",
+          "company_id": "teresa_roig"
+        },
+        {
+          "title": "La llegenda de St. Jordi",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Fes visible l'invisible",
+          "company_id": "recrea_accions",
+          "played": [
+            { "entity_id": "museo_art_sabadel" }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Teatro de calle",
+      "image": "teatro.jpg",
+      "items": [
+        {
+          "title": "El petit Lilo",
+          "company_id": "actua_produccions"
+        },
+        {
+          "title": "Els gegants",
+          "company_id": "actua_produccions"
+        },
+        {
+          "title": "Les nòmades",
+          "company_id": "actua_produccions"
+        },
+        {
+          "title": "El campament de l'Ambaixador",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Rambla's show. Management i disseny d’espectacles",
+          "company_id": "royal_caribbean"
+        },
+        {
+          "title": "Deixeu que parlin les pedres",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Spiders",
+          "company_id": "setekrit_teatre"
+        },
+        {
+          "title": "Una Visita als monuments modernistes de la Caixa d'estalvis de Sabadell",
+          "company_id": "de_la_crem_produccions"
+        }
+      ]
+    },
+    {
+      "category": "Audiovisual",
+      "image": "audiovisual.jpg",
+      "items": [
+        {
+          "title": "Mira lo que has hecho",
+          "played": [
+            { "entity_id": "movistar_plus_mira_lo_que_has_hecho" }
+          ]
+        },
+        {
+          "title": "Fes-te soci!",
+          "played": [
+            { "entity_id": "ce_sabadell" }
+          ]
+        },
+        {
+          "title": "El cor de la ciutat (secundario)",
+          "played": [
+            { "entity_id": "tv3_el_cor_de_la_ciutat" }
+          ]
+        },
+        {
+          "title": "Els Abans de Déu. Secundari",
+          "played": [
+            { "entity_id": "xtlc" }
+          ]
+        },
+        {
+          "title": "Els Abans de Déu. Secundari",
+          "played": [
+            { "entity_id": "xtlc" }
+          ]
+        },
+        {
+          "title": "Anuncio de Cerveza San Miguel (protagonista)",
+          "played": [
+            { "entity_id": "san_miguel_landia_films" }
+          ]
+        },
+        {
+          "title": "More (cortometraje)",
+          "played": [
+            { "entity_id": "escac" },
+            { "entity_id": "pavoreal_films" }
+          ]
+        },
+        {
+          "title": "Anuncio como protagonista para Hard Rock Cafè",
+          "played": [
+            { "entity_id": "pavoreal_films" }
+          ]
+        },
+        {
+          "title": "Negra noche (cortometraje)",
+          "played": [
+            { "entity_id": "cecc" }
+          ]
+        },
+        {
+          "title": "Mila (cortometraje)",
+          "played": [
+            { "entity_id": "escac" }
+          ]
+        },
+        {
+          "title": "Manual de natación (cortometraje)",
+          "played": [
+            { "entity_id": "escac" },
+            { "entity_id": "pavoreal_films" }
+          ]
+        },
+        {
+          "title": "Hemisferios a ciegas",
+          "played": [
+            { "entity_id": "escac" },
+            { "entity_id": "maynetto_producciones" }
+          ]
+        },
+        {
+          "title": "Deux ex Machina",
+          "played": [
+            { "entity_id": "cecc" },
+            { "entity_id": "roy_baritten" }
+          ]
+        },
+        {
+          "title": "Para lo que hay que decir (cortometraje)",
+          "played": [
+            { "entity_id": "escac" },
+            { "entity_id": "francisco_amezcua" }
+          ]
+        },
+        {
+          "title": "El Buzzlightyear (cortometraje)",
+          "played": [
+            { "entity_id": "escac" },
+            { "entity_id": "pavoreal_films" }
+          ]
+        },
+        {
+          "title": "Som (cortometraje)",
+          "played": [
+            { "entity_id": "uab_el_grinyol_producciones" }
+          ]
+        },
+        {
+          "title": "Revival (Programa videoclips)",
+          "played": [
+            { "entity_id": "flaix_tv" }
+          ]
+        },
+        {
+          "title": "Anuncio para SEAT Sarsa (protagonista)",
+          "played": [
+            { "entity_id": "brunet_films" }
+          ]
+        },
+        {
+          "title": "Anuncio para M2 Construccions (protagonista)",
+          "played": [
+            { "entity_id": "brunet_films" }
+          ]
+        },
+        {
+          "title": "Quieren matar a Francesco! (cortometraje en 16mm)",
+          "played": [
+            { "entity_id": "escac" }
+          ]
+        },
+        {
+          "title": "Pack (Cortometraje)",
+          "played": [
+            { "entity_id": "imatge_sl_produccions" }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Lecturas y recitales",
+      "image": "lecturas_y_recitales.jpg",
+      "items": [
+        {
+          "title": "Lectures Dramatitzades",
+          "author": "Varios autores",
+          "director": "David Plana",
+          "played": [
+            { "entity_id": "sala_beckett" }
+          ]
+        },
+        {
+          "title": "La guerra dins la guerra (Recital de canciones y textos)",
+          "played": [
+            { "entity_id": "blanc_i_negre" }
+          ]
+        },
+        {
+          "title": "Ketchup (Lectura  dramatizada de la novela)",
+          "author": "Xavier Gual",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "El Papa y la Bruja (Lectura  dramatizada)",
+          "author": "Darío Fo",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Edmond",
+          "author": "David Mamet",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Un espacio para el sueño (Recital de poemas)",
+          "author": "Martí i Pol y Benedetti",
+          "company_id": "de_la_crem_produccions"
+        }
+      ]
+    },
+    {
+      "category": "Zarzuela",
+      "image": "zarzuela.jpg",
+      "items": [
+        {
+          "title": "La Dogaresa",
+          "company_id": "lirica_bcn"
+        },
+        {
+          "title": "Agua, azucarillos y aguardiente",
+          "company_id": "lirica_bcn"
+        },
+        {
+          "title": "Luisa Fernanda",
+          "company_id": "lirica_bcn"
+        },
+        {
+          "title": "La Corte del Faraón",
+          "company_id": "lirica_bcn"
+        },
+        {
+          "title": "La Leyenda del Beso",
+          "company_id": "lirica_bcn"
+        }
+      ]
+    }
+  ],
+  "education": [
+    "Graduat en interpretació pel Col·legi del Teatre de Barcelona",
+    "El verso y la dicción en inglés con textos de Shakespeare, con en Dugald BruceLockhart de la compañia  Propellers",
+    "El actor y la cámara con el director Esteve Rovira",
+    "Acting in English, con Lucy Lenox",
+    "Interpretación de canciones con Ángel Cerdanya 'El Sueco'",
+    "Técnicas de improvisación con Mercè Lleixà",
+    "Dicción con Rosa Victoria Gras",
+    "Danza-teatro con Jordi Cortés",
+    "Danza contemporánea con Susana do Fao",
+    "Máscara neutro con Ester Nadal"
+  ]
+}

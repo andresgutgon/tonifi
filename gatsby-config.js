@@ -16,13 +16,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'tonifi',
+        short_name: 'tonifi',
         start_url: '/',
         background_color: '#222222',
         theme_color: '#222222',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png'
+        icon: 'src/images/favicon.png'
       }
     },
     {
@@ -41,11 +41,18 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pdf`,
+        path: `${__dirname}/src/pdfs`,
+      },
+    },
     'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: './src/data'
+        path: `${__dirname}/src/data`
       }
     }
   ]

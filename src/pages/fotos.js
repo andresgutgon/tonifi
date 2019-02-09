@@ -3,13 +3,13 @@ import { graphql } from 'gatsby'
 
 import Home from '../components/Home'
 
-const IndexPage = ({ data }) => {
+const ImagesPage = ({ data }) => {
   return (
     <Home images={data.allHomeJson.edges[0].node.images} />
   )
 }
 
-export default IndexPage
+export default ImagesPage
 
 export const pageQuery = graphql`
   query {

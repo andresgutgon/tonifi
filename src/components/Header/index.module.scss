@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $content-padding;
+  margin: $content-padding-vw;
+  margin-bottom: $bottom-header / 2;
+  margin-top: 0;
+  &:after {
+    content: '';
+    height: 3px;
+    width: 100px;
+    background-color: $gray-light-8;
+    top: $bottom-header / 2;
+    position: relative;
+  }
+  .title {
+    margin: 0;
+    font-family: $fs-sans-serif;
+    font-weight: 300;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    font-family: $fs-sans-serif;
+    font-size: 1.8em;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  @include mq-tablet-portrait-up {
+    padding-top: $top-header;
+    .content {
+      max-width: 90%;
+      align-items: center;
+    }
+  }
+}

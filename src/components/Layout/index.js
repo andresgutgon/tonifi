@@ -1,20 +1,18 @@
 import React from 'react'
-import classNames from 'classnames/bind'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Sidebar from '../Sidebar'
+import Navigation from '../Navigation'
 
 // Load global styles
 import 'react-image-lightbox/style.css'
 import '../../styles/index.scss'
 
 import styles from './index.module.scss'
-const cx = classNames.bind(styles)
 
 const GOOGLE_FONTS_SITE = 'https://fonts.googleapis.com/css?family='
-const Layout = ({ fullExpanded = false, children }) => (
+const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -44,19 +42,17 @@ const Layout = ({ fullExpanded = false, children }) => (
             rel='stylesheet'
           />
         </Helmet>
-        <div className={cx('layout', { fullExpanded })} >
-          <div className={styles.sidebar}>
-            <Sidebar
+        <div className={styles.layout} >
+          <div className={styles.nav}>
+            <Navigation
               name={data.site.siteMetadata.name}
               surname={data.site.siteMetadata.surname}
               copyright={data.site.siteMetadata.copyright}
             />
           </div>
-          <div className={styles.content}>
-            <div className={styles.contentInner}>
-              {children}
-            </div>
-          </div>
+          <main className={styles.main}>
+            {children}
+          </main>
         </div>
       </>
     )}

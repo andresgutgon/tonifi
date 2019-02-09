@@ -140,6 +140,9 @@ export default class Gallery extends React.Component {
 
         {imageIndex !== null && (
           <Lightbox
+            reactModalProps={{
+              shouldReturnFocusAfterClose: false
+            }}
             mainSrc={this.mainSrc}
             nextSrc={this.nextSrc}
             prevSrc={this.prevSrc}

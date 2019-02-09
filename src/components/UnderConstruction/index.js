@@ -5,7 +5,7 @@ import Layout from '../Layout'
 import styles from './index.module.scss'
 
 const UnderConstruction = () => (
-  <Layout fullExpanded>
+  <Layout>
     <div className={styles.under}>
       <h2>En construction</h2>
       <p>Todavia no esta esta seccion.</p>
