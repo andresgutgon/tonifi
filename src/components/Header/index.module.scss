@@ -18,6 +18,7 @@
     top: $bottom-header / 2;
     position: relative;
   }
+
   .title {
     margin: 0;
     font-family: $fs-sans-serif;
@@ -29,6 +30,15 @@
       margin-top: 2rem;
       margin-bottom: 2rem;
     }
+  }
+
+  .description {
+    font-family: $fs-sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: $gray-light-4;
+    text-align: center;
+    margin: 0;
   }
 
   .content {
