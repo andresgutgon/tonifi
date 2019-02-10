@@ -22,7 +22,7 @@
     margin: 0;
     font-family: $fs-sans-serif;
     font-weight: 300;
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -40,6 +40,9 @@
 
   @include mq-tablet-portrait-up {
     padding-top: $top-header;
+    .title {
+      font-size: 5rem;
+    }
     .content {
       max-width: 90%;
       align-items: center;

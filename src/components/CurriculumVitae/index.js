@@ -73,24 +73,11 @@ function MetadataItem ({metaKey, item}) {
 }
 
 const CurriculumVitae = ({ content }) => {
-  const { education, work, contact, languages } = content
+  const { education, work, languages } = content
 
   return (
     <Layout>
       <Header title='Curriculum'>
-        <div className={styles.infoLine}>
-          <ul>
-            <li>
-              <strong>Teléfono: </strong>
-              {contact.phone}
-            </li>
-            <li className={styles.separator}>/</li>
-            <li>
-              <strong>Email: </strong>
-              {contact.email}
-            </li>
-          </ul>
-        </div>
         <div className={styles.infoLine}>
           <ul>
             <li>

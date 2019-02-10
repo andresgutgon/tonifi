@@ -20,6 +20,30 @@
     bottom: 4rem;
     right: 4rem;
     font-size: 1.4rem;
+    .download {
+      margin-bottom: 2rem;
+      display: flex;
+      span {
+        margin: 0 .5rem;
+      }
+      a {
+        transition: all .3s;
+        color: $gray-mid-9;
+        svg {
+          fill: $gray-mid-9;
+        }
+        &:visited {
+          color: $gray-mid-9;
+        }
+        &:hover,
+        &:active {
+          color: $gray-dark-3;
+          svg {
+            fill: $gray-dark-3;
+          }
+        }
+      }
+    }
   }
 
   .menu {

@@ -1,6 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react'
+import { Link, withPrefix } from 'gatsby'
 
+import InstagramIcon from './InstagramIcon'
 import styles from './index.module.scss'
 
 // FIXME: Move to `siteConfig.js`
@@ -16,17 +17,14 @@ const MENU_ITEMS = [
     order: 1
   },
   {
-    text: 'Vídeos',
-    href: '/videos/',
-    order: 2
-  },
-  {
     text: 'Contacto',
     href: '/contacto/',
     order: 3
   }
 ]
-const Navigation = ({ name, surname, copyright }) => (
+const Navigation = ({
+  name, surname, copyright, cvPdfPath, instagramUsername
+}) => (
   <div className={styles.navigation}>
     <div className={styles.navigationInner}>
       <div className={styles.top}>
@@ -57,6 +55,24 @@ const Navigation = ({ name, surname, copyright }) => (
         </nav>
       </div>
       <div className={styles.bottom}>
+        <div className={styles.download}>
+          <a
+            className={styles.socialLink}
+            href={`https://www.instagram.com/${instagramUsername}`}
+            title={`Instagram (${instagramUsername})`}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <InstagramIcon />
+          </a>
+          <span>|</span>
+          <a
+            href={withPrefix(cvPdfPath)}
+            target='_blank'
+          >
+            Descargar CV (PDF)
+          </a>
+        </div>
         <div className={styles.copyright}>{copyright}</div>
       </div>
     </div>

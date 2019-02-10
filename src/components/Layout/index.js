@@ -16,12 +16,21 @@ const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
+        allFile(filter: { extension: { eq: "pdf" }, name: { eq:"cv"} }) {
+          edges {
+            node {
+              publicURL
+              name
+            }
+          }
+        }
         site {
           siteMetadata {
             title
             name
             surname
             copyright
+            instagramUsername
             fonts
           }
         }
@@ -47,6 +56,8 @@ const Layout = ({ children }) => (
             <Navigation
               name={data.site.siteMetadata.name}
               surname={data.site.siteMetadata.surname}
+              instagramUsername={data.site.siteMetadata.instagramUsername}
+              cvPdfPath={data.allFile.edges[0].node.publicURL}
               copyright={data.site.siteMetadata.copyright}
             />
           </div>

@@ -34,8 +34,8 @@ You have to go to `chrome://inspect` in your Chrome browser to start debugging
 - [x] Proccess CV JSON on gatsby-node.js to put categories and places
 - [x] C.V. HTML version
 - [x] Generate PDF from JSON with [pdfmake](http://pdfmake.org)
+- [x] Sidebar footer with Instagran Link and Download C.V.
 - [ ] Mobile menu
-- [ ] Sidebar footer with Instagran Link and Download C.V.
 - [ ] Contact form with Google app link
 - [ ] Send emails via [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
 - [ ] Videos section

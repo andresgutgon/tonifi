@@ -8,6 +8,7 @@ module.exports = {
   name,
   surname,
   secondSurname,
+  instagramUsername: 'tonifi',
   siteTitle: fullName,
   copyright: `© ${year} ${fullName}`,
   pathPrefix: '/tonifi',
