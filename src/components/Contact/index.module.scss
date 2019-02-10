@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
+$red-error-color: red;
 .contact {
   font-size: 2rem;
 }
@@ -11,10 +12,7 @@
 }
 
 .row {
-  margin-bottom: 2rem;
-  @include mq-tablet-portrait-up {
-    margin-bottom: 3rem;
-  }
+  margin-bottom: 3rem;
 }
 
 .labelInput {
@@ -32,6 +30,10 @@
     font-weight: 500;
     transform-origin: 0 0;
     transition: all .2s ease;
+    .errors {
+      color: $red-error-color;
+      font-size: .8em;
+    }
   }
   .border {
     position: absolute;
@@ -44,11 +46,21 @@
     transform-origin: 0 0;;
     transition: all .15s ease;
   }
-  &.textarea {
-    .label {
-      top: 2rem;
+
+  &.hasErrors {
+    .input {
+      border-bottom-color: $red-error-color;
+      &:focus + span {
+        .errors {
+          display: none;
+        }
+      }
+      &:focus + span + .border{
+        background-color: $gray-dark-1;
+      }
     }
   }
+
   input, textarea {
     &:not(:placeholder-shown) + span {
       color: $gray-mid-6;
@@ -114,6 +126,9 @@
   span {
     display: block;
     padding: 12px 24px;
+  }
+  &:disabled {
+    opacity: .5;
   }
   &:before {
     transform: translate(-50%, -50%);

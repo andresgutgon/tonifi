@@ -12,7 +12,13 @@ import '../../styles/index.scss'
 
 import styles from './index.module.scss'
 
-const Layout = ({ children, pathname, pageTitle, metaImage }) => (
+const Layout = ({
+  children,
+  pathname,
+  pageTitle,
+  metaImage,
+  hideFooter = false
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -65,13 +71,15 @@ const Layout = ({ children, pathname, pageTitle, metaImage }) => (
           <main className={styles.main}>
             {children}
           </main>
-          <div className={styles.footer}>
-            <Footer
-              instagramUsername={data.site.siteMetadata.instagramUsername}
-              cvPdfPath={data.allFile.edges[0].node.publicURL}
-              copyright={data.site.siteMetadata.copyright}
-            />
-          </div>
+          {!hideFooter &&
+            <div className={styles.footer}>
+              <Footer
+                instagramUsername={data.site.siteMetadata.instagramUsername}
+                cvPdfPath={data.allFile.edges[0].node.publicURL}
+                copyright={data.site.siteMetadata.copyright}
+              />
+            </div>
+          }
         </div>
       </>
     )}
