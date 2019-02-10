@@ -23,17 +23,19 @@
     font-size: 2rem;
     text-decoration: none;
     text-align: center;
-    color: $gray-dark-3;
+    color: rgba(white, .4);
     border-top: .3rem solid transparent;
+    transition: all .3s;
     &:active,
     &:visited,
     &:hover {
-      color: white;
+      color: rgba(white, .4);
       text-decoration: none;
     }
   }
   &LinkActive {
     border-color: white;
+    color: white
   }
   @include mq-tablet-portrait-up {
     border-bottom: 0;

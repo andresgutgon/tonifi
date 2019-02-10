@@ -9,7 +9,9 @@ module.exports = {
   surname,
   secondSurname,
   instagramUsername: 'tonifi',
+  twitterUsername: 'tonifi',
   siteTitle: fullName,
+  siteUrl: 'https://tonifiguera.com',
   copyright: `© ${year} ${fullName}`,
   pathPrefix: '/tonifi',
   fonts: 'Playfair+Display:400,700|Source+Sans+Pro:300,400,600'

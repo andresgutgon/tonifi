@@ -5,7 +5,10 @@ import CurriculumVitae from '../components/CurriculumVitae'
 
 const CVPage = ({ data }) => {
   return (
-    <CurriculumVitae content={data.allCvJson.edges[0].node} />
+    <CurriculumVitae
+      cvPdfPath={data.allFile.edges[0].node.publicURL}
+      content={data.allCvJson.edges[0].node}
+    />
   )
 }
 
@@ -13,6 +16,14 @@ export default CVPage
 
 export const pageQuery = graphql`
   query {
+    allFile(filter: { extension: { eq: "pdf" }, name: { eq:"cv"} }) {
+      edges {
+        node {
+          publicURL
+          name
+        }
+      }
+    }
     allCvJson {
       edges {
         node {

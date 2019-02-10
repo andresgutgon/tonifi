@@ -1,5 +1,6 @@
-import React from 'react'
+import * as React from 'react'
 import cn from 'classnames/bind'
+import { withPrefix } from 'gatsby'
 
 import Layout from '../Layout'
 import Header from '../Header'
@@ -72,17 +73,27 @@ function MetadataItem ({metaKey, item}) {
   )
 }
 
-const CurriculumVitae = ({ content }) => {
+const CurriculumVitae = ({ content, cvPdfPath }) => {
   const { education, work, languages } = content
+ const thumbnail = work[0].image.childImageSharp.fluid.src
 
   return (
-    <Layout>
+    <Layout pageTitle='Curriculum' pathname='cv' metaImage={thumbnail}>
       <Header title='Curriculum'>
         <div className={styles.infoLine}>
           <ul>
             <li>
               <strong>Idiomas: </strong>
               {languages.join(' / ')}
+            </li>
+            <li>
+              <a
+                href={withPrefix(cvPdfPath)}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Descargar CV (PDF)
+              </a>
             </li>
           </ul>
         </div>

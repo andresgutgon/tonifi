@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Metatags from '../Metatags'
 import Footer from '../Footer'
 import Navigation from '../Navigation'
 
@@ -12,8 +12,7 @@ import '../../styles/index.scss'
 
 import styles from './index.module.scss'
 
-const GOOGLE_FONTS_SITE = 'https://fonts.googleapis.com/css?family='
-const Layout = ({ children }) => (
+const Layout = ({ children, pathname, pageTitle, metaImage }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -28,10 +27,12 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            siteUrl
             name
             surname
             copyright
             instagramUsername
+            twitterUsername
             fonts
           }
         }
@@ -39,19 +40,18 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Toni figuera actor' },
-            { name: 'keywords', content: 'actor, director, cine, teatro' },
-          ]}
-        >
-          <html lang="es" />
-          <link
-            href={`${GOOGLE_FONTS_SITE}${data.site.siteMetadata.fonts}`}
-            rel='stylesheet'
-          />
-        </Helmet>
+        <Metatags
+          fonts={data.site.siteMetadata.fonts}
+          baseTitle={data.site.siteMetadata.title}
+          pageTitle={pageTitle}
+          url={data.site.siteMetadata.siteUrl}
+          twitter={data.site.siteMetadata.twitterUsername}
+          pathname={pathname}
+          thumbnail={metaImage}
+          description='Toni figuera actor'
+          keywords='actor, director, cine, teatro'
+          locale='es'
+        />
         <div className={styles.layout}>
           <div className={styles.nav}>
             <Navigation

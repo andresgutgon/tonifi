@@ -21,6 +21,12 @@
         display: block;
         text-align: center;
       }
+      a,
+      &:hover {
+        color: $gray-dark-4;
+        display: block;
+        text-align: center;
+      }
     }
   }
 
@@ -34,7 +40,6 @@
     text-align: center;
     flex-direction: row;
     ul {
-      flex-direction: row;
       li {
         margin-left: .5rem;
         &:first-child {

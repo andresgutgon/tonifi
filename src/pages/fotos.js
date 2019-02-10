@@ -5,7 +5,11 @@ import Home from '../components/Home'
 
 const ImagesPage = ({ data }) => {
   return (
-    <Home images={data.allHomeJson.edges[0].node.images} />
+    <Home
+      images={data.allHomeJson.edges[0].node.images}
+      pathname='fotos'
+      pageTitle='Fotos'
+    />
   )
 }
 
