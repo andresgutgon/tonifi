@@ -35,11 +35,11 @@ You have to go to `chrome://inspect` in your Chrome browser to start debugging
 - [x] C.V. HTML version
 - [x] Generate PDF from JSON with [pdfmake](http://pdfmake.org)
 - [x] Sidebar footer with Instagran Link and Download C.V.
-- [ ] Mobile menu
-- [ ] Contact form with Google app link
+- [x] Mobile menu
+- [ ] Contact form with Google app link and Formik
 - [ ] Send emails via [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
-- [ ] Videos section
 - [ ] SEO with React Helmet
+- [ ] Videos section
 
 This is the Google app URL to put on Contact form: `https://script.google.com/macros/s/AKfycbwSzORHBSE-no7C4et5Trm_64w28881aa5wH7DZ/exec`
 

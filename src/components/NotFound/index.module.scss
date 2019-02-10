@@ -1,12 +1,14 @@
-.under {
+@import '../../styles/variables.scss';
+.notFound {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 10rem;
-  padding-bottom: 100rem;
+  padding-bottom: 20rem;
   font-size: 2rem;
   text-align: center;
-  h2 {
-    font-size: 3rem
+  a,
+  &:hover {
+    color: $gray-dark-4;
   }
 }

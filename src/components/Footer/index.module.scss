@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.footer {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .links {
+    list-style: none;
+    display: flex;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    li {
+      margin: 0;
+      &.separator {
+        margin: 0 .5rem;
+        &:before {
+          content: '|'
+        }
+      }
+    }
+  }
+  a {
+    transition: all .3s;
+    color: $gray-mid-9;
+    svg {
+      fill: $gray-mid-9;
+    }
+    &:visited {
+      color: $gray-mid-9;
+    }
+    &:hover,
+    &:active {
+      color: $gray-dark-3;
+      svg {
+        fill: $gray-dark-3;
+      }
+    }
+  }
+}

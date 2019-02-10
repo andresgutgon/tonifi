@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Footer from '../Footer'
 import Navigation from '../Navigation'
 
 // Load global styles
@@ -51,7 +52,7 @@ const Layout = ({ children }) => (
             rel='stylesheet'
           />
         </Helmet>
-        <div className={styles.layout} >
+        <div className={styles.layout}>
           <div className={styles.nav}>
             <Navigation
               name={data.site.siteMetadata.name}
@@ -64,6 +65,13 @@ const Layout = ({ children }) => (
           <main className={styles.main}>
             {children}
           </main>
+          <div className={styles.footer}>
+            <Footer
+              instagramUsername={data.site.siteMetadata.instagramUsername}
+              cvPdfPath={data.allFile.edges[0].node.publicURL}
+              copyright={data.site.siteMetadata.copyright}
+            />
+          </div>
         </div>
       </>
     )}

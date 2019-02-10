@@ -4,6 +4,8 @@
 .navigation {
   display: flex;
   height: 100%;
+  margin-bottom: 3rem;
+  background-color: $gray-dark-4;
   &Inner {
     width: 100%;
     display: flex;
@@ -19,145 +21,15 @@
     position: absolute;
     bottom: 4rem;
     right: 4rem;
-    font-size: 1.4rem;
-    .download {
-      margin-bottom: 2rem;
-      display: flex;
-      span {
-        margin: 0 .5rem;
-      }
-      a {
-        transition: all .3s;
-        color: $gray-mid-9;
-        svg {
-          fill: $gray-mid-9;
-        }
-        &:visited {
-          color: $gray-mid-9;
-        }
-        &:hover,
-        &:active {
-          color: $gray-dark-3;
-          svg {
-            fill: $gray-dark-3;
-          }
-        }
-      }
-    }
-  }
-
-  .menu {
-    display: none;
-    list-style: none;
-    margin: 0;
-    &Link {
-      display: block;
-      padding: 1rem 4rem 1rem 0;
-      font-size: 2rem;
-      text-decoration: none;
-      text-align: right;
-      color: $gray-dark-3;
-      border-right: .3rem solid transparent;
-      &:active,
-      &:visited,
-      &:hover {
-        color: $gray-dark-3;
-        text-decoration: none;
-      }
-    }
-    &LinkActive {
-      border-color: $gray-dark-3;
-    }
   }
 
   @include mq-tablet-portrait-up {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;
-    .menu {
-      display: flex;
-      flex-direction: column;
-    }
+    background-color: transparent;
     .bottom {
       display: block;
-    }
-  }
-}
-
-.header {
-  .logo {
-    margin-bottom: 0;
-    padding-right: 4rem;
-    display: flex;
-    justify-content: flex-end;
-    a {
-      font-family: $fs-serif;
-      font-weight: 700;
-      font-size: 4rem;
-    }
-    a,
-    a:hover,
-    a:visited,
-    a:active {
-      color: $gray-dark-8;
-      text-decoration: none;
-    }
-
-    @include mq-tablet-portrait-up {
-      padding-top: $top-header;
-      padding-bottom: $bottom-header;
-      margin-bottom: $bottom-header;
-      a {
-        font-size: 6rem;
-      }
-    }
-
-    &Inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      .name {
-        font-size: 2rem;
-        top: -1rem;
-        position: relative;
-        left: 4px;
-      }
-      .surname {
-        font-size: 4rem;
-        line-height: 1;
-      }
-
-      .surname {
-        margin-left: .6rem;
-        line-height: 1;
-      }
-      // Media query
-      @include mq-tablet-portrait-up {
-        text-align: left;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        a {
-          font-size: 6rem;
-        }
-      }
-
-      @include mq-tablet-landscape-up {
-        .surname {
-          font-size: 6rem;
-          margin-left: 0;
-          margin-top: -1rem;
-        }
-      }
-
-      @include mq-desktop-up {
-        .surname {
-          font-size: 8rem;
-          margin-left: 0;
-        }
-      }
     }
   }
 }

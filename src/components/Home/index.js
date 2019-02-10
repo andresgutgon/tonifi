@@ -11,7 +11,7 @@ const Home = ({ images }) => (
   <Layout>
     <Header title='Actor y director'>
       <p className={styles.intro}>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit nisi diam aliquam, mollis a laoreet hac magnis posuere facilisi malesuada cursus mus curabitur, suspendisse interdum metus congue pharetra tellus fermentum lobortis sed.
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nisi diam aliquam, mollis a laoreet hac magnis posuere facilisi.
       </p>
     </Header>
     <Content>

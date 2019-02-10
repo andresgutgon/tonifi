@@ -1,5 +1,6 @@
 $gutter: 30px;
 $gutter-vw: 2vw;
+$border-radius: 2px;
 .grid {
   .row {
     display: flex;
@@ -21,6 +22,7 @@ $gutter-vw: 2vw;
     margin-right: $gutter / 2;
     margin-left: $gutter-vw / 2;
     margin-right: $gutter-vw / 2;
+    border-radius: $border-radius;
 
     &.isVisible {
       box-shadow: 0 0 3px 1px rgba(0, 0, 0, .3);
@@ -30,7 +32,7 @@ $gutter-vw: 2vw;
       overflow: hidden;
       height: 100%;
       cursor: pointer;
-      border-radius: 2px;
+      border-radius: $border-radius;
       img {
 	      object-fit: cover;
 	      transition: transform 400ms ease-out;

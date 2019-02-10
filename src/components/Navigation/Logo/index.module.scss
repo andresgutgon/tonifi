@@ -1,0 +1,94 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.logo {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: $gray-dark-4;
+
+  a {
+    font-family: $fs-serif;
+    font-weight: 700;
+    font-size: 4rem;
+  }
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: $gray-mid-5;
+    text-decoration: none;
+  }
+
+  @include mq-tablet-portrait-up {
+    background-color: transparent;
+    padding-right: 4rem;
+    justify-content: flex-end;
+    padding-top: $top-header;
+    padding-bottom: $bottom-header;
+    margin-bottom: $bottom-header;
+    a {
+    }
+    a,
+    a:hover,
+    a:visited,
+    a:active {
+      font-size: 6rem;
+      color: $gray-dark-8;
+    }
+  }
+
+  &Inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .name {
+      font-size: 3rem;
+    }
+    .surname {
+      font-size: 3rem;
+      line-height: 1;
+    }
+
+    .surname {
+      margin-left: .6rem;
+      line-height: 1;
+    }
+    // Media query
+    @include mq-tablet-portrait-up {
+      text-align: left;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      a {
+        font-size: 6rem;
+      }
+
+      .name {
+        font-size: 2rem;
+        top: -1rem;
+        position: relative;
+        left: 4px;
+      }
+    }
+
+    @include mq-tablet-landscape-up {
+      .surname {
+        font-size: 6rem;
+        margin-left: 0;
+        margin-top: -1rem;
+      }
+    }
+
+    @include mq-desktop-up {
+      .surname {
+        font-size: 8rem;
+        margin-left: 0;
+      }
+    }
+  }
+}

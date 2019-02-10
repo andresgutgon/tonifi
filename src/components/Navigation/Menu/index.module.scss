@@ -1,0 +1,60 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.menu {
+  border-top: .1rem solid rgba(white, .1);
+  .list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -1px;
+    position: relative;
+  }
+
+  &Item {
+    flex: 1;
+    margin: 0;
+  }
+
+  &Link {
+    display: block;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+    text-decoration: none;
+    text-align: center;
+    color: $gray-dark-3;
+    border-top: .3rem solid transparent;
+    &:active,
+    &:visited,
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &LinkActive {
+    border-color: white;
+  }
+  @include mq-tablet-portrait-up {
+    border-bottom: 0;
+    .list {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    &Link {
+      padding: 1rem 4rem 1rem 0;
+      border-right: .3rem solid transparent;
+      border-top: 0;
+      text-align: right;
+      color: $gray-dark-3;
+      &:active,
+      &:visited,
+      &:hover {
+        color: $gray-dark-3;
+      }
+    }
+    &LinkActive {
+      border-color: $gray-dark-3;
+    }
+  }
+}

@@ -24,8 +24,11 @@
     font-weight: 300;
     font-size: 3rem;
     text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    @include mq-tablet-portrait-up {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   .content {
