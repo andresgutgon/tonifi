@@ -17,7 +17,18 @@ const INITIAL_STATE = {
   email: '',
   name: '',
   subject: '',
-  message: ''
+  message: '',
+  answer: ''
+}
+
+/**
+ * This is a honeypot spam. If not empty do not submit
+ */
+function emptyAnswerValidation(value) {
+  const valueDom = document.getElementById('answer').value
+  if (value != '' || valueDom != '') return 'Bad boy'
+
+  return null
 }
 
 function requiredValidation(value) {
@@ -167,6 +178,16 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
         />
       </Row>
       <Row>
+        <div className={styles.answer}>
+          <TextInput
+            type='text'
+            name='answer'
+            label='Put here your answer'
+            errors={errors}
+            touched={touched}
+            validate={emptyAnswerValidation}
+          />
+        </div>
         <button
           className={styles.button}
           type='submit'
@@ -192,7 +213,7 @@ function onSubmit (data, actions) {
     setTimeout(() => {
       actions.resetForm()
       actions.setStatus({ sent: false })
-    }, 5000) // 5 seconds
+    }, 4000) // 4 seconds
     return
   }
   const encoded = Object
@@ -235,7 +256,7 @@ const Contact = () => (
                   <p>
                     Gracias <strong>{name}</strong>,
                     en cuanto lo reciba te contesto a tu email:
-                    <strong>{email}</strong>
+                    <strong>{` ${email}`}</strong>
                   </p>
                 </div>
                 <FormComponent

@@ -98,6 +98,10 @@ $red-error-color: red;
   color: $gray-dark-2;
 }
 
+.answer {
+  display: none;
+}
+
 .success {
   display: none;
   flex-direction: column;
