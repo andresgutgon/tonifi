@@ -6,9 +6,19 @@ import cn from 'classnames/bind'
 import Layout from '../Layout'
 import Header from '../Header'
 import Content from '../Content'
-
 import styles from './index.module.scss'
+import TickIcon from './TickIcon'
 const cx = cn.bind(styles)
+
+const BASE_API = 'https://script.google.com/macros/s'
+const VERSION = 'AKfycbzKC8m1Gu1zP0ihCK9EVEUu1xcg0ZXzlqvpmXP-AQ-tIxfYWl76'
+const URL = `${BASE_API}/${VERSION}/exec`
+const INITIAL_STATE = {
+  email: '',
+  name: '',
+  subject: '',
+  message: ''
+}
 
 function requiredValidation(value) {
   if (!value) return 'Requerido'
@@ -112,9 +122,86 @@ function TextAreaInput ({ label, name, type, validate, errors, touched }) {
   )
 }
 
-function onSubmit (values, actions) {
-  return Promise.resolve()
+function FormComponent ({ sent, errors, touched, isSubmitting }) {
+  const effect = sent ? 'bounceOutDown' : 'bounceInUp'
+  return (
+    <Form className={cx('form', 'animated', effect)}>
+      <Row>
+        <TextInput
+          type='email'
+          name='email'
+          label='Tu email'
+          errors={errors}
+          touched={touched}
+          validate={emailValidation}
+        />
+      </Row>
+      <Row>
+        <TextInput
+          type='text'
+          name='name'
+          label='Tu nombre'
+          errors={errors}
+          touched={touched}
+          validate={requiredValidation}
+        />
+      </Row>
+      <Row>
+        <TextInput
+          type='text'
+          name='subject'
+          label='Asunto de tu consulta'
+          errors={errors}
+          touched={touched}
+          validate={requiredValidation}
+        />
+      </Row>
+      <Row>
+        <TextAreaInput
+          type='textarea'
+          name='message'
+          label='Tus comentarios'
+          errors={errors}
+          touched={touched}
+          validate={requiredValidation}
+        />
+      </Row>
+      <Row>
+        <button
+          className={styles.button}
+          type='submit'
+          disabled={isSubmitting}
+        >
+          <span>
+            {isSubmitting && 'Enviando mensaje...'}
+            {!isSubmitting && 'Enviar mensaje'}
+          </span>
+        </button>
+      </Row>
+    </Form>
+  )
 }
+
+function onSubmit (data, actions) {
+  const xhr = new XMLHttpRequest()
+  xhr.open('POST', URL)
+  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+  xhr.onreadystatechange = function() {
+    actions.setSubmitting(false)
+    actions.setStatus({ sent: true })
+    setTimeout(() => {
+      actions.resetForm()
+      actions.setStatus({ sent: false })
+    }, 5000) // 5 seconds
+    return
+  }
+  const encoded = Object
+    .keys(data)
+    .map((k) => (encodeURIComponent(k) + "=" + encodeURIComponent(data[k])))
+    .join('&')
+  return xhr.send(encoded)
+}
+
 const Contact = () => (
   <Layout
     hideFooter
@@ -128,55 +215,38 @@ const Contact = () => (
     <Content>
       <div className={styles.contact}>
         <Formik
-          initialValues={{
-            email: '',
-            subject: '',
-            comment: ''
-          }}
+          initialStatus={{ sent: false }}
+          initialValues={INITIAL_STATE}
           onSubmit={onSubmit}
-          render={({ errors, status, touched, isSubmitting }) => (
-            <Form className={styles.form}>
-              <Row>
-                <TextInput
-                  type='email'
-                  name='email'
-                  label='Tu email'
+          render={({ errors, values, status, touched, isSubmitting }) => {
+            const { sent } = status
+            const { name, email } = values
+            const messageSuccess = sent ? 'bounceInDown' : 'bounceOutUp'
+
+            return (
+              <>
+                <div className={cx('success', 'animated', messageSuccess, { sent })}>
+                  <h3>
+                    <div className={styles.successIcon}>
+                      <TickIcon />
+                    </div>
+                    Mensaje enviado
+                  </h3>
+                  <p>
+                    Gracias <strong>{name}</strong>,
+                    en cuanto lo reciba te contesto a tu email:
+                    <strong>{email}</strong>
+                  </p>
+                </div>
+                <FormComponent
+                  sent={sent}
                   errors={errors}
                   touched={touched}
-                  validate={emailValidation}
+                  isSubmitting={isSubmitting}
                 />
-              </Row>
-              <Row>
-                <TextInput
-                  type='text'
-                  name='subject'
-                  label='Asunto de tu consulta'
-                  errors={errors}
-                  touched={touched}
-                  validate={requiredValidation}
-                />
-              </Row>
-              <Row>
-                <TextAreaInput
-                  type='textarea'
-                  name='comment'
-                  label='Tus comentarios'
-                  errors={errors}
-                  touched={touched}
-                  validate={requiredValidation}
-                />
-              </Row>
-              <Row>
-                <button
-                  className={styles.button}
-                  type='submit'
-                  disabled={isSubmitting}
-                >
-                  <span>Enviar mensaje</span>
-                </button>
-              </Row>
-            </Form>
-          )}
+              </>
+            )
+          }}
         />
       </div>
     </Content>

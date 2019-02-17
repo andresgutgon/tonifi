@@ -1,6 +1,5 @@
 import * as React from 'react'
 import cn from 'classnames/bind'
-import { withPrefix } from 'gatsby'
 
 import Layout from '../Layout'
 import Header from '../Header'
@@ -88,7 +87,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
             </li>
             <li>
               <a
-                href={withPrefix(cvPdfPath)}
+                href={cvPdfPath}
                 target='_blank'
                 rel='noopener noreferrer'
               >

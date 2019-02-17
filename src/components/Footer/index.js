@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { withPrefix } from 'gatsby'
 
 import InstagramIcon from './InstagramIcon'
 import styles from './index.module.scss'
@@ -21,7 +20,7 @@ const Footer = ({ copyright, cvPdfPath, instagramUsername }) => (
       <li className={styles.separator} />
       <li>
         <a
-          href={withPrefix(cvPdfPath)}
+          href={cvPdfPath}
           target='_blank'
           rel='noopener noreferrer'
         >

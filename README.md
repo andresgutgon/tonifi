@@ -37,11 +37,15 @@ You have to go to `chrome://inspect` in your Chrome browser to start debugging
 - [x] Sidebar footer with Instagran Link and Download C.V.
 - [x] Mobile menu
 - [x] SEO with React Helmet
-- [ ] Contact form with Google app link and Formik
-- [ ] Send emails via [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
+- [x] Contact form with Formik
+- [x] Send emails via [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
+- [ ] Sticky navigation on mobile
 - [ ] Videos section
 
-This is the Google app URL to put on Contact form: `https://script.google.com/macros/s/AKfycbwSzORHBSE-no7C4et5Trm_64w28881aa5wH7DZ/exec`
+
+### Sent emails
+Is managed by an Excel called: `Toni Figure Contact form`
+Tutorial on how works [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) for sending emails
 
 ### Issues
 [pathPrefix does not work](https://github.com/gatsbyjs/gatsby/issues/2440). We need `pathPrefix` for deploying to Github pages. Let's see with custom domain if it's needed. If not need remove `cleanCache` task from package.json.

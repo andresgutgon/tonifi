@@ -25,7 +25,7 @@ $red-error-color: red;
     position: absolute;
     top: 2rem;
     left: 0;
-    font-size: 2rem;
+    font-size: 1.7rem;
     color: $gray-dark-2;
     font-weight: 500;
     transform-origin: 0 0;
@@ -98,6 +98,58 @@ $red-error-color: red;
   color: $gray-dark-2;
 }
 
+.success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &.sent {
+    display: flex;
+  }
+  &Icon {
+    display: flex;
+    margin: 0 1rem 0 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid $success-color;
+    @include mq-tablet-portrait-up {
+      height: 40px;
+      width: 40px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+      path {
+        fill: $success-color;
+      }
+    }
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $success-color;
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    @include mq-tablet-portrait-up {
+      font-size: 3rem;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: .9em;
+    line-height: 1.6;
+    margin-bottom: .5em;
+  }
+}
 .button {
   width: 100%;
   cursor: pointer;
