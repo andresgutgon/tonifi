@@ -2,7 +2,12 @@
 @import '../../../styles/mixins.scss';
 
 .menu {
+  background-color: $gray-dark-4;
   border-top: .1rem solid rgba(white, .1);
+  margin-top: -1px;
+  &.fixed {
+    z-index: $top-menu-zIndex;
+  }
   .list {
     list-style: none;
     margin: 0;
@@ -38,6 +43,8 @@
     color: white
   }
   @include mq-tablet-portrait-up {
+    background-color: transparent;
+    margin-top: 5rem;
     border-bottom: 0;
     .list {
       flex-direction: column;

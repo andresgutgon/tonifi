@@ -1,7 +1,10 @@
 import * as React from 'react'
+import cn from 'classnames/bind'
 import { Link } from 'gatsby'
 
+import StickyComponent from '../../StickyComponent'
 import styles from './index.module.scss'
+const cx = cn.bind(styles)
 
 // FIXME: Move to `siteConfig.js`
 const MENU_ITEMS = [
@@ -21,8 +24,8 @@ const MENU_ITEMS = [
     order: 3
   }
 ]
-const Menu = () => (
-  <nav className={styles.menu}>
+const MenuComponent = ({ fixed = false, inlineStyles = {} }) => (
+  <nav className={cx('menu', { fixed })} style={inlineStyles}>
     <ul className={styles.list}>
       {MENU_ITEMS.map((link, index) =>
         <li key={index} className={styles.menuItem}>
@@ -38,5 +41,24 @@ const Menu = () => (
     </ul>
   </nav>
 )
+
+function isBigScreen () {
+  if (typeof window === 'undefined') return true
+  return window.matchMedia('(min-width: 400px)').matches
+}
+
+const Menu = () => {
+  const bigScreen = isBigScreen()
+
+  if (bigScreen) return <MenuComponent />
+
+  return (
+    <StickyComponent position='top'>
+      {({ fixed, inlineStyles }) => (
+        <MenuComponent fixed={fixed} inlineStyles={inlineStyles} />
+      )}
+    </StickyComponent>
+  )
+}
 
 export default Menu

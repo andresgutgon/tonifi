@@ -39,7 +39,7 @@ You have to go to `chrome://inspect` in your Chrome browser to start debugging
 - [x] SEO with React Helmet
 - [x] Contact form with Formik
 - [x] Send emails via [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
-- [ ] Sticky navigation on mobile
+- [x] Sticky navigation on mobile
 - [ ] Videos section
 
 

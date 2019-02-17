@@ -8,12 +8,10 @@ import styles from './index.module.scss'
 const Navigation = ({
   name, surname, copyright, cvPdfPath, instagramUsername
 }) => (
-  <div className={styles.navigation}>
+  <nav className={styles.navigation}>
     <div className={styles.navigationInner}>
-      <div className={styles.top}>
-        <div className={styles.header}>
-          <Logo name={name} surname={surname} />
-        </div>
+      <div>
+        <Logo name={name} surname={surname} />
         <Menu />
       </div>
       <div className={styles.bottom}>
@@ -24,7 +22,7 @@ const Navigation = ({
         />
       </div>
     </div>
-  </div>
+  </nav>
 )
 
 export default Navigation

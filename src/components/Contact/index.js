@@ -26,7 +26,7 @@ const INITIAL_STATE = {
  */
 function emptyAnswerValidation(value) {
   const valueDom = document.getElementById('answer').value
-  if (value != '' || valueDom != '') return 'Bad boy'
+  if (value !== '' || valueDom !== '') return 'Bad boy'
 
   return null
 }
