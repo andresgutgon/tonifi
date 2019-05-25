@@ -13,57 +13,76 @@ const companies = JSON.parse(
 const cvPath = path.join(__dirname, 'data', 'cv.json')
 const cv = JSON.parse(fs.readFileSync(cvPath, 'utf8'))
 
-const imageRoot = '../../images/cv'
-function findTheaterCategory (work, categories) {
-  const category = categories.find(
-    c => c.id === work.category_id
-  )
-  if (!category) {
-    return 'no_category'
+const IMAGE_ROOT = '../../images/cv'
+
+function proccessEducation (education) {
+  if (!education.company_id) return education
+
+  const company = companies.find(c => c.id === education.company_id)
+
+  if (!company) {
+    throw new Error(
+      `No company found with id: ${education.company_id}`
+    )
   }
-  return category.label
+  education.company = company
+  return education
 }
 
+function proccessWork (work) {
+  const played = work.played || []
 
+  // Companies
+  if (work.company_id) {
+    const company = companies.find(
+      c => c.id === work.company_id
+    )
+    if (!company) {
+      throw new Error(
+        `No company found with id: ${work.company_id}`
+      )
+    }
+    work.company = company
+  }
+
+  // Entities
+  work.played = played.map(entityItem => {
+    const entity = entities.find(
+      item => item.id === entityItem.entity_id
+    )
+
+    if (!entity) {
+      throw new Error('No entity found')
+    }
+
+    const tags = entityItem.tags || []
+    return Object.assign(
+      { tags }, entity
+    )
+  })
+
+  return work
+}
 
 module.exports = function ProccesData () {
   cv.work = cv.work.map(group => {
-    group.image = `${imageRoot}/${group.image}`
-    group.items = group.items.map(work => {
-      const played = work.played || []
-
-      // Companies
-      if (work.company_id) {
-        const company = companies.find(
-          c => c.id === work.company_id
-        )
-        if (!company) {
-          throw new Error(
-            `No company found with id: ${work.company_id}`
-          )
-        }
-        work.company = company
-      }
-
-      // Entities
-      work.played = played.map(entityItem => {
-        const entity = entities.find(
-          item => item.id === entityItem.entity_id
-        )
-
-        if (!entity) {
-          throw new Error('No entity found')
-        }
-
-        const tags = entityItem.tags || []
-        return Object.assign(
-          { tags }, entity
-        )
+    group.image = `${IMAGE_ROOT}/${group.image}`
+    group.items = group
+      .items
+      .sort((work1, work2) => {
+        const year1 = work1.year || 1900
+        const year2 = work2.year || 1900
+        return year2 - year1
       })
+      .map(proccessWork)
 
-      return work
-    })
     return group
   })
+  cv.education = cv.education.sort((edu1, edu2) => {
+      const year1 = edu1.start_year || 1900
+      const year2 = edu2.start_year || 1900
+      return year2 - year1
+    })
+    .map(proccessEducation)
   return cv
 }

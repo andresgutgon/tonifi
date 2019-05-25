@@ -9,10 +9,14 @@ import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
 const METADATA = {
+  start_year: 'Curso',
+  end_year: 'Curso fin',
+  teacher: 'Profesor',
+  year: 'Año',
   director: 'Director',
-  production: 'Producción',
   author: 'Autor',
-  company: 'Compañía'
+  company: 'Compañía',
+  production: 'Producción'
 }
 
 function itemsGrouped (items) {
@@ -41,10 +45,13 @@ function hasMetadata(item) {
   return !!Object.keys(METADATA).map(meta => !item.meta)
 }
 
-function MetadataItem ({metaKey, item}) {
+function Title ({ title }) {
+  return <h4 className={styles.title}>{title}</h4>
+}
+
+function MetadataItem ({ metaKey, item }) {
   const content = item[metaKey]
   let name
-
 
   if (!content) return null
 
@@ -62,7 +69,8 @@ function MetadataItem ({metaKey, item}) {
     name = content.name
   }
 
-  if (typeof name !== 'string') return null
+  const type = typeof name
+  if (type !== 'string' && type !== 'number') return null
 
   return (
     <div className={styles.metadata}>
@@ -82,7 +90,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
         <div className={styles.infoLine}>
           <ul>
             <li>
-              <strong>Idiomas: </strong>
+              <strong>Idiomas:&nbsp;</strong>
               {languages.join(' / ')}
             </li>
             <li>
@@ -103,7 +111,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
           <div key={group.category}>
             <div
               className={styles.category}
-              style={{ backgroundImage: `url(${group.image.childImageSharp.fluid.src})` }}
+              style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(${group.image.childImageSharp.fluid.src})` }}
             >
               <h3 className={styles.categoryTitle}>
                 {group.category}
@@ -118,9 +126,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
                   {itemGroup.map((item, index) =>
                     <div key={index} className={styles.col}>
                       <div className={styles.item}>
-                        <h4 className={styles.itemTitle}>
-                          {item.title}
-                        </h4>
+                        <Title title={item.title} />
                         {hasMetadata(item) &&
                           <div className={styles.metadataList}>
                             {Object.keys(METADATA).map(metaKey =>
@@ -158,8 +164,23 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
         )}
         <h2 className={styles.sectionTitle}>Estudios</h2>
         <ul className={styles.education}>
-          {education.map((eduItem, index) =>
-            <li key={index}>{eduItem}</li>
+          {education.map((item, index) =>
+            <li key={index}>
+              <div className={styles.educationItem}>
+                <Title title={item.title} />
+                {hasMetadata(item) &&
+                 <div className={styles.metadataList}>
+                   {Object.keys(METADATA).map(metaKey =>
+                      <MetadataItem
+                        key={metaKey}
+                        metaKey={metaKey}
+                        item={item}
+                      />
+                    )}
+                 </div>
+                }
+              </div>
+            </li>
           )}
         </ul>
       </Content>

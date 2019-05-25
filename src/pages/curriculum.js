@@ -28,7 +28,16 @@ export const pageQuery = graphql`
       edges {
         node {
           languages
-          education
+          education {
+            title
+            teacher
+            company {
+              id
+              name
+            }
+            start_year
+            end_year
+          }
           contact {
             email
             phone
@@ -44,6 +53,7 @@ export const pageQuery = graphql`
             category
             items {
               title
+              year
               director
               production
               author

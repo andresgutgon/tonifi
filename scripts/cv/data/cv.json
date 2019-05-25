@@ -10,15 +10,37 @@
       "image": "teatro.jpg",
       "items": [
         {
+          "title": "Els reis de Shakespeare escriuen el discurs de Phillipe the sixth",
+          "year": 2019,
+          "author": "LaminimaL",
+          "company_id": "la_minimal_teatre",
+          "played": [
+            { "entity_id": "sala_barts"}
+          ]
+        },
+        {
+          "title": "Frankenstein, musical (Gira)",
+          "author": "Mary Shelly",
+          "year": 2017,
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
           "title": "Espejismo 53: Arrojarse al vacío",
           "author": "Albert Pijuan y LaminimaL",
+          "year": 2017,
           "played": [
             { "entity_id": "festival_santiago_off" }
           ]
         },
         {
           "title": "Apocalypse/Uploaded",
+          "company_id": "la_minimal_teatre",
           "author": "Albert Pijuan y LaminimaL",
+          "year": 2016,
           "played": [
             { "entity_id": "fira_tarrega" },
             { "entity_id": "frinje_madrid" }
@@ -26,6 +48,7 @@
         },
         {
           "title": "Jekyll & Hide, musical (Gira)",
+          "year": 2016,
           "played": [
             {
               "entity_id": "chamber_theater_company"
@@ -34,7 +57,9 @@
         },
         {
           "title": "La supervivència de les lluernes",
+          "company_id": "la_minimal_teatre",
           "author": "LaminimaL",
+          "year": 2016,
           "played": [
             { "entity_id": "fira_tarrega" },
             { "entity_id": "frinje_madrid" },
@@ -46,6 +71,7 @@
         },
         {
           "title": "The Crimes on the rue morgue, musical. (Gira)",
+          "year": 2015,
           "played": [
             {
               "entity_id": "chamber_theater_company"
@@ -55,13 +81,25 @@
         {
           "title": "Fam de llibertat",
           "author": "Marcel Vilarós i Alberto Reche",
+          "year": 2014,
           "played": [
             { "entity_id": "blanc_i_negre" }
           ]
         },
         {
+          "title": "The Phantom of the Opera, musical (Gira)",
+          "year": 2014,
+          "played": [
+            {
+              "entity_id": "chamber_theater_company"
+            }
+          ]
+        },
+        {
           "title": "El suïcidi de l’Elefant Hipotecat",
           "author": "LaminimaL",
+          "year": 2013,
+          "company_id": "la_minimal_teatre",
           "played": [
             {
               "entity_id": "sala_tantarantana",
@@ -73,7 +111,9 @@
           ]
         },
         {
-          "title": "The Phantom of the Opera, musical (Gira)",
+          "title": "Dràcula, musical (Gira)",
+          "author": "Bram Stoker",
+          "year": 2013,
           "played": [
             {
               "entity_id": "chamber_theater_company"
@@ -83,38 +123,23 @@
         {
           "title": "La Grandesa d’ésser un entre tants",
           "author": "David Eudave i LaminimaL",
+          "year": 2011,
           "played": [
             { "entity_id": "sala_beckett" }
           ]
         },
         {
-          "title": "Dràcula, musical (Gira)",
-          "author": "Bram Stoker",
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
           "title": "El teló de pedra",
           "author": "Marcel Vilarós",
+          "year": 2011,
           "played": [
             { "entity_id": "blanc_i_negre" }
           ]
         },
         {
-          "title": "Frankenstein, musical (Gira)",
-          "author": "Mary Shelly",
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
           "title": "La mort no és el final",
           "author": "Marcel Vilarós Alberto Reche",
+          "year": 2010,
           "played": [
             { "entity_id": "blanc_i_negre" }
           ]
@@ -122,6 +147,7 @@
         {
           "title": "L'Hostalera",
           "author": "Carlo Goldoni",
+          "year": 2009,
           "production": "Mondocane Producciones",
           "played": [
             { "entity_id": "sala_muntaner" }
@@ -130,26 +156,30 @@
         {
           "title": "Qui té por de la Virginia Woolf?",
           "author": "Edward Albee.",
+          "year": 2008,
           "played": [
             { "entity_id": "teatre_del_sol" }
           ]
         },
         {
-          "title": "Mar i Cel (gira)",
-          "author": "Àngel Guimerà",
-          "production": "Mondocane Producciones"
-        },
-        {
           "title": "Bent",
           "author": "Martin Sheerman",
+          "year": 2002,
           "company_id": "de_la_crem_produccions",
           "played": [
             { "entity_id": "versus_teatre" }
           ]
         },
         {
+          "title": "Mar i Cel (gira)",
+          "author": "Àngel Guimerà",
+          "year": 2008,
+          "production": "Mondocane Producciones"
+        },
+        {
           "title": "Pòker",
           "author": "Glòria Marín",
+          "year": 2001,
           "company_id": "de_la_crem_produccions"
         }
       ]
@@ -159,23 +189,25 @@
       "image": "teatro.jpg",
       "items": [
         {
+          "title": "La família monstre",
+          "year": 2017,
+          "author": "Viu el Teatre i Tibidabo",
+          "played": [
+            { "entity_id": "parc_tibidabo" }
+          ]
+        },
+        {
           "title": "Les aventures d'Aladí (Gira)",
+          "year": 2017,
           "company_id": "teatritus",
           "played": [
             { "entity_id": "teatre_apolo" }
           ]
         },
         {
-          "title": "El petit Dalí (Gira)",
-          "company_id": "unics_produccions",
-          "played": [
-            { "entity_id": "teatre_romea" },
-            { "entity_id": "teatre_poliorama" }
-          ]
-        },
-        {
           "title": "Les mascotes del Tibidabo fan la volta al món",
           "company_id": "unics_produccions",
+          "year": 2016,
           "played": [
             { "entity_id": "parc_tibidabo" }
           ]
@@ -183,6 +215,7 @@
         {
           "title": "Les aventures de les mascotes del Tibidabo",
           "company_id": "unics_produccions",
+          "year": 2015,
           "played": [
             { "entity_id": "parc_tibidabo" }
           ]
@@ -190,32 +223,54 @@
         {
           "title": "Tibinet",
           "company_id": "unics_produccions",
+          "year": 2015,
           "played": [
             { "entity_id": "parc_tibidabo" }
           ]
         },
         {
+          "title": "Patatu",
+          "year": 2015,
+          "company_id": "unics_produccions",
+          "played": [
+            { "entity_id": "teatre_romea" }
+          ]
+        },
+        {
+          "title": "El petit Dalí (Gira)",
+          "company_id": "unics_produccions",
+          "year": 2013,
+          "played": [
+            { "entity_id": "teatre_romea" },
+            { "entity_id": "teatre_poliorama" }
+          ]
+        },
+        {
           "title": "The Magic Books (Gira)",
+          "year": 2011,
           "played": [
             { "entity_id": "polizon_teatro" }
           ]
         },
         {
-          "title": "El Follet Valent (Gira)",
-          "company_id": "unics_produccions",
-          "played": [
-            { "entity_id": "teatre_poliorama" }
-          ]
-        },
-        {
           "title": "La Clau Somiada",
           "company_id": "unics_produccions",
+          "year": 2011,
           "played": [
             { "entity_id": "parc_tibidabo" }
           ]
         },
         {
+          "title": "El Follet Valent (Gira)",
+          "company_id": "unics_produccions",
+          "year": 2010,
+          "played": [
+            { "entity_id": "teatre_poliorama" }
+          ]
+        },
+        {
           "title": "The Fruits (Gira)",
+          "year": 2010,
           "played": [
             { "entity_id": "polizon_teatro" }
           ]
@@ -223,6 +278,7 @@
         {
           "title": "Papanotes (Gira)",
           "company_id": "unics_produccions",
+          "year": 2009,
           "played": [
             { "entity_id": "teatre_poliorama" }
           ]
@@ -230,6 +286,7 @@
         {
           "title": "Pirats, els joglars flotants (Gira)",
           "company_id": "unics_produccions",
+          "year": 2009,
           "played": [
             { "entity_id": "teatre_poliorama" }
           ]
@@ -237,24 +294,29 @@
         {
           "title": "Tibi, el Follet de Collserola",
           "company_id": "unics_produccions",
+          "year": 2009,
           "played": [
             { "entity_id": "parc_tibidabo" }
           ]
         },
         {
           "title": "La Ventafocs (Gira)",
+          "year": 2006,
           "company_id": "catacrac"
         },
         {
           "title": "Monstres i altres bèsties (Gira)",
+          "year": 2005,
           "company_id": "teresa_roig"
         },
         {
           "title": "La llegenda de St. Jordi",
+          "year": 2004,
           "company_id": "de_la_crem_produccions"
         },
         {
           "title": "Fes visible l'invisible",
+          "year": 2003,
           "company_id": "recrea_accions",
           "played": [
             { "entity_id": "museo_art_sabadel" }
@@ -267,35 +329,48 @@
       "image": "teatro.jpg",
       "items": [
         {
-          "title": "El petit Lilo",
+          "title": "Sysiphus",
+          "year": 2018,
           "company_id": "actua_produccions"
         },
         {
           "title": "Els gegants",
+          "year": 2018,
           "company_id": "actua_produccions"
         },
         {
           "title": "Les nòmades",
+          "year": 2018,
+          "company_id": "actua_produccions"
+        },
+        {
+          "title": "El petit Lilo",
+          "year": 2017,
           "company_id": "actua_produccions"
         },
         {
           "title": "El campament de l'Ambaixador",
+          "year": 2005,
           "company_id": "de_la_crem_produccions"
         },
         {
           "title": "Rambla's show. Management i disseny d’espectacles",
+          "year": 2002,
           "company_id": "royal_caribbean"
         },
         {
           "title": "Deixeu que parlin les pedres",
+          "year": 2001,
           "company_id": "de_la_crem_produccions"
         },
         {
           "title": "Spiders",
+          "year": 2000,
           "company_id": "setekrit_teatre"
         },
         {
           "title": "Una Visita als monuments modernistes de la Caixa d'estalvis de Sabadell",
+          "year": 2000,
           "company_id": "de_la_crem_produccions"
         }
       ]
@@ -306,67 +381,71 @@
       "items": [
         {
           "title": "Mira lo que has hecho",
+          "year": 2018,
           "played": [
             { "entity_id": "movistar_plus_mira_lo_que_has_hecho" }
           ]
         },
         {
           "title": "Fes-te soci!",
+          "year": 2018,
           "played": [
             { "entity_id": "ce_sabadell" }
           ]
         },
         {
-          "title": "El cor de la ciutat (secundario)",
-          "played": [
-            { "entity_id": "tv3_el_cor_de_la_ciutat" }
-          ]
-        },
-        {
           "title": "Els Abans de Déu. Secundari",
-          "played": [
-            { "entity_id": "xtlc" }
-          ]
-        },
-        {
-          "title": "Els Abans de Déu. Secundari",
+          "year": 2011,
           "played": [
             { "entity_id": "xtlc" }
           ]
         },
         {
           "title": "Anuncio de Cerveza San Miguel (protagonista)",
+          "year": 2011,
           "played": [
             { "entity_id": "san_miguel_landia_films" }
           ]
         },
         {
+          "title": "El cor de la ciutat (secundario)",
+          "year": 2009,
+          "played": [
+            { "entity_id": "tv3_el_cor_de_la_ciutat" }
+          ]
+        },
+        {
           "title": "More (cortometraje)",
+          "year": 2008,
           "played": [
             { "entity_id": "escac" },
             { "entity_id": "pavoreal_films" }
           ]
         },
         {
-          "title": "Anuncio como protagonista para Hard Rock Cafè",
+          "title": "Anuncio para Hard Rock Cafè (protagonista)",
+          "year": 2008,
           "played": [
             { "entity_id": "pavoreal_films" }
           ]
         },
         {
           "title": "Negra noche (cortometraje)",
+          "year": 2008,
           "played": [
             { "entity_id": "cecc" }
           ]
         },
         {
           "title": "Mila (cortometraje)",
+          "year": 2007,
           "played": [
             { "entity_id": "escac" }
           ]
         },
         {
           "title": "Manual de natación (cortometraje)",
+          "year": 2007,
           "played": [
             { "entity_id": "escac" },
             { "entity_id": "pavoreal_films" }
@@ -374,6 +453,7 @@
         },
         {
           "title": "Hemisferios a ciegas",
+          "year": 2007,
           "played": [
             { "entity_id": "escac" },
             { "entity_id": "maynetto_producciones" }
@@ -381,6 +461,7 @@
         },
         {
           "title": "Deux ex Machina",
+          "year": 2007,
           "played": [
             { "entity_id": "cecc" },
             { "entity_id": "roy_baritten" }
@@ -388,6 +469,7 @@
         },
         {
           "title": "Para lo que hay que decir (cortometraje)",
+          "year": 2007,
           "played": [
             { "entity_id": "escac" },
             { "entity_id": "francisco_amezcua" }
@@ -395,6 +477,7 @@
         },
         {
           "title": "El Buzzlightyear (cortometraje)",
+          "year": 2007,
           "played": [
             { "entity_id": "escac" },
             { "entity_id": "pavoreal_films" }
@@ -402,36 +485,42 @@
         },
         {
           "title": "Som (cortometraje)",
+          "year": 2006,
           "played": [
             { "entity_id": "uab_el_grinyol_producciones" }
           ]
         },
         {
-          "title": "Revival (Programa videoclips)",
-          "played": [
-            { "entity_id": "flaix_tv" }
-          ]
-        },
-        {
-          "title": "Anuncio para SEAT Sarsa (protagonista)",
-          "played": [
-            { "entity_id": "brunet_films" }
-          ]
-        },
-        {
           "title": "Anuncio para M2 Construccions (protagonista)",
+          "year": 2006,
           "played": [
             { "entity_id": "brunet_films" }
           ]
         },
         {
           "title": "Quieren matar a Francesco! (cortometraje en 16mm)",
+          "year": 2006,
           "played": [
             { "entity_id": "escac" }
           ]
         },
         {
+          "title": "Anuncio para SEAT Sarsa (protagonista)",
+          "year": 2005,
+          "played": [
+            { "entity_id": "brunet_films" }
+          ]
+        },
+        {
+          "title": "Revival (Programa videoclips)",
+          "year": 2002,
+          "played": [
+            { "entity_id": "flaix_tv" }
+          ]
+        },
+        {
           "title": "Pack (Cortometraje)",
+          "year": 1997,
           "played": [
             { "entity_id": "imatge_sl_produccions" }
           ]
@@ -442,6 +531,30 @@
       "category": "Lecturas y recitales",
       "image": "lecturas_y_recitales.jpg",
       "items": [
+        {
+          "title": "Ketchup (Lectura  dramatizada de la novela)",
+          "year": 2006,
+          "author": "Xavier Gual",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "El Papa y la Bruja (Lectura  dramatizada)",
+          "year": 2000,
+          "author": "Darío Fo",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Edmond",
+          "year": 2000,
+          "author": "David Mamet",
+          "company_id": "de_la_crem_produccions"
+        },
+        {
+          "title": "Un espacio para el sueño (Recital de poemas)",
+          "year": 2000,
+          "author": "Martí i Pol y Benedetti",
+          "company_id": "de_la_crem_produccions"
+        },
         {
           "title": "Lectures Dramatitzades",
           "author": "Varios autores",
@@ -455,26 +568,6 @@
           "played": [
             { "entity_id": "blanc_i_negre" }
           ]
-        },
-        {
-          "title": "Ketchup (Lectura  dramatizada de la novela)",
-          "author": "Xavier Gual",
-          "company_id": "de_la_crem_produccions"
-        },
-        {
-          "title": "El Papa y la Bruja (Lectura  dramatizada)",
-          "author": "Darío Fo",
-          "company_id": "de_la_crem_produccions"
-        },
-        {
-          "title": "Edmond",
-          "author": "David Mamet",
-          "company_id": "de_la_crem_produccions"
-        },
-        {
-          "title": "Un espacio para el sueño (Recital de poemas)",
-          "author": "Martí i Pol y Benedetti",
-          "company_id": "de_la_crem_produccions"
         }
       ]
     },
@@ -484,37 +577,83 @@
       "items": [
         {
           "title": "La Dogaresa",
+          "year": 2009,
           "company_id": "lirica_bcn"
         },
         {
           "title": "Agua, azucarillos y aguardiente",
+          "year": 2008,
           "company_id": "lirica_bcn"
         },
         {
           "title": "Luisa Fernanda",
+          "year": 2008,
           "company_id": "lirica_bcn"
         },
         {
           "title": "La Corte del Faraón",
+          "year": 2008,
           "company_id": "lirica_bcn"
         },
         {
           "title": "La Leyenda del Beso",
+          "year": 2007,
           "company_id": "lirica_bcn"
         }
       ]
     }
   ],
   "education": [
-    "Graduat en interpretació pel Col·legi del Teatre de Barcelona",
-    "El verso y la dicción en inglés con textos de Shakespeare, con en Dugald BruceLockhart de la compañia  Propellers",
-    "El actor y la cámara con el director Esteve Rovira",
-    "Acting in English, con Lucy Lenox",
-    "Interpretación de canciones con Ángel Cerdanya 'El Sueco'",
-    "Técnicas de improvisación con Mercè Lleixà",
-    "Dicción con Rosa Victoria Gras",
-    "Danza-teatro con Jordi Cortés",
-    "Danza contemporánea con Susana do Fao",
-    "Máscara neutro con Ester Nadal"
+    {
+      "title": "El actor y la cámara",
+      "teacher": "Esteve Rovira (director)",
+      "start_year": 2008,
+      "end_year": 2009
+    },
+    {
+      "title": "Graduat en interpretació pel Col·legi del Teatre de Barcelona",
+      "start_year": 1999,
+      "end_year": 2002
+    },
+    {
+      "title": "El verso y la dicción en inglés con textos de Shakespeare",
+      "teacher": "Dugald BruceLockhart",
+      "company_id": "propellers"
+    },
+    {
+      "title": "Acting in English",
+      "teacher": "Lucy Lenox",
+      "start_year": 2002
+    },
+    {
+      "title": "Interpretación de canciones",
+      "teacher": "Ángel Cerdanya 'El Sueco'",
+      "start_year": 2002
+    },
+    {
+      "title": "Técnicas de improvisación",
+      "teacher": "Mercè Lleixà",
+      "start_year": 2002
+    },
+    {
+      "title": "Dicción",
+      "teacher": "Rosa Victoria Gras",
+      "start_year": 2001
+    },
+    {
+      "title": "Danza-teatro",
+      "teacher": "Jordi Cortés",
+      "start_year": 2001
+    },
+    {
+      "title": "Danza contemporánea",
+      "teacher": "Susana do Fao",
+      "start_year": 2001
+    },
+    {
+      "title": "Máscara neutro",
+      "teacher": "Ester Nadal",
+      "start_year": 2001
+    }
   ]
 }

@@ -44,7 +44,7 @@ You have to go to `chrome://inspect` in your Chrome browser to start debugging
 
 
 ### Sent emails
-Is managed by an Excel called: `Toni Figure Contact form`
+Is managed by an Excel called: `Toni Figuera Contact form`
 Tutorial on how works [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server) for sending emails
 
 ### Issues

@@ -1,27 +1,12 @@
 const styles = require('./styles.js')
-
-function splitInColumns (items, numColumns) {
-  const halftWorksCount = Math.round(items.length / numColumns)
-  const firstColumn = items.slice(0, halftWorksCount)
-  const lastColumn = items.slice(halftWorksCount, items.length)
-
-  if (lastColumn.length <= 0) return [firstColumn]
-
-  return [ firstColumn, lastColumn]
-}
-
-function renderSubitem (content, label) {
-  if (!content) return null
-  return {
-    text: [
-      { style: 'bold', text: label },
-      content
-    ]
-  }
-}
+const utils = require('./utils.js')
+const { renderItem, splitInColumns, renderSubitem } = utils
 
 function renderSubitems (item) {
   let items = []
+
+  const year = renderSubitem(item.year, 'Año: ')
+  if (year) items.push(year)
 
   const author = renderSubitem(item.author, 'Autor: ')
   if (author) items.push(author)
@@ -65,22 +50,6 @@ function renderSubitems (item) {
   }
 }
 
-function renderItem (workItem) {
-  debugger
-  return {
-    layout: 'noBorders',
-    style: 'workItemRow',
-    table: {
-      body: [
-        [
-          { text: workItem.title }
-        ],
-        [ renderSubitems(workItem)]
-      ]
-    }
-  }
-}
-
 module.exports = function buildWork (work, allData, isFirst) {
   const columns = splitInColumns(work.items, 2)
 
@@ -100,7 +69,9 @@ module.exports = function buildWork (work, allData, isFirst) {
           ],
           [
             {
-              columns: columns.map((column) => column.map(renderItem))
+              columns: columns.map((column) =>
+                column.map(renderItem(renderSubitems))
+              )
             }
           ],
         ]

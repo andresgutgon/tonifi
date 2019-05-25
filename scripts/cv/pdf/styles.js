@@ -49,9 +49,6 @@ module.exports = {
       workTableRow: {
         margin: [0, 0, 0, 30]
       },
-      educationTable: {
-        margin: [0, 40, 0, 0]
-      },
       tableHeader: {
         bold: true,
         fontSize: 14,
@@ -71,10 +68,6 @@ module.exports = {
         bold: true
       },
       workItemRow: {
-        margin: [0, 0, 0, 10]
-      },
-      education: {
-        fontSize: 12,
         margin: [0, 0, 0, 10]
       }
     },

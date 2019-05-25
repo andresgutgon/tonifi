@@ -1,5 +1,10 @@
 [
   {
+    "id": "la_minimal_teatre",
+    "name": "LAminimaL Teatre",
+    "url": "http://www.laminimalteatre.cat/"
+  },
+  {
     "id": "unics_produccions",
     "name": "Unics produccions",
     "url": "https://www.facebook.com/Unicsproduccions"
@@ -11,7 +16,7 @@
   },
   {
     "id": "royal_caribbean",
-    "name": "Roya Caribbean",
+    "name": "Royal Caribbean",
     "url": "https://www.royalcaribbean.com"
   },
   {
@@ -44,5 +49,9 @@
   {
     "id": "recrea_accions",
     "name": "Recrea-Accions"
+  },
+  {
+    "id": "propellers",
+    "name": "Propellers"
   }
 ]
