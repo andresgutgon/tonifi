@@ -9,14 +9,13 @@ import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
 const METADATA = {
-  start_year: 'Curso',
-  end_year: 'Curso fin',
-  teacher: 'Profesor',
-  year: 'Año',
+  start_year: 'Curs',
+  teacher: 'Professor/a',
+  year: 'Any',
   director: 'Director',
   author: 'Autor',
-  company: 'Compañía',
-  production: 'Producción'
+  company: 'Companyia',
+  production: 'Productora'
 }
 
 function itemsGrouped (items) {
@@ -51,6 +50,7 @@ function Title ({ title }) {
 
 function MetadataItem ({ metaKey, item }) {
   const content = item[metaKey]
+  const isCareer = item['is_career']
   let name
 
   if (!content) return null
@@ -71,10 +71,13 @@ function MetadataItem ({ metaKey, item }) {
 
   const type = typeof name
   if (type !== 'string' && type !== 'number') return null
-
+  const contentMeta = METADATA[metaKey]
+  const meta = metaKey === 'start_year' && isCareer ? 'Promoció' : contentMeta
   return (
     <div className={styles.metadata}>
-      <strong>{METADATA[metaKey]}</strong>
+      {metaKey !== 'year' &&
+       <strong>{meta}</strong>
+      }
       {name}
     </div>
   )
@@ -86,11 +89,11 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
 
   return (
     <Layout pageTitle='Curriculum' pathname='cv' metaImage={thumbnail}>
-      <Header title='Curriculum'>
+      <Header title='Currículum'>
         <div className={styles.infoLine}>
           <ul>
             <li>
-              <strong>Idiomas:&nbsp;</strong>
+              <strong>Idiomes:&nbsp;</strong>
               {languages.join(' / ')}
             </li>
             <li>
@@ -106,7 +109,6 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
         </div>
       </Header>
       <Content>
-        <h2 className={styles.sectionTitle}>Trayectoria</h2>
         {work.map((group) =>
           <div key={group.category}>
             <div
@@ -140,7 +142,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
                         }
                         {item.played.length > 0 &&
                           <div className={styles.places}>
-                            <strong>Representado en:</strong>
+                            <strong>Productora:</strong>
                             <div className={styles.placeList}>
                               {item.played.map((place, index)=>
                                 <div key={index} className={styles.place}>
@@ -162,7 +164,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
             </div>
           </div>
         )}
-        <h2 className={styles.sectionTitle}>Estudios</h2>
+        <h2 className={styles.sectionTitle}>Estudis</h2>
         <ul className={styles.education}>
           {education.map((item, index) =>
             <li key={index}>

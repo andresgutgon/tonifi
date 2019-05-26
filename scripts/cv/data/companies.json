@@ -53,5 +53,13 @@
   {
     "id": "propellers",
     "name": "Propellers"
+  },
+  {
+    "id": "studi_karloff",
+    "name": "Studi Karloff"
+  },
+  {
+    "id": "ruben_sanchez_productions",
+    "name": "Ruben Sanchez productions"
   }
 ]

@@ -3,10 +3,10 @@
     "phone": "606 97 97 35",
     "email": "tonifiguera@hotmail.com"
   },
-  "languages": ["Castellano", "Catalan", "Ingles"],
+  "languages": ["Castellano", "Català", "English"],
   "work": [
     {
-      "category": "Teatro",
+      "category": "Teatre",
       "image": "teatro.jpg",
       "items": [
         {
@@ -185,8 +185,8 @@
       ]
     },
     {
-      "category": "Teatro familiar",
-      "image": "teatro.jpg",
+      "category": "Teatre familiar",
+      "image": "teatro-familiar.jpg",
       "items": [
         {
           "title": "La família monstre",
@@ -325,8 +325,8 @@
       ]
     },
     {
-      "category": "Teatro de calle",
-      "image": "teatro.jpg",
+      "category": "Teatre de carrer",
+      "image": "teatres-de-carrer.jpg",
       "items": [
         {
           "title": "Sysiphus",
@@ -380,42 +380,57 @@
       "image": "audiovisual.jpg",
       "items": [
         {
-          "title": "Mira lo que has hecho",
+          "title": "El cazador de lobos (curtmetratge / protagonista)",
+          "year": 2019,
+          "production": "Rll produccions"
+        },
+        {
+          "title": "Alexa (curtmetratge / secundari)",
+          "year": 2019,
+          "production": "TC Matar producciones"
+        },
+        {
+          "title": "Rosario (curtmetratge / secundari)",
+          "year": 2019,
+          "production": "Sur producciones i ESCAC films"
+        },
+        {
+          "title": "Mira lo que has hecho (serie / secundari capitular)",
           "year": 2018,
           "played": [
             { "entity_id": "movistar_plus_mira_lo_que_has_hecho" }
           ]
         },
         {
-          "title": "Fes-te soci!",
+          "title": "Fes-te soci! (anunci per a CE Sabadell / protagonista)",
           "year": 2018,
           "played": [
-            { "entity_id": "ce_sabadell" }
+            { "entity_id": "at_productions"}
           ]
         },
         {
-          "title": "Els Abans de Déu. Secundari",
+          "title": "Els Abans de Déu. (serie / secundari capitular)",
           "year": 2011,
           "played": [
             { "entity_id": "xtlc" }
           ]
         },
         {
-          "title": "Anuncio de Cerveza San Miguel (protagonista)",
+          "title": "Mi experiencia (anunci per a cervesa San Miguel / protagonista)",
           "year": 2011,
           "played": [
             { "entity_id": "san_miguel_landia_films" }
           ]
         },
         {
-          "title": "El cor de la ciutat (secundario)",
+          "title": "El cor de la ciutat (serie / secundari)",
           "year": 2009,
           "played": [
             { "entity_id": "tv3_el_cor_de_la_ciutat" }
           ]
         },
         {
-          "title": "More (cortometraje)",
+          "title": "More (curtmetratge / protagonista)",
           "year": 2008,
           "played": [
             { "entity_id": "escac" },
@@ -423,28 +438,28 @@
           ]
         },
         {
-          "title": "Anuncio para Hard Rock Cafè (protagonista)",
+          "title": "Safe the Rock Stars (anunci per a Hard Rock Café / protagonista)",
           "year": 2008,
           "played": [
             { "entity_id": "pavoreal_films" }
           ]
         },
         {
-          "title": "Negra noche (cortometraje)",
+          "title": "Negra noche (curtmetratge / secundari)",
           "year": 2008,
           "played": [
             { "entity_id": "cecc" }
           ]
         },
         {
-          "title": "Mila (cortometraje)",
+          "title": "Mila (curtmetratge / secundari)",
           "year": 2007,
           "played": [
             { "entity_id": "escac" }
           ]
         },
         {
-          "title": "Manual de natación (cortometraje)",
+          "title": "Manual de natación (curtmetratge / protagonista)",
           "year": 2007,
           "played": [
             { "entity_id": "escac" },
@@ -452,7 +467,7 @@
           ]
         },
         {
-          "title": "Hemisferios a ciegas",
+          "title": "Hemisferios a ciegas (curtmetrage / protagonista)",
           "year": 2007,
           "played": [
             { "entity_id": "escac" },
@@ -460,7 +475,7 @@
           ]
         },
         {
-          "title": "Deux ex Machina",
+          "title": "Deux ex Machina (curtmetrage / secundari)",
           "year": 2007,
           "played": [
             { "entity_id": "cecc" },
@@ -468,7 +483,7 @@
           ]
         },
         {
-          "title": "Para lo que hay que decir (cortometraje)",
+          "title": "Para lo que hay que decir (curtmetratge / protagonista)",
           "year": 2007,
           "played": [
             { "entity_id": "escac" },
@@ -476,7 +491,7 @@
           ]
         },
         {
-          "title": "El Buzzlightyear (cortometraje)",
+          "title": "El Buzzlightyear (curtmetratge / protagonista)",
           "year": 2007,
           "played": [
             { "entity_id": "escac" },
@@ -484,28 +499,28 @@
           ]
         },
         {
-          "title": "Som (cortometraje)",
+          "title": "Som (curtmetratge / protagonista)",
           "year": 2006,
           "played": [
             { "entity_id": "uab_el_grinyol_producciones" }
           ]
         },
         {
-          "title": "Anuncio para M2 Construccions (protagonista)",
+          "title": "¿Por dónde empiezo? (anunci per a M2 Construccions / protagonista)",
           "year": 2006,
           "played": [
             { "entity_id": "brunet_films" }
           ]
         },
         {
-          "title": "Quieren matar a Francesco! (cortometraje en 16mm)",
+          "title": "Quieren matar a Francesco! (curtmetratge / protagonista)",
           "year": 2006,
           "played": [
             { "entity_id": "escac" }
           ]
         },
         {
-          "title": "Anuncio para SEAT Sarsa (protagonista)",
+          "title": "Viajando (anunci per a SEAT Sarsa / protagonista)",
           "year": 2005,
           "played": [
             { "entity_id": "brunet_films" }
@@ -519,7 +534,7 @@
           ]
         },
         {
-          "title": "Pack (Cortometraje)",
+          "title": "Pack (curtmetratge / protagonista)",
           "year": 1997,
           "played": [
             { "entity_id": "imatge_sl_produccions" }
@@ -528,17 +543,17 @@
       ]
     },
     {
-      "category": "Lecturas y recitales",
+      "category": "Lectures i recitals",
       "image": "lecturas_y_recitales.jpg",
       "items": [
         {
-          "title": "Ketchup (Lectura  dramatizada de la novela)",
+          "title": "Ketchup (Lectura  dramatitzada de la novela)",
           "year": 2006,
           "author": "Xavier Gual",
           "company_id": "de_la_crem_produccions"
         },
         {
-          "title": "El Papa y la Bruja (Lectura  dramatizada)",
+          "title": "El Papa y la Bruja (Lectura  dramatitzada)",
           "year": 2000,
           "author": "Darío Fo",
           "company_id": "de_la_crem_produccions"
@@ -557,7 +572,7 @@
         },
         {
           "title": "Lectures Dramatitzades",
-          "author": "Varios autores",
+          "author": "Varis autors",
           "director": "David Plana",
           "played": [
             { "entity_id": "sala_beckett" }
@@ -572,7 +587,7 @@
       ]
     },
     {
-      "category": "Zarzuela",
+      "category": "Sarsuela",
       "image": "zarzuela.jpg",
       "items": [
         {
@@ -605,20 +620,24 @@
   ],
   "education": [
     {
-      "title": "El actor y la cámara",
+      "title": "Entrenament actoral en càmera",
+      "start_year": 2019,
+      "teacher": "Pep Armengol i Lluisa Castells"
+    },
+    {
+      "title": "El vers i la dicció en anglès en textos de Shakespeare",
+      "start_year": 2018,
+      "teacher": "Dugald BruceLockhart"
+    },
+    {
+      "title": "L'actor i la càmera",
       "teacher": "Esteve Rovira (director)",
-      "start_year": 2008,
-      "end_year": 2009
+      "start_year": 2008
     },
     {
       "title": "Graduat en interpretació pel Col·legi del Teatre de Barcelona",
-      "start_year": 1999,
-      "end_year": 2002
-    },
-    {
-      "title": "El verso y la dicción en inglés con textos de Shakespeare",
-      "teacher": "Dugald BruceLockhart",
-      "company_id": "propellers"
+      "is_career": true,
+      "start_year": 1999
     },
     {
       "title": "Acting in English",
@@ -626,32 +645,32 @@
       "start_year": 2002
     },
     {
-      "title": "Interpretación de canciones",
+      "title": "Interpretació de cançons",
       "teacher": "Ángel Cerdanya 'El Sueco'",
       "start_year": 2002
     },
     {
-      "title": "Técnicas de improvisación",
+      "title": "Técniques d'improvització",
       "teacher": "Mercè Lleixà",
       "start_year": 2002
     },
     {
-      "title": "Dicción",
+      "title": "Dicció",
       "teacher": "Rosa Victoria Gras",
       "start_year": 2001
     },
     {
-      "title": "Danza-teatro",
+      "title": "Dansa-teatre",
       "teacher": "Jordi Cortés",
       "start_year": 2001
     },
     {
-      "title": "Danza contemporánea",
+      "title": "Dansa contemporània",
       "teacher": "Susana do Fao",
       "start_year": 2001
     },
     {
-      "title": "Máscara neutro",
+      "title": "Màscara neutre",
       "teacher": "Ester Nadal",
       "start_year": 2001
     }

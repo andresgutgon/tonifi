@@ -31,12 +31,8 @@ export const pageQuery = graphql`
           education {
             title
             teacher
-            company {
-              id
-              name
-            }
+            is_career
             start_year
-            end_year
           }
           contact {
             email
