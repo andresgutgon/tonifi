@@ -15,7 +15,7 @@
     "cleanStart": "npm run cleanDevelop",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "npm run cleanCache && npm run generateCv && gatsby build --prefix-paths",
+    "build": "npm run cleanCache && npm run generateCv && gatsby build",
     "deploy": "npm run build && gh-pages -d public"
   },
   "devDependencies": {
