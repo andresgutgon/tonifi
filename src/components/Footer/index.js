@@ -24,7 +24,7 @@ const Footer = ({ copyright, cvPdfPath, instagramUsername }) => (
           target='_blank'
           rel='noopener noreferrer'
         >
-          Descargar CV (PDF)
+          Descarregar CV (PDF)
         </a>
       </li>
     </ul>

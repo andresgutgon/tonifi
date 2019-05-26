@@ -23,12 +23,8 @@
     {
       "title": "La grandesa d'Esser",
       "alt": "la grandesa desser",
-      "src": "../../images/photos/la-grandesa-desser-3.jpg"
-    },
-    {
-      "title": "Luciernagas",
-      "alt": "luciernagas",
-      "src": "../../images/photos/luciernagas.jpg"
+      "src": "../../images/photos/la-grandesa-desser-3.jpg",
+      "full": true
     },
     {
       "title": "Luciernagas",

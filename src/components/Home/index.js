@@ -14,9 +14,9 @@ const Home = ({ images, pathname, pageTitle }) => {
       pathname={pathname}
       pageTitle={pageTitle}
     >
-      <Header title='Actor y director'>
+      <Header title='Actor i director'>
         <p className={styles.intro}>
-          Dedicado a la interpretación y el mundo del espectáculo
+          Dedicat a la interpretació i el món de l'espectacle
         </p>
       </Header>
       <Content>

@@ -14,9 +14,9 @@ const Photos = ({ images, pathname, pageTitle }) => {
       pathname={pathname}
       pageTitle={pageTitle}
     >
-      <Header title='Galeria de imágenes'>
+      <Header title="Galeria d'imatges">
         <p className={styles.intro}>
-          Fotos de espectáculos y actuaciones
+          Fotos d'espectacles i actuacions
         </p>
       </Header>
       <Content>

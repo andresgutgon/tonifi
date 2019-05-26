@@ -19,8 +19,8 @@ const MENU_ITEMS = [
     order: 1
   },
   {
-    text: 'Contacto',
-    href: '/contacto/',
+    text: 'Contacte',
+    href: '/contacte/',
     order: 3
   }
 ]
