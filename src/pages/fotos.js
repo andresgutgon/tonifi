@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Home from '../components/Home'
+import Photos from '../components/Photos'
 
 const ImagesPage = ({ data }) => {
   return (
-    <Home
-      images={data.allHomeJson.edges[0].node.images}
+    <Photos
+      images={data.allPhotosJson.edges[0].node.images}
       pathname='fotos'
       pageTitle='Fotos'
     />
@@ -17,7 +17,7 @@ export default ImagesPage
 
 export const pageQuery = graphql`
   query {
-    allHomeJson {
+    allPhotosJson {
       edges {
         node {
           images {
@@ -30,7 +30,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            full
           }
         }
       }

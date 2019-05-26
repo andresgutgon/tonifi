@@ -13,10 +13,10 @@ const Home = ({ images, pathname, pageTitle }) => {
       metaImage={images[0].src.childImageSharp.fluid.src}
       pathname={pathname}
       pageTitle={pageTitle}
-   >
+    >
       <Header title='Actor y director'>
         <p className={styles.intro}>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit nisi diam aliquam, mollis a laoreet hac magnis posuere facilisi.
+          Dedicado a la interpretación y el mundo del espectáculo
         </p>
       </Header>
       <Content>

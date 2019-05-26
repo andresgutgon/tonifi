@@ -1,0 +1,49 @@
+{
+  "images": [
+    {
+      "title": "Appocalipse",
+      "alt": "appocalipse",
+      "src": "../../images/photos/appocalipse.jpg"
+    },
+    {
+      "title": "Elefant",
+      "alt": "elefant",
+      "src": "../../images/photos/elefant.jpg"
+    },
+    {
+      "title": "La grandesa d'Esser",
+      "alt": "la grandesa desser",
+      "src": "../../images/photos/la-grandesa-desser.jpg"
+    },
+    {
+      "title": "La grandesa d'Esser",
+      "alt": "la grandesa desser",
+      "src": "../../images/photos/la-grandesa-desser-2.jpg"
+    },
+    {
+      "title": "La grandesa d'Esser",
+      "alt": "la grandesa desser",
+      "src": "../../images/photos/la-grandesa-desser-3.jpg"
+    },
+    {
+      "title": "Luciernagas",
+      "alt": "luciernagas",
+      "src": "../../images/photos/luciernagas.jpg"
+    },
+    {
+      "title": "Luciernagas",
+      "alt": "luciernagas",
+      "src": "../../images/photos/luciernagas-2.jpg"
+    },
+    {
+      "title": "Luciernagas",
+      "alt": "luciernagas",
+      "src": "../../images/photos/luciernagas-3.jpg"
+    },
+    {
+      "title": "Plano medio",
+      "alt": "plano medio",
+      "src": "../../images/photos/plano-medio.jpg"
+    }
+  ]
+}
