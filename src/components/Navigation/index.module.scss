@@ -11,7 +11,7 @@
     flex-direction: column;
     position: relative;
 
-    @include mq-tablet-portrait-up {
+    @include mq-tablet-landscape-up {
       padding-right: 0;
     }
   }
@@ -22,7 +22,7 @@
     right: 4rem;
   }
 
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 0;

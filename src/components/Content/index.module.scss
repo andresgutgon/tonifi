@@ -11,7 +11,7 @@
   &Inner {
     width: 100%;
   }
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     padding-top: $content-padding;
   }
 }

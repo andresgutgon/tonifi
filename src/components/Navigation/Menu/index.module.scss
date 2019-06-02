@@ -42,7 +42,7 @@
     border-color: white;
     color: white
   }
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     background-color: transparent;
     margin-top: 5rem;
     border-bottom: 0;

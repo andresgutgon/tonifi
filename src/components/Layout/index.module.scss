@@ -23,7 +23,7 @@ $sidebar-width: 22%;
     background-color: $gray-light-8;
   }
 
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     margin-top: 0;
     flex-direction: row;
     .footer {

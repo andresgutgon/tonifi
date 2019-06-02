@@ -22,7 +22,7 @@
     text-decoration: none;
   }
 
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     background-color: transparent;
     padding-right: 4rem;
     justify-content: flex-end;
@@ -59,7 +59,7 @@
       line-height: 1;
     }
     // Media query
-    @include mq-tablet-portrait-up {
+    @include mq-tablet-landscape-up {
       text-align: left;
       flex-direction: column;
       align-items: flex-start;

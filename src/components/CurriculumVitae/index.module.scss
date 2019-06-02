@@ -36,7 +36,7 @@
     display: none;
   }
 
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     text-align: center;
     flex-direction: row;
     ul {
@@ -87,7 +87,7 @@
     color: white;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
   }
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     height: 30rem;
     margin-left: 0;
     &Title {

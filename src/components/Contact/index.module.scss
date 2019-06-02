@@ -119,7 +119,7 @@ $red-error-color: red;
     height: 30px;
     width: 30px;
     border: 1px solid $success-color;
-    @include mq-tablet-portrait-up {
+    @include mq-tablet-landscape-up {
       height: 40px;
       width: 40px;
       svg {
@@ -143,7 +143,7 @@ $red-error-color: red;
     font-weight: 300;
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    @include mq-tablet-portrait-up {
+    @include mq-tablet-landscape-up {
       font-size: 3rem;
     }
   }
@@ -169,7 +169,7 @@ $red-error-color: red;
   color: white;
   transition: background-color .3s;
 
-  @include mq-tablet-portrait-up {
+  @include mq-tablet-landscape-up {
     width: auto;
   }
   &:hover,
