@@ -134,7 +134,7 @@ function TextAreaInput ({ label, name, type, validate, errors, touched }) {
 }
 
 function FormComponent ({ sent, errors, touched, isSubmitting }) {
-  const effect = sent ? 'bounceOutDown' : 'bounceInUp'
+  const effect = sent === null ? null : sent ? 'bounceOutDown' : 'bounceInUp'
   return (
     <Form className={cx('form', 'animated', effect)}>
       <Row>
@@ -236,7 +236,7 @@ const Contact = () => (
     <Content>
       <div className={styles.contact}>
         <Formik
-          initialStatus={{ sent: false }}
+          initialStatus={{ sent: null }}
           initialValues={INITIAL_STATE}
           onSubmit={onSubmit}
           render={({ errors, values, status, touched, isSubmitting }) => {
