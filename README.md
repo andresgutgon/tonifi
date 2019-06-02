@@ -26,6 +26,10 @@ node --inspect-brk scripts/cv/generate.js
 You have to go to `chrome://inspect` in your Chrome browser to start debugging
 
 ### TODO
+- [ ] Navegacion CV
+- [ ] Detalles fotos on hover
+- [ ] Fotos en mails
+- [ ] Videos section
 - [x] Boostrap GatsbyJs project and deploy to gh-page
 - [x] Initial style the page with Sass and custom font
 - [x] Data in JSON for image galleries
@@ -40,7 +44,6 @@ You have to go to `chrome://inspect` in your Chrome browser to start debugging
 - [x] Contact form with Formik
 - [x] Send emails via [Google app script](https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server)
 - [x] Sticky navigation on mobile
-- [ ] Videos section
 
 
 ### Sent emails

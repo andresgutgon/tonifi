@@ -64,14 +64,22 @@ function proccessWork (work) {
   return work
 }
 
+/**
+ * @param {Number} years
+ */
+function latestYear(years) {
+  const y =  years || []
+  return y.sort((a, b) => b - a)[0] || 1900
+}
+
 module.exports = function ProccesData () {
   cv.work = cv.work.map(group => {
     group.image = `${IMAGE_ROOT}/${group.image}`
     group.items = group
       .items
       .sort((work1, work2) => {
-        const year1 = work1.year || 1900
-        const year2 = work2.year || 1900
+        const year1 = latestYear(work1.years)
+        const year2 = latestYear(work2.years)
         return year2 - year1
       })
       .map(proccessWork)
@@ -79,8 +87,8 @@ module.exports = function ProccesData () {
     return group
   })
   cv.education = cv.education.sort((edu1, edu2) => {
-      const year1 = edu1.start_year || 1900
-      const year2 = edu2.start_year || 1900
+      const year1 = latestYear(edu1.years)
+      const year2 = latestYear(edu1.years)
       return year2 - year1
     })
     .map(proccessEducation)

@@ -6,6 +6,11 @@
     "url": "http://santiagooff.com"
   },
   {
+    "id": "associacio_la_remencada",
+    "name": "Associaciaó la Remençada (Diputació de Barcelona)",
+    "location": "Ajuntament de Montornès del Vallès"
+  },
+  {
     "id": "fira_tarrega",
     "name": "FiraTàrrega",
     "url": "https://www.firatarrega.cat"

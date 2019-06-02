@@ -9,11 +9,10 @@ import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
 const METADATA = {
-  start_year: 'Curs',
   teacher: 'Professor/a',
-  year: 'Any',
   director: 'Director',
   author: 'Autor',
+  years: 'Anys',
   company: 'Companyia',
   production: 'Productora'
 }
@@ -70,12 +69,14 @@ function MetadataItem ({ metaKey, item }) {
   }
 
   const type = typeof name
-  if (type !== 'string' && type !== 'number') return null
+  const isArray = Array.isArray(name)
+  if (type !== 'string' && type !== 'number' && !isArray) return null
   const contentMeta = METADATA[metaKey]
-  const meta = metaKey === 'start_year' && isCareer ? 'Promoció' : contentMeta
+  const meta = metaKey === 'years' && isCareer ? 'Promoció' : contentMeta
+  name = isArray ? name.join(', ') : name
   return (
     <div className={styles.metadata}>
-      {metaKey !== 'year' &&
+      {metaKey !== 'years' &&
        <strong>{meta}</strong>
       }
       {name}
@@ -84,18 +85,13 @@ function MetadataItem ({ metaKey, item }) {
 }
 
 const CurriculumVitae = ({ content, cvPdfPath }) => {
-  const { education, work, languages } = content
- const thumbnail = work[0].image.childImageSharp.fluid.src
-
+  const { education, work } = content
+  const thumbnail = work[0].image.childImageSharp.fluid.src
   return (
     <Layout pageTitle='Curriculum' pathname='cv' metaImage={thumbnail}>
       <Header title='Currículum'>
         <div className={styles.infoLine}>
           <ul>
-            <li>
-              <strong>Idiomes:&nbsp;</strong>
-              {languages.join(' / ')}
-            </li>
             <li>
               <a
                 href={cvPdfPath}

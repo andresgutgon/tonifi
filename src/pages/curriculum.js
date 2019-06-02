@@ -27,12 +27,11 @@ export const pageQuery = graphql`
     allCvJson {
       edges {
         node {
-          languages
           education {
             title
             teacher
             is_career
-            start_year
+            years
           }
           contact {
             email
@@ -49,7 +48,7 @@ export const pageQuery = graphql`
             category
             items {
               title
-              year
+              years
               director
               production
               author

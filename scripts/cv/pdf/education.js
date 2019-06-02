@@ -5,8 +5,8 @@ const { renderItem, splitInColumns, renderSubitem } = utils
 function renderSubitems (item) {
   let items = []
 
-  const startYear = renderSubitem(item.start_year, 'Curso: ')
-  if (startYear) items.push(startYear)
+  const years = renderSubitem(item.years, 'Curso: ')
+  if (years) items.push(years)
 
   const endYear = renderSubitem(item.end_year, 'Curso fin: ')
   if (endYear) items.push(endYear)

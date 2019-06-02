@@ -12,10 +12,11 @@ function splitInColumns (items, numColumns) {
 
 function renderSubitem (content, label) {
   if (!content) return null
+  const info = Array.isArray(content) ? content.join(', ') : content
   return {
     text: [
       { style: 'bold', text: label },
-      content
+      info
     ]
   }
 }

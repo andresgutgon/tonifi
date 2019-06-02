@@ -5,8 +5,8 @@ const { renderItem, splitInColumns, renderSubitem } = utils
 function renderSubitems (item) {
   let items = []
 
-  const year = renderSubitem(item.year, 'Año: ')
-  if (year) items.push(year)
+  const years = renderSubitem(item.years, 'Año: ')
+  if (years) items.push(years)
 
   const author = renderSubitem(item.author, 'Autor: ')
   if (author) items.push(author)
