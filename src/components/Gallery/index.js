@@ -137,12 +137,12 @@ export default class Gallery extends React.Component {
             ))}
           </div>
         ))}
-
         {imageIndex !== null && (
           <Lightbox
             reactModalProps={{
               shouldReturnFocusAfterClose: false
             }}
+            reactModalStyle={{ overlay: { zIndex: 3001 }}}
             mainSrc={this.mainSrc}
             nextSrc={this.nextSrc}
             prevSrc={this.prevSrc}
