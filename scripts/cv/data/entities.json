@@ -1,176 +1,252 @@
 [
   {
     "id": "festival_santiago_off",
-    "name": "Festival Santiago Off",
+    "name": {
+      "es": "Festival Santiago Off"
+    },
     "location": "Santiago de Chile",
     "url": "http://santiagooff.com"
   },
   {
     "id": "associacio_la_remencada",
-    "name": "Associaciaó la Remençada (Diputació de Barcelona)",
+    "name": {
+      "es": "Associaciaón la Remençada (Diputación de Barcelona)",
+      "ca": "Associaciaó la Remençada (Diputació de Barcelona)"
+    },
     "location": "Ajuntament de Montornès del Vallès"
   },
   {
     "id": "fira_tarrega",
-    "name": "FiraTàrrega",
+    "name": {
+      "es": "FiraTàrrega"
+    },
     "url": "https://www.firatarrega.cat"
   },
   {
     "id": "frinje_madrid",
-    "name": "Frinje",
+    "name": {
+      "es": "Frinje"
+    },
     "url": "https://www.facebook.com/FrinjeMadrid",
     "location": "Madrid"
   },
   {
     "id": "chamber_theater_company",
-    "name": "Chamber Theater Company",
+    "name": {
+      "es": "Chamber Theater Company"
+    },
     "url": "http://www.chambertheatre.com"
   },
   {
     "id": "teatre_romea",
-    "name": "Teatre Romea",
+    "name": {
+      "es": "Teatre Romea"
+    },
     "location": "Barcelona",
     "url": "https://www.teatreromea.cat"
   },
   {
     "id": "blanc_i_negre",
-    "name": "Plataforma Blanc i Negre",
+    "name": {
+      "es": "Plataforma Blanc i Negre"
+    },
     "location": "Barcelona",
     "url": "http://www.plataformablancinegre.com"
   },
   {
     "id": "sala_tantarantana",
-    "name": "Sala Tantarantana",
+    "name": {
+      "es": "Sala Tantarantana"
+    },
     "location": "Barcelona",
     "url": "http://tantarantana.com"
   },
   {
     "id": "sala_seca_espai_brosa",
-    "name": "La Seca-Espai Brossa",
+    "name": {
+      "es": "La Seca-Espai Brossa"
+    },
     "location": "Barcelona",
     "url": "http://escenaribrossa.cat"
   },
   {
     "id": "sala_barts",
-    "name": "Sala Barts",
+    "name": {
+      "es": "Sala Barts"
+    },
     "location": "Barcelona",
     "url": "http://www.barts.cat"
   },
   {
     "id": "sala_beckett",
-    "name": "Sala Beckett",
+    "name": {
+      "es": "Sala Beckett"
+    },
     "location": "Barcelona",
     "url": "https://www.salabeckett.cat"
   },
   {
     "id": "sala_muntaner",
-    "name": "Sala Muntaner",
+    "name": {
+      "es": "Sala Muntaner"
+    },
     "location": "Barcelona",
     "url": "http://www.salamuntaner.com"
   },
   {
     "id": "teatre_del_sol",
-    "name": "Teatre del Sol",
+    "name": {
+      "es": "Teatre del Sol"
+    },
     "location": "Sabadell",
     "url": "http://www.teatredelsol.org"
   },
   {
     "id": "versus_teatre",
-    "name": "Versus Teatre",
+    "name": {
+      "es": "Versus Teatre"
+    },
     "location": "Barcelona",
     "url": "http://versusteatre.com"
   },
   {
     "id": "movistar_plus_mira_lo_que_has_hecho",
-    "name": "Movistar +",
+    "name": {
+      "es": "Movistar +"
+    },
     "url": "http://ver.movistarplus.es/ficha/mira-lo-que-has-hecho/?id=1433335"
   },
   {
     "id": "at_productions",
-    "name": "AT productions"
+    "name":{
+      "es": "AT productions"
+    }
   },
   {
     "id": "tv3_el_cor_de_la_ciutat",
-    "name": "TV3 serie",
+    "name": {
+      "es": "TV3 serie"
+    },
     "url": "http://www.ccma.cat/tv3/el-cor-de-la-ciutat/"
   },
   {
     "id": "xtlc",
-    "name": "XTLC"
+    "name":{
+      "es": "XTLC"
+    }
   },
   {
     "id": "san_miguel_landia_films",
-    "name": "Ver spot de Landia Films",
+    "name": {
+      "es": "Ver spot de Landia Films"
+    },
     "url": "https://www.youtube.com/watch?v=H4-oJ1n4K7E"
   },
   {
     "id": "escac",
-    "name": "ESCAC",
+    "name": {
+      "es": "ESCAC"
+    },
     "url": "https://escac.com"
   },
   {
     "id": "pavoreal_films",
-    "name": "Pavoreal Films",
+    "name": {
+      "es": "Pavoreal Films"
+    },
     "url": "http://www.pavoreal.co/nosotros/"
   },
   {
     "id": "cecc",
-    "name": "CECC",
+    "name": {
+      "es": "CECC"
+    },
     "url": "https://es.wikipedia.org/wiki/Centre_d%27Estudis_Cinematogr%C3%A0fics_de_Catalunya"
   },
   {
     "id": "maynetto_producciones",
-    "name": "Maynetto producciones"
+    "name":{
+      "es": "Producciones Maynetto",
+      "ca": "Maynetto produccions"
+    }
   },
   {
     "id": "roy_baritten",
-    "name": "Roy Baritten"
+    "name":{
+      "es": "Roy Baritten"
+    }
   },
   {
     "id": "francisco_amezcua",
-    "name": "Francisco Amezcua"
+    "name":{
+      "es": "Francisco Amezcua"
+    }
   },
   {
     "id": "uab_el_grinyol_producciones",
-    "name": "El Grinyol Prodccions y UAB",
+    "name": {
+      "es": "Prodcciones El Grinyol y UAB",
+      "ca": "El Grinyol Prodccions i UAB"
+    },
     "url": "https://ddd.uab.cat/record/34887"
   },
   {
     "id": "flaix_tv",
-    "name": "Flaix TV",
+    "name": {
+      "es": "Flaix TV"
+    },
     "url": "https://www.flaixbac.cat"
   },
   {
     "id": "brunet_films",
-    "name": "Brunet Films"
+    "name":{
+      "es": "Brunet Films"
+    }
   },
   {
     "id": "imatge_sl_produccions",
-    "name": "Imatge SL Produccions"
+    "name":{
+      "es": "Producciones Imatge SL",
+      "ca": "Imatge SL Produccions"
+    }
   },
   {
     "id": "teatre_apolo",
-    "name": "Teatre Apolo",
+    "name": {
+      "es": "Teatro Apolo",
+      "ca": "Teatre Apolo"
+    },
     "url": "http://www.teatreapolo.com"
   },
   {
     "id": "teatre_poliorama",
-    "name": "Teatre Poliorama",
+    "name": {
+      "es": "Teatro Poliorama",
+      "ca": "Teatre Poliorama"
+    },
     "url": "https://www.teatrepoliorama.com"
   },
   {
     "id": "parc_tibidabo",
-    "name": "Tibidabo",
+    "name": {
+      "es": "Tibidabo"
+    },
     "url": "https://www.tibidabo.cat"
   },
   {
     "id": "polizon_teatro",
-    "name": "Polizón teatro",
+    "name": {
+      "es": "Polizón teatro",
+      "ca": "Polizón teatre"
+    },
     "url": "http://www.7vientos.com/polizon_teatro.htm"
   },
   {
     "id": "museo_art_sabadel",
-    "name": "Museu d'Art de Sabadel",
+    "name": {
+      "es": "Museo de Arte de Sabadel",
+      "ca": "Museu d'Art de Sabadel"
+    },
     "url": "http://museus.sabadell.cat/museu-art"
   }
 ]

@@ -6,7 +6,6 @@ const path = require('path')
 const styles = require('./pdf/styles.js')
 const rootPath = path.join(__dirname, '../..')
 const srcPath = path.join(rootPath, 'src')
-const pdfFile = path.join(srcPath, 'pdfs', 'cv.pdf')
 const siteData = require('../../data/siteConfig.js')
 const buildHeaderContent = require('./pdf/header.js')
 const buildWork = require('./pdf/work.js')
@@ -32,28 +31,31 @@ function buildFont () {
     )
 }
 
-function buildContent (data) {
+function buildContent (data, locale) {
   return Object.assign(
     styles.pageConfig,
     styles.pageStyles,
     styles.pageImages,
     {
       content: [
-        ...buildHeaderContent(siteData, data),
+        ...buildHeaderContent(siteData, data, locale),
         ...data.work.map((work, index) => {
           const isFirst = index === 0
-          return buildWork(work, data, isFirst)
+          return buildWork(work, locale, isFirst)
         }),
-        ...buildEducation(data.education)
+        ...buildEducation(data.education, locale)
       ]
     }
   )
 }
 
-module.exports = function createPdf (data) {
+module.exports = function createPdf (data, locale, localeName) {
   const maker = new pdfmake({ Roboto: buildFont() })
-  const content = buildContent(data)
+  const content = buildContent(data, locale)
   const doc = maker.createPdfKitDocument(content)
+  const baseFileName = 'toni-figuera-curriculum'
+  const pdfFile = path.join(srcPath, 'pdfs', `${baseFileName}-${localeName}.pdf`)
+
   doc.pipe(fs.createWriteStream(pdfFile));
   doc.end();
 }

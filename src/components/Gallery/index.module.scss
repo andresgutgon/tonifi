@@ -36,7 +36,8 @@ $border-radius: 2px;
       img {
 	      object-fit: cover;
 	      transition: transform 400ms ease-out;
-        &:hover {
+        &:hover,
+        &:active {
           transform: scale(1.15);
         }
       }

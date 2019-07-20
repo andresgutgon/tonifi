@@ -1,0 +1,27 @@
+
+{
+  "contact": {
+    "phone": "606 97 97 35",
+    "email": "tonifiguera@hotmail.com",
+    "name": {
+      "es": "Antonio",
+      "ca": "Toni"
+    }
+  },
+  "languages": ["Castellano", "Català", "English"],
+  "work": [
+    {
+      "category": "Audiovisual",
+      "image": "audiovisual.jpg",
+      "items": [
+        {
+          "title": {
+            "es": "El cazador de lobos (curtmetratge / protagonista)"
+          },
+          "years": [2019],
+          "production": "Rll produccions"
+        }
+      ]
+    }
+  ]
+}
