@@ -1,7 +1,9 @@
 import * as React from 'react'
 import cn from 'classnames/bind'
 
-import Layout from '../Layout'
+import { FormattedMessage } from 'react-intl'
+import TranslatedMessage from '../TranslatedMessage'
+import useFormatMessage from '../../hooks/useFormatMessage'
 import Header from '../Header'
 import Content from '../Content'
 
@@ -34,7 +36,9 @@ function MetaLink ({ metaKey, url, name }) {
   return (
     <div className={styles.metadata}>
       <strong>{METADATA[metaKey]}</strong>
-      <a href={url} target='_bkank'>{name}</a>
+      <a href={url} target='_bkank'>
+        <TranslatedMessage text={name} />
+      </a>
     </div>
   )
 }
@@ -44,7 +48,11 @@ function hasMetadata(item) {
 }
 
 function Title ({ title }) {
-  return <h4 className={styles.title}>{title}</h4>
+  return (
+    <h4 className={styles.title}>
+      <TranslatedMessage text={title} />
+    </h4>
+  )
 }
 
 function MetadataItem ({ metaKey, item }) {
@@ -71,7 +79,7 @@ function MetadataItem ({ metaKey, item }) {
   const type = typeof name
   const isArray = Array.isArray(name)
   if (type !== 'string' && type !== 'number' && !isArray) return null
-  const contentMeta = METADATA[metaKey]
+  const contentMeta = useFormatMessage(`curriculum.${metaKey}`)
   const meta = metaKey === 'years' && isCareer ? 'Promoció' : contentMeta
   name = isArray ? name.join(', ') : name
   return (
@@ -79,40 +87,35 @@ function MetadataItem ({ metaKey, item }) {
       {metaKey !== 'years' &&
        <strong>{meta}</strong>
       }
-      {name}
+      <TranslatedMessage text={name} />
     </div>
   )
 }
 
-const CurriculumVitae = ({ content, cvPdfPath }) => {
+const CurriculumVitae = ({ title, content, cvPdfPath }) => {
   const { education, work } = content
-  const thumbnail = work[0].image.childImageSharp.fluid.src
   return (
-    <Layout pageTitle='Curriculum' pathname='cv' metaImage={thumbnail}>
-      <Header title='Currículum'>
+    <>
+      <Header title={title}>
         <div className={styles.infoLine}>
           <ul>
             <li>
-              <a
-                href={cvPdfPath}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Descarregar CV (PDF)
+              <a href={cvPdfPath} target='_blank' rel='noopener noreferrer'>
+                <FormattedMessage id='footer.downloadCv' />
               </a>
             </li>
           </ul>
         </div>
       </Header>
       <Content>
-        {work.map((group) =>
-          <div key={group.category}>
+        {work.map((group, index) =>
+          <div key={index}>
             <div
               className={styles.category}
               style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(${group.image.childImageSharp.fluid.src})` }}
             >
               <h3 className={styles.categoryTitle}>
-                {group.category}
+                <TranslatedMessage text={group.category} />
               </h3>
             </div>
             <div className={styles.items}>
@@ -142,7 +145,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
                             <div className={styles.placeList}>
                               {item.played.map((place, index)=>
                                 <div key={index} className={styles.place}>
-                                  {place.name}
+                                  <TranslatedMessage text={place.name} />
                                   {place.location && <span>&nbsp;({place.location})</span>}
                                   {place.tags.length > 0 && place.tags.map(
                                     (tag, i) => <span key={i} className={styles.tag}>{tag}</span>
@@ -160,7 +163,9 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
             </div>
           </div>
         )}
-        <h2 className={styles.sectionTitle}>Estudis</h2>
+        <h2 className={styles.sectionTitle}>
+          <FormattedMessage id='curriculum.education' />
+        </h2>
         <ul className={styles.education}>
           {education.map((item, index) =>
             <li key={index}>
@@ -182,7 +187,7 @@ const CurriculumVitae = ({ content, cvPdfPath }) => {
           )}
         </ul>
       </Content>
-    </Layout>
+    </>
   )
 }
 

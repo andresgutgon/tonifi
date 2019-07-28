@@ -6,16 +6,24 @@ import Menu from './Menu'
 import styles from './index.module.scss'
 
 const Navigation = ({
-  name, surname, copyright, cvPdfPath, instagramUsername
+  urls,
+  langKey,
+  name,
+  surname,
+  copyright,
+  cvPdfPath,
+  instagramUsername,
+  langsMenu
 }) => (
   <nav className={styles.navigation}>
     <div className={styles.navigationInner}>
       <div>
-        <Logo name={name} surname={surname} />
-        <Menu />
+        <Logo langKey={langKey} name={name} surname={surname} />
+        <Menu urls={urls} langKey={langKey} />
       </div>
       <div className={styles.bottom}>
         <Footer
+          langsMenu={langsMenu}
           copyright={copyright}
           cvPdfPath={cvPdfPath}
           instagramUsername={instagramUsername}

@@ -27,7 +27,7 @@
     text-align: center;
     margin-bottom: 1rem;
     @include mq-tablet-landscape-up {
-      margin-top: 2rem;
+      margin-top: 3rem;
       margin-bottom: 2rem;
     }
   }
@@ -52,7 +52,6 @@
   }
 
   @include mq-tablet-landscape-up {
-    padding-top: $top-header;
     .title {
       font-size: 5rem;
     }

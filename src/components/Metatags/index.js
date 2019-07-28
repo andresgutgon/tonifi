@@ -3,6 +3,16 @@ import Helmet from 'react-helmet'
 
 const GOOGLE_FONTS_SITE = 'https://fonts.googleapis.com/css?family='
 
+function CanonicalLink ({ langs }) {
+  debugger
+  if (!langs) return null
+
+  return (
+    <>
+    </>
+  )
+}
+
 function Metatags({
   url,
   fonts,
@@ -13,11 +23,14 @@ function Metatags({
   keywords,
   thumbnail,
   twitter,
+  langs,
   locale
 }) {
 
   const title = pageTitle ? `${pageTitle} - ${baseTitle}` : baseTitle
   const thumbnailUrl = thumbnail ? `${url}/${thumbnail}` : null
+  const canonical = langs ? langs.find(l => l.selected) : null
+  const alternates = langs ? langs.filter(l => !l.selected) : []
   return (
     <Helmet
       title={title}
@@ -49,6 +62,21 @@ function Metatags({
       ]}
     >
       <html lang={locale} />
+      {canonical &&
+        <link
+          href={`${url}${canonical.link}`}
+          hreflang={canonical.langKey}
+          rel='canonical'
+        />
+      }
+      {alternates.map((alternate) => (
+        <link
+          key={alternate.langKey}
+          href={`${url}${alternate.link}`}
+          hreflang={alternate.langKey}
+          rel='alternate'
+        />
+      ))}
       <link
         href={`${GOOGLE_FONTS_SITE}${fonts}`}
         rel='stylesheet'

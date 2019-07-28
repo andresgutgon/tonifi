@@ -1,93 +1,97 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Metatags from '../Metatags'
-import Footer from '../Footer'
-import Navigation from '../Navigation'
+import Content from './Content'
 
-// Load global styles
-import 'react-image-lightbox/style.css'
-import '../../styles/index.scss'
-
-import styles from './index.module.scss'
-
-const Layout = ({
-  children,
-  pathname,
-  pageTitle,
-  metaImage,
-  hideFooter = false
-}) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        allFile(filter: { extension: { eq: "pdf" }, name: { eq:"cv"} }) {
-          edges {
-            node {
-              publicURL
-              name
-            }
-          }
+const query = graphql`
+  query SiteTitleQuery {
+    allFile(
+      filter: {
+        extension: { eq: "pdf" },
+        name: {
+          in: [
+            "toni-figuera-curriculum-castellano",
+            "toni-figuera-curriculum-catala"
+          ]
         }
-        site {
-          siteMetadata {
-            title
-            siteUrl
-            name
-            surname
-            copyright
-            instagramUsername
-            twitterUsername
-            fonts
+      }
+    ) {
+      edges {
+        node {
+          publicURL
+          name
+        }
+      }
+    }
+    allPageMappingsJson {
+      edges {
+        node {
+          pageUrlMappings {
+            es
+            ca
           }
         }
       }
-    `}
-    render={data => (
-      <>
-        <Metatags
-          fonts={data.site.siteMetadata.fonts}
-          baseTitle={data.site.siteMetadata.title}
-          pageTitle={pageTitle}
-          url={data.site.siteMetadata.siteUrl}
-          twitter={data.site.siteMetadata.twitterUsername}
-          pathname={pathname}
-          thumbnail={metaImage}
-          description='Toni figuera actor'
-          keywords='actor, director, cine, teatro'
-          locale='es'
-        />
-        <div className={styles.layout}>
-          <div className={styles.nav}>
-            <Navigation
-              name={data.site.siteMetadata.name}
-              surname={data.site.siteMetadata.surname}
-              instagramUsername={data.site.siteMetadata.instagramUsername}
-              cvPdfPath={data.allFile.edges[0].node.publicURL}
-              copyright={data.site.siteMetadata.copyright}
-            />
-          </div>
-          <main className={styles.main}>
-            {children}
-          </main>
-          {!hideFooter &&
-            <div className={styles.footer}>
-              <Footer
-                instagramUsername={data.site.siteMetadata.instagramUsername}
-                cvPdfPath={data.allFile.edges[0].node.publicURL}
-                copyright={data.site.siteMetadata.copyright}
-              />
-            </div>
-          }
-        </div>
-      </>
-    )}
-  />
-)
+    }
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        name
+        surname
+        copyright
+        instagramUsername
+        twitterUsername
+        fonts
+        languages {
+          defaultLangKey
+          langs
+        }
+      }
+    }
+  }
+`
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
+const FILE_NAMES = {
+  'toni-figuera-curriculum-castellano': 'es',
+  'toni-figuera-curriculum-catala': 'ca'
+}
+
+function findCvFile (files, locale) {
+  return files
+    .map(f => f.node)
+    .find((data) => FILE_NAMES[data.name] === locale)
+    .publicURL
+}
+
+const Layout = ({ children, location, pageData, hideFooter }) => {
+  return (
+    <StaticQuery query={query} render={data => {
+      const metadata = {
+        ...data.site.siteMetadata,
+        page: {
+          id: pageData.markdownRemark.frontmatter.id,
+          title: pageData.markdownRemark.frontmatter.title,
+          description: pageData.markdownRemark.frontmatter.description,
+          keywords: pageData.markdownRemark.frontmatter.keywords,
+          image: pageData.metaImage
+        }
+      }
+      const urls = data.allPageMappingsJson.edges[0].node.pageUrlMappings
+      const cvPdfPath = findCvFile(data.allFile.edges, pageData.locale)
+
+      return (
+        <Content
+          children={children}
+          hideFooter={hideFooter}
+          location={location}
+          metadata={metadata}
+          urls={urls}
+          cvPdfPath={cvPdfPath}
+        />
+      )}}
+    />
+  )
 }
 
 export default Layout

@@ -20,6 +20,8 @@ export default class Gallery extends React.Component {
   }
 
   get rows () {
+    if (!this.rowCells.length)  return []
+
     const rows = this.rowCells.reduce((memo, cell) => {
       const lastRowIndex = memo.length - 1
       const lastRow = memo[lastRowIndex]

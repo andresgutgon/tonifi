@@ -1,5 +1,22 @@
 const styles = require('./styles.js')
-module.exports = function buildHeaderContent (siteData, data) {
+const utils = require('./utils.js')
+const { translate } = utils
+
+const translations = {
+  es: {
+    languages: 'idiomas',
+    spanish_catalan_level: 'Castellano / Catalán: bilingüe',
+    english_level: 'Inglés: B2'
+  },
+  ca: {
+    languages: 'ideomes',
+    spanish_catalan_level: 'Castellà / Català: bilingue',
+    english_level: 'Anglès: B2'
+  }
+}
+
+module.exports = function buildHeaderContent (siteData, data, locale) {
+  const i18n = translate(translations, locale)
   return [
     {
       text: `${siteData.name} ${siteData.surname} ${siteData.secondSurname}`,
@@ -64,18 +81,18 @@ module.exports = function buildHeaderContent (siteData, data) {
                       [
                         {
                           style: 'tableHeader',
-                          text: 'IDIOMAS'
+                          text: i18n('languages').toUpperCase()
                         }
                       ],
                       [
                         {
-                          text: 'Castellano / Catalán: bilingüe',
+                          text: i18n('spanish_catalan_level'),
                           style: 'textSmall'
                         }
                       ],
                       [
                         {
-                          text: 'Inglés: B2',
+                          text: i18n('english_level'),
                           style: 'textSmall'
                         }
                       ]

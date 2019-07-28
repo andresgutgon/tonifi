@@ -13,7 +13,8 @@
     margin-bottom: 1rem;
     li {
       margin: 0;
-      &.separator {
+      display: flex;
+      .separator {
         margin: 0 .5rem;
         &:before {
           content: '|'
@@ -21,21 +22,46 @@
       }
     }
   }
-  a {
-    transition: all .3s;
+}
+
+.link {
+  transition: all .3s;
+  color: $gray-mid-9;
+  svg {
+    fill: $gray-mid-9;
+  }
+  &:visited {
     color: $gray-mid-9;
+  }
+
+  &Selected,
+  &Selected:visited,
+  &:hover,
+  &:active {
+    color: $gray-dark-3;
     svg {
-      fill: $gray-mid-9;
+      fill: $gray-dark-3;
     }
-    &:visited {
-      color: $gray-mid-9;
-    }
-    &:hover,
-    &:active {
-      color: $gray-dark-3;
-      svg {
-        fill: $gray-dark-3;
-      }
-    }
+  }
+}
+.langItem {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding: .5rem 0;
+  &.linkSelected {
+    padding: .5rem .8rem;
+    background-color: $gray-dark-3;
+    color: white;
+    border-radius: 100px;
+    text-decoration: none;
+  }
+}
+.copyright {
+  display: none;
+  @include mq-tablet-landscape-up {
+    display: block;
   }
 }

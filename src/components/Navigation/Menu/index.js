@@ -1,40 +1,38 @@
 import * as React from 'react'
 import cn from 'classnames/bind'
 import { Link } from 'gatsby'
+import { FormattedMessage } from 'react-intl'
 
+import { urlForId } from '../../Layout/Content'
 import StickyComponent from '../../StickyComponent'
 import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
-// FIXME: Move to `siteConfig.js`
 const MENU_ITEMS = [
   {
-    text: 'CV',
-    href: '/curriculum/',
-    order: 0
+    textKey: 'mainMenu.cv',
+    id: '02',
   },
   {
-    text: 'Fotos',
-    href: '/fotos/',
-    order: 1
+    textKey: 'mainMenu.photos',
+    id: '03',
   },
   {
-    text: 'Contacte',
-    href: '/contacte/',
-    order: 3
+    textKey: 'mainMenu.contact',
+    id: '04'
   }
 ]
-const MenuComponent = ({ fixed = false, inlineStyles = {} }) => (
+const MenuComponent = ({ urls, langKey, fixed = false, inlineStyles = {} }) => (
   <nav className={cx('menu', { fixed })} style={inlineStyles}>
     <ul className={styles.list}>
       {MENU_ITEMS.map((link, index) =>
         <li key={index} className={styles.menuItem}>
           <Link
-            to={link.href}
+            to={urlForId(link.id, langKey, urls)}
             className={styles.menuLink}
             activeClassName={styles.menuLinkActive}
           >
-            {link.text}
+            <FormattedMessage id={link.textKey} />
           </Link>
         </li>
       )}
@@ -47,15 +45,15 @@ function isBigScreen () {
   return window.matchMedia('(min-width: 400px)').matches
 }
 
-const Menu = () => {
+const Menu = (props) => {
   const bigScreen = isBigScreen()
 
-  if (bigScreen) return <MenuComponent />
+  if (bigScreen) return <MenuComponent {...props} />
 
   return (
     <StickyComponent position='top'>
       {({ fixed, inlineStyles }) => (
-        <MenuComponent fixed={fixed} inlineStyles={inlineStyles} />
+        <MenuComponent {...props} fixed={fixed} inlineStyles={inlineStyles} />
       )}
     </StickyComponent>
   )

@@ -3,7 +3,8 @@ import { Formik, Field, Form } from 'formik'
 import Textarea from 'react-textarea-autosize'
 import cn from 'classnames/bind'
 
-import Layout from '../Layout'
+import { FormattedMessage } from 'react-intl'
+import useFormatMessage from '../../hooks/useFormatMessage'
 import Header from '../Header'
 import Content from '../Content'
 import styles from './index.module.scss'
@@ -36,12 +37,14 @@ function requiredValidation(value) {
   return null
 }
 
-function emailValidation(value) {
-  let error = requiredValidation(value);
-  if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    error = 'Email no válido'
+function emailValidation(errorMesssage) {
+  return (value) => {
+    let error = requiredValidation(value);
+    if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
+      error = errorMesssage
+    }
+    return error
   }
-  return error
 }
 
 function Row ({ children }) {
@@ -135,16 +138,17 @@ function TextAreaInput ({ label, name, type, validate, errors, touched }) {
 
 function FormComponent ({ sent, errors, touched, isSubmitting }) {
   const effect = sent === null ? null : sent ? 'bounceOutDown' : 'bounceInUp'
+  const invalidEmailErrorMessage = useFormatMessage('contact.fields.email.invalidFormat')
   return (
     <Form className={cx('form', 'animated', effect)}>
       <Row>
         <TextInput
           type='email'
           name='email'
-          label='Tu email'
+          label={useFormatMessage('contact.fields.email.label')}
           errors={errors}
           touched={touched}
-          validate={emailValidation}
+          validate={emailValidation(invalidEmailErrorMessage)}
         />
       </Row>
       <Row>
@@ -152,6 +156,7 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
           type='text'
           name='name'
           label='Tu nombre'
+          label={useFormatMessage('contact.fields.name.label')}
           errors={errors}
           touched={touched}
           validate={requiredValidation}
@@ -161,7 +166,7 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
         <TextInput
           type='text'
           name='subject'
-          label='Asunto de tu consulta'
+          label={useFormatMessage('contact.fields.subject.label')}
           errors={errors}
           touched={touched}
           validate={requiredValidation}
@@ -171,7 +176,7 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
         <TextAreaInput
           type='textarea'
           name='message'
-          label='Tus comentarios'
+          label={useFormatMessage('contact.fields.comments.label')}
           errors={errors}
           touched={touched}
           validate={requiredValidation}
@@ -194,8 +199,8 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
           disabled={isSubmitting}
         >
           <span>
-            {isSubmitting && 'Enviando mensaje...'}
-            {!isSubmitting && 'Enviar mensaje'}
+            {isSubmitting && <FormattedMessage id='contact.fields.sending' />}
+            {!isSubmitting && <FormattedMessage id='contact.fields.send' />}
           </span>
         </button>
       </Row>
@@ -223,15 +228,11 @@ function onSubmit (data, actions) {
   return xhr.send(encoded)
 }
 
-const Contact = () => (
-  <Layout
-    hideFooter
-    pathname='contacto'
-    pageTitle='Contacto'
-  >
+const Contact = ({ title, description }) => (
+  <>
     <Header
-      title='Contacto'
-      description='Recibiré un email y te contestaré lo antes posible.'
+      title={title}
+      description={description}
     />
     <Content>
       <div className={styles.contact}>
@@ -248,15 +249,17 @@ const Contact = () => (
               <>
                 <div className={cx('success', 'animated', messageSuccess, { sent })}>
                   <h3>
-                    <div className={styles.successIcon}>
-                      <TickIcon />
-                    </div>
-                    Mensaje enviado
+                    <div className={styles.successIcon}><TickIcon /></div>
+                    <FormattedMessage id='contact.messageSent' />
                   </h3>
                   <p>
-                    Gracias <strong>{name}</strong>,
-                    en cuanto lo reciba te contesto a tu email:
-                    <strong>{` ${email}`}</strong>
+                    <FormattedMessage
+                      id='contact.thanks'
+                      values={{
+                        name: <strong>{name}</strong>,
+                        email: <strong>{email}</strong>
+                      }}
+                    />
                   </p>
                 </div>
                 <FormComponent
@@ -271,7 +274,7 @@ const Contact = () => (
         />
       </div>
     </Content>
-  </Layout>
+  </>
 )
 
 export default Contact

@@ -14,5 +14,9 @@ module.exports = {
   siteUrl: 'https://tonifiguera.com',
   copyright: `© ${year} ${fullName}`,
   pathPrefix: '/tonifi',
-  fonts: 'Playfair+Display:400,700|Source+Sans+Pro:300,400,600'
+  fonts: 'Playfair+Display:400,700|Source+Sans+Pro:300,400,600',
+  languages: {
+    langs: ['es', 'ca'],
+    defaultLangKey: 'es'
+  }
 }

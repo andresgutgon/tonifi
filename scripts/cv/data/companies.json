@@ -1,65 +1,97 @@
 [
   {
     "id": "la_minimal_teatre",
-    "name": "LAminimaL Teatre",
+    "name": {
+      "es": "Teatro LAminimaL",
+      "ca": "LAminimaL Teatre"
+    },
     "url": "http://www.laminimalteatre.cat/"
   },
   {
     "id": "unics_produccions",
-    "name": "Unics produccions",
+    "name": {
+      "es": "Producciones Unics ",
+      "ca": "Unics produccions"
+    },
     "url": "https://www.facebook.com/Unicsproduccions"
   },
   {
     "id": "actua_produccions",
-    "name": "Actua Produccions",
+    "name": {
+      "es": "Producciones Actua",
+      "ca": "Actua Produccions"
+    },
     "url": "https://www.actuaproduccions.com"
   },
   {
     "id": "royal_caribbean",
-    "name": "Royal Caribbean",
+    "name": {
+      "es": "Royal Caribbean"
+    },
     "url": "https://www.royalcaribbean.com"
   },
   {
     "id": "de_la_crem_produccions",
-    "name": "De La Crem producciones"
+    "name":{
+      "es": "Producciones De La Crem",
+      "ca": "De La Crem produccions"
+    }
   },
   {
     "id": "setekrit_teatre",
-    "name": "Setekrit Teatre"
+    "name":{
+      "es": "Setekrit Teatre"
+    }
   },
   {
     "id": "lirica_bcn",
-    "name": "Lírica de la Ciutat Comtal de BCN",
+    "name": {
+      "es": "Lírica de la Ciutat Comtal de BCN"
+    },
     "url": "http://amorenozarzuela.blogspot.com"
   },
   {
     "id": "teatritus",
-    "name": "Teatritus",
+    "name": {
+      "es": "Teatritus"
+    },
     "url": "https://www.facebook.com/pages/category/Arts---Entertainment/Teatritus-Teatre-174879549222836"
   },
   {
     "id": "catacrac",
-    "name": "Catacrac",
+    "name": {
+      "es": "Catacrac"
+    },
     "url": "https://beteve.cat/catakrac"
   },
   {
     "id": "teresa_roig",
-    "name": "Teresa Roig"
+    "name":{
+      "es": "Teresa Roig"
+    }
   },
   {
     "id": "recrea_accions",
-    "name": "Recrea-Accions"
+    "name":{
+      "es": "Recrea-Accions"
+    }
   },
   {
     "id": "propellers",
-    "name": "Propellers"
+    "name":{
+      "es": "Propellers"
+    }
   },
   {
     "id": "studi_karloff",
-    "name": "Studi Karloff"
+    "name":{
+      "es": "Studi Karloff"
+    }
   },
   {
     "id": "ruben_sanchez_productions",
-    "name": "Ruben Sanchez productions"
+    "name":{
+      "es": "Ruben Sanchez productions"
+    }
   }
 ]

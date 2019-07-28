@@ -21,14 +21,14 @@ function renderSubitem (content, label) {
   }
 }
 
-function renderItem (renderSubitemsFn) {
+function renderItem (renderTextFn, renderSubitemsFn) {
   return (item) => ({
     layout: 'noBorders',
     style: 'workItemRow',
     table: {
       body: [
         [
-          { text: item.title }
+          { text: renderTextFn(item) }
         ],
         [renderSubitemsFn(item)]
       ]
@@ -36,6 +36,23 @@ function renderItem (renderSubitemsFn) {
   })
 }
 
+function translate (data, locale) {
+  const locales = data[locale]
+  return (key) => locales[key]
+}
+
+function translateContent (locale) {
+  return (content) => {
+    const text = content[locale]
+    if (!text) return content
+    return text
+  }
+}
+
 module.exports = {
-  renderItem, renderSubitem, splitInColumns
+  renderItem,
+  renderSubitem,
+  splitInColumns,
+  translate,
+  translateContent
 }

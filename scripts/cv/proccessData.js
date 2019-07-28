@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
+const i18nFallbacks = require('./i18nFallbacks')
 
 const entitiesPath = path.join(__dirname, 'data', 'entities.json')
 const entities = JSON.parse(fs.readFileSync(entitiesPath, 'utf8'))
@@ -92,5 +93,5 @@ module.exports = function ProccesData () {
       return year2 - year1
     })
     .map(proccessEducation)
-  return cv
+  return i18nFallbacks(cv)
 }

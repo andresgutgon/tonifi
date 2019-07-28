@@ -1,0 +1,24 @@
+{
+  "pageUrlMappings": [
+    {
+      "id": "01",
+      "es": "",
+      "ca": ""
+    },
+    {
+      "id": "02",
+      "es": "curriculum",
+      "ca": "/curriculum"
+    },
+    {
+      "id": "03",
+      "es": "fotos",
+      "ca": "/fotos"
+    },
+    {
+      "id": "04",
+      "es": "contacto",
+      "ca": "/contacte"
+    }
+  ]
+}

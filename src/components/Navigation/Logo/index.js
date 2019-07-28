@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 
 import styles from './index.module.scss'
 
-const Logo = ({ name, surname }) => (
+const Logo = ({ name, surname, langKey }) => (
   <div className={styles.logo}>
-    <Link to="/">
+    <Link to={langKey === 'es' ? '/' : `/${langKey}`}>
       <div className={styles.logoInner}>
         <div className={styles.name}>{name}</div>
         <div className={styles.surname}>{surname}</div>
