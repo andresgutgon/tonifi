@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.videobook {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 200px;
+  .videoWrapper {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    padding: 56.25% 0 0 0;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
