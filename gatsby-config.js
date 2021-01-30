@@ -59,13 +59,7 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        includePaths: [
-          `${__dirname}/src/styles`,
-          `${__dirname}/src/components`,
-        ]
-      },
+      resolve: `gatsby-plugin-sass`
     },
     {
       resolve: `gatsby-source-filesystem`,
