@@ -1,7 +1,7 @@
 ---
 id: '02'
-title: 'Vídeo book'
-description: 'El meu vídeo book'
+title: 'Videobook'
+description: 'reel 2021'
 keywords: 'Toni Figurea, actor, vídeo book'
 template: videobook
 locale: ca
