@@ -8,12 +8,29 @@
     "url": "http://www.laminimalteatre.cat/"
   },
   {
+    "id": "chamber_theater_company",
+    "name": {
+      "es": "Chamber Theater Company"
+    },
+    "url": "http://www.laminimalteatre.cat/"
+  },
+  {
+    "id": "blanc_i_negre",
+    "name": {
+      "es": "Plataforma Blanc i Negre"
+    }
+  },
+  {
+    "id": "mondocane_produccions",
+    "name": {
+      "es": "Mondocane Producciones"
+    }
+  },
+  {
     "id": "unics_produccions",
     "name": {
-      "es": "Producciones Unics ",
-      "ca": "Unics produccions"
-    },
-    "url": "https://www.facebook.com/Unicsproduccions"
+      "es": "Viu el teatre"
+    }
   },
   {
     "id": "actua_produccions",
@@ -68,6 +85,13 @@
     "id": "teresa_roig",
     "name":{
       "es": "Teresa Roig"
+    }
+  },
+  {
+    "id": "polizon_teatro",
+    "name": {
+      "es": "Polizón teatro",
+      "ca": "Polizón teatre"
     }
   },
   {

@@ -11,15 +11,19 @@ const cx = cn.bind(styles)
 const MENU_ITEMS = [
   {
     textKey: 'mainMenu.cv',
+    id: '03',
+  },
+  {
+    textKey: 'mainMenu.videobook',
     id: '02',
   },
   {
     textKey: 'mainMenu.photos',
-    id: '03',
+    id: '04',
   },
   {
     textKey: 'mainMenu.contact',
-    id: '04'
+    id: '05'
   }
 ]
 const MenuComponent = ({ urls, langKey, fixed = false, inlineStyles = {} }) => (

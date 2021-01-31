@@ -7,6 +7,215 @@
   "work": [
     {
       "category": {
+        "es": "Teatro",
+        "ca": "Teatre"
+      },
+      "image": "teatro.jpg",
+      "items": [
+        {
+          "title": {
+            "es": "Los reyes de Shakespeare escriben el discurso de Phillipe the sixth",
+            "ca": "Els reis de Shakespeare escriuen el discurs de Phillipe the sixth"
+          },
+          "years": [2019],
+          "author": "Albert Pijuan",
+          "company_id": "la_minimal_teatre",
+          "played": [
+            { "entity_id": "sala_barts"}
+          ]
+        },
+        {
+          "title": {
+            "es": "Frankenstein, musical (Gira)"
+          },
+          "author": "Cristina Esteve y Jaume Carreras",
+          "company_id": "chamber_theater_company",
+          "years": [2017]
+        },
+        {
+          "title": {
+            "es": "Espejismo 53: Arrojarse al vacío"
+          },
+          "author": "Albert Pijuan y LaminimaL",
+          "years": [2017],
+          "played": [
+            { "entity_id": "festival_santiago_off" }
+          ]
+        },
+        {
+          "title": {
+            "es": "Apocalypse/Uploaded"
+          },
+          "company_id": "la_minimal_teatre",
+          "author": "Albert Pijuan",
+          "years": [2016],
+          "played": [
+            { "entity_id": "fira_tarrega" },
+            { "entity_id": "frinje_madrid" },
+            { "entity_id": "sala_seca_espai_brosa" }
+          ]
+        },
+        {
+          "title": {
+            "es": "Jekyll & Hide, musical (Gira)"
+          },
+          "author": "Cristina Esteve y Jaume Carreras",
+          "company_id": "chamber_theater_company",
+          "years": [2016]
+        },
+        {
+          "title": {
+            "es": "La supervivencia de las luciérnagas",
+            "ca": "La supervivència de les lluernes"
+          },
+          "company_id": "la_minimal_teatre",
+          "author": "LaminimaL",
+          "years": [2016],
+          "played": [
+            { "entity_id": "fira_tarrega" },
+            { "entity_id": "frinje_madrid" },
+            {
+              "entity_id": "teatre_romea"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "The Crimes on the rue morgue, musical. (Gira)"
+          },
+          "years": [2015],
+          "author": "Cristina Esteve y Jaume Carreras",
+          "company_id": "chamber_theater_company"
+        },
+        {
+          "title": {
+            "es": "Fam de llibertat"
+          },
+          "company_id": "blanc_i_negre",
+          "author": "Marcel Vilarós / Alberto Reche",
+          "years": [2014]
+        },
+        {
+          "title": {
+            "es": "The Phantom of the Opera, musical (Gira)"
+          },
+          "author": "Cristina Esteve y Jaume Carreras",
+          "company_id": "chamber_theater_company",
+          "years": [2014]
+        },
+        {
+          "title": {
+            "es": "El suicidio del Elefante Hipotecado",
+            "ca": "El suïcidi de l’Elefant Hipotecat"
+          },
+          "author": "LaminimaL",
+          "years": [2013],
+          "company_id": "la_minimal_teatre",
+          "played": [
+            {
+              "entity_id": "sala_tantarantana",
+              "premiere": true
+            },
+            { "entity_id": "sala_seca_espai_brosa" },
+            { "entity_id": "sala_barts"}
+          ]
+        },
+        {
+          "title": {
+            "es": "Drácula, musical (Gira)",
+            "ca": "Dràcula, musical (Gira)"
+          },
+          "author": "Bram Stoker",
+          "years": [2013],
+          "author": "Cristina Esteve y Jaume Carreras",
+          "company_id": "chamber_theater_company"
+        },
+        {
+          "title": {
+            "es": "La Grandesa d'ésser un entre tants"
+          },
+          "company_id": "la_minimal_teatre",
+          "author": "David Eudave",
+          "years": [2011],
+          "played": [
+            { "entity_id": "sala_atrium" }
+          ]
+        },
+        {
+          "title": {
+            "es": "El telón de piedra (Gira)",
+            "ca": "El teló de pedra (Gira)"
+          },
+          "author": "Marcel Vilarós",
+          "years": [2011],
+          "company_id": "blanc_i_negre"
+        },
+        {
+          "title": {
+            "es": "La muerte no es el final",
+            "ca": "La mort no és el final"
+          },
+          "company_id": "blanc_i_negre",
+          "author": "Marcel Vilarós / Alberto Reche",
+          "years": [2010]
+        },
+        {
+          "title": {
+            "es": "La Hostalera",
+            "ca": "L'Hostalera"
+          },
+          "author": "Carlo Goldoni",
+          "years": [2009],
+          "company_id": "mondocane_produccions",
+          "played": [
+            { "entity_id": "sala_muntaner" }
+          ]
+        },
+        {
+          "title": {
+            "es": "¿Quién tiene miedo de Virginia Woolf?",
+            "ca": "Qui té por de la Virginia Woolf?"
+          },
+          "author": "Edward Albee.",
+          "years": [2008],
+          "played": [
+            { "entity_id": "teatre_del_sol" }
+          ]
+        },
+        {
+          "title": {
+            "es": "Bent",
+            "ca": "Bent"
+          },
+          "author": "Martin Sheerman",
+          "years": [2002],
+          "company_id": "de_la_crem_produccions",
+          "played": [
+            { "entity_id": "versus_teatre" }
+          ]
+        },
+        {
+          "title": {
+            "es": "Mar y Cielo (gira por Cataluña)",
+            "ca": "Mar i Cel (gira per Catalunya)"
+          },
+          "company_id": "mondocane_produccions",
+          "author": "Àngel Guimerà",
+          "years": [2008]
+        },
+        {
+          "title": {
+            "es": "Pòker (gira por Cataluña)",
+            "ca": "Pòker (gira per Catalunya)"
+          },
+          "author": "Glòria Marín",
+          "years": [2001],
+          "company_id": "de_la_crem_produccions"
+        }
+      ]
+    },
+    {
+      "category": {
         "es": "Audiovisual"
       },
       "image": "audiovisual.jpg",
@@ -14,7 +223,7 @@
         {
           "title": {
             "es": "El cazador de lobos (cortometraje / protagonista)",
-            "ca": "El caçador de llops (curtmetratge / protagonista)"
+            "ca": "El cazador de lobos (curtmetratge / protagonista)"
           },
           "years": [2019],
           "production": "Rll produccions"
@@ -67,8 +276,8 @@
         },
         {
           "title": {
-            "es": "Mi experiencia (anuncio para cerveza San Miguel / protagonista)",
-            "ca": "Mi experiencia (anunci per a cervesa San Miguel / protagonista)"
+            "es": "Mi experiencia (anuncio San Miguel / protagonista)",
+            "ca": "Mi experiencia (anunci San Miguel / protagonista)"
           },
           "years": [2011],
           "played": [
@@ -139,7 +348,7 @@
         {
           "title": {
             "es": "Hemisferios a ciegas (cortometraje / protagonista)",
-            "ca": "Hemisferios a ciegas (curtmetrage / protagonista)"
+            "ca": "Hemisferios a ciegas (curtmetratge / protagonista)"
           },
           "years": [2007],
           "played": [
@@ -150,7 +359,7 @@
         {
           "title": {
             "es": "Deux ex Machina (cortometraje / secundari)",
-            "ca": "Deux ex Machina (curtmetrage / secundari)"
+            "ca": "Deux ex Machina (curtmetratge / secundari)"
           },
           "years": [2007],
           "played": [
@@ -160,8 +369,8 @@
         },
         {
           "title": {
-            "es": "Para lo que hay que decir (curtmetratge / protagonista)",
-            "ca": "Para lo que hay que decir (cortometraje / protagonista)"
+            "es": "Para lo que hay que decir (cortometraje / protagonista)",
+            "ca": "Para lo que hay que decir (curtmetratge / protagonista)"
           },
           "years": [2007],
           "played": [
@@ -171,8 +380,8 @@
         },
         {
           "title": {
-            "es": "El Buzzlightyear (curtmetratge / protagonista)",
-            "ca": "El Buzzlightyear (cortometraje / protagonista)"
+            "es": "El Buzzlightyear (cortometraje / protagonista)",
+            "ca": "El Buzzlightyear (curtmetratge / protagonista)"
           },
           "years": [2007],
           "played": [
@@ -182,8 +391,8 @@
         },
         {
           "title": {
-            "es": "Som (curtmetratge / protagonista)",
-            "ca": "Som (cortometraje / protagonista)"
+            "es": "Som (cortometraje / protagonista)",
+            "ca": "Som (curtmetratge / protagonista)"
           },
           "years": [2006],
           "played": [
@@ -243,15 +452,15 @@
     },
     {
       "category": {
-        "es": "Dirección y otros",
-        "ca": "Direcció i altres"
+        "es": "Dirección / guión",
+        "ca": "Direcció / guió"
       },
       "image": "teatro.jpg",
       "items": [
         {
           "title": {
-            "es": "La Remençada, el musical histórico del Vallès",
-            "ca": "La Remençada, el musical històric del Vallès"
+            "es": "La Remençada, el musical histórico del Vallès (Dirección)",
+            "ca": "La Remençada, el musical històric del Vallès (Direcció)"
           },
           "years": [2019, 2018, 2017, 2016, 2015],
           "played": [
@@ -275,6 +484,7 @@
           },
           "years": [2017],
           "played": [
+            { "entity_id": "viu_el_teatre" },
             { "entity_id": "parc_tibidabo" }
           ]
         },
@@ -290,261 +500,30 @@
         },
         {
           "title": {
-            "es": "Los zombies no miran la televisión (Dirección / guión / músicas / diseño / vestuario / escenografia)",
-            "ca": "Els zombies no miren la televisió (Direcció / guió / músiques / disseny / vestuari / escenografia)"
+            "es": "Los zombies no miran la televisión (Dirección / guión / músicas / diseño vestuario y escenografia)",
+            "ca": "Els zombies no miren la televisió (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
-          "years": [2009],
+          "years": [2012],
           "played": [
             { "entity_id": "polizon_teatro" }
           ]
         },
         {
           "title": {
-            "es": "Game Over (Dirección / guión / músicas / diseño / vestuario / escenografia)",
-            "ca": "Game Over (Direcció / guió / músiques / disseny / vestuari / escenografia)"
+            "es": "Game Over (Dirección / guión / músicas / diseño vestuario y escenografia)",
+            "ca": "Game Over (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
-          "years": [2008],
+          "years": [2011],
           "played": [
             { "entity_id": "polizon_teatro" }
           ]
         },
         {
           "title": {
-            "es": "Gala Cosméticos Kin (Dirección / producción / gestión de espactáculos)",
-            "ca": "Gala Kin Cosmètics (Direcció / producció / gestió d’espectacles)"
+            "es": "Gala Cosméticos Kin (Dirección y producción",
+            "ca": "Gala Kin Cosmètics (Direcció i producció"
           },
-          "years": [2007],
-          "company_id": "de_la_crem_produccions"
-        }
-      ]
-    },
-    {
-      "category": {
-        "es": "Teatro",
-        "ca": "Teatre"
-      },
-      "image": "teatro.jpg",
-      "items": [
-        {
-          "title": {
-            "es": "Los reyes de Shakespeare escriben el discurso de Phillipe the sixth",
-            "ca": "Els reis de Shakespeare escriuen el discurs de Phillipe the sixth"
-          },
-          "years": [2019],
-          "author": "LaminimaL",
-          "company_id": "la_minimal_teatre",
-          "played": [
-            { "entity_id": "sala_barts"}
-          ]
-        },
-        {
-          "title": {
-            "es": "Frankenstein, musical (Gira)"
-          },
-          "author": "Mary Shelly",
-          "years": [2017],
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
-          "title": {
-            "es": "Espejismo 53: Arrojarse al vacío"
-          },
-          "author": "Albert Pijuan y LaminimaL",
-          "years": [2017],
-          "played": [
-            { "entity_id": "festival_santiago_off" }
-          ]
-        },
-        {
-          "title": {
-            "es": "Apocalypse/Uploaded"
-          },
-          "company_id": "la_minimal_teatre",
-          "author": "Albert Pijuan y LaminimaL",
-          "years": [2016],
-          "played": [
-            { "entity_id": "fira_tarrega" },
-            { "entity_id": "frinje_madrid" }
-          ]
-        },
-        {
-          "title": {
-            "es": "Jekyll & Hide, musical (Gira)"
-          },
-          "years": [2016],
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
-          "title": {
-            "es": "La supervivencia de las luciérnagas",
-            "ca": "La supervivència de les lluernes"
-          },
-          "company_id": "la_minimal_teatre",
-          "author": "LaminimaL",
-          "years": [2016],
-          "played": [
-            { "entity_id": "fira_tarrega" },
-            { "entity_id": "frinje_madrid" },
-            {
-              "entity_id": "teatre_romea",
-              "tags": ["Temporada"]
-            }
-          ]
-        },
-        {
-          "title": {
-            "es": "The Crimes on the rue morgue, musical. (Gira)"
-          },
-          "years": [2015],
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
-          "title": {
-            "es": "Fam de llibertat"
-          },
-          "author": "Marcel Vilarós / Alberto Reche",
-          "years": [2014],
-          "played": [
-            { "entity_id": "blanc_i_negre" }
-          ]
-        },
-        {
-          "title": {
-            "es": "The Phantom of the Opera, musical (Gira)"
-          },
-          "years": [2014],
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
-          "title": {
-            "es": "El suicidio del Elefante Hipotecado",
-            "ca": "El suïcidi de l’Elefant Hipotecat"
-          },
-          "author": "LaminimaL",
-          "years": [2013],
-          "company_id": "la_minimal_teatre",
-          "played": [
-            {
-              "entity_id": "sala_tantarantana",
-              "premiere": true,
-              "tags": ["Temporada"]
-            },
-            { "entity_id": "sala_seca_espai_brosa" },
-            { "entity_id": "sala_barts"}
-          ]
-        },
-        {
-          "title": {
-            "es": "Drácula, musical (Gira)",
-            "ca": "Dràcula, musical (Gira)"
-          },
-          "author": "Bram Stoker",
-          "years": [2013],
-          "played": [
-            {
-              "entity_id": "chamber_theater_company"
-            }
-          ]
-        },
-        {
-          "title": {
-            "es": "La Grandesa d'ésser un entre tants"
-          },
-          "author": "David Eudave / LaminimaL",
-          "years": [2011],
-          "played": [
-            { "entity_id": "sala_beckett" }
-          ]
-        },
-        {
-          "title": {
-            "es": "El telón de piedra",
-            "ca": "El teló de pedra"
-          },
-          "author": "Marcel Vilarós",
-          "years": [2011],
-          "played": [
-            { "entity_id": "blanc_i_negre" }
-          ]
-        },
-        {
-          "title": {
-            "es": "La muerte no es el final",
-            "ca": "La mort no és el final"
-          },
-          "author": "Marcel Vilarós / Alberto Reche",
-          "years": [2010],
-          "played": [
-            { "entity_id": "blanc_i_negre" }
-          ]
-        },
-        {
-          "title": {
-            "es": "La Hostalera",
-            "ca": "L'Hostalera"
-          },
-          "author": "Carlo Goldoni",
-          "years": [2009],
-          "production": "Mondocane Producciones",
-          "played": [
-            { "entity_id": "sala_muntaner" }
-          ]
-        },
-        {
-          "title": {
-            "es": "¿Quién tiene miedo de Virginia Woolf?",
-            "ca": "Qui té por de la Virginia Woolf?"
-          },
-          "author": "Edward Albee.",
           "years": [2008],
-          "played": [
-            { "entity_id": "teatre_del_sol" }
-          ]
-        },
-        {
-          "title": {
-            "es": "Bent",
-            "ca": "Bent"
-          },
-          "author": "Martin Sheerman",
-          "years": [2002],
-          "company_id": "de_la_crem_produccions",
-          "played": [
-            { "entity_id": "versus_teatre" }
-          ]
-        },
-        {
-          "title": {
-            "es": "Mar y Cielo (gira)",
-            "ca": "Mar i Cel (gira)"
-          },
-          "author": "Àngel Guimerà",
-          "years": [2008],
-          "production": "Mondocane Producciones"
-        },
-        {
-          "title": {
-            "es": "Pòker",
-            "ca": "Pòker"
-          },
-          "author": "Glòria Marín",
-          "years": [2001],
           "company_id": "de_la_crem_produccions"
         }
       ]
@@ -568,8 +547,8 @@
         },
         {
           "title": {
-            "es": "Las aventuras de Aladino (Gira)",
-            "ca": "Les aventures d'Aladí (Gira)"
+            "es": "Las aventuras de Aladino",
+            "ca": "Les aventures d'Aladí"
           },
           "years": [2017],
           "company_id": "teatritus",
@@ -622,11 +601,11 @@
         },
         {
           "title": {
-            "es": "El pequeño Dalí (Gira)",
-            "ca": "El petit Dalí (Gira)"
+            "es": "El pequeño Dalí",
+            "ca": "El petit Dalí"
           },
           "company_id": "unics_produccions",
-          "years": [2013],
+          "years": [2019, 2018, 2017, 2016, 2015, 2014, 2013],
           "played": [
             { "entity_id": "teatre_romea" },
             { "entity_id": "teatre_poliorama" }
@@ -637,9 +616,7 @@
             "es": "The Magic Books (Gira)"
           },
           "years": [2011],
-          "played": [
-            { "entity_id": "polizon_teatro" }
-          ]
+          "company_id": "polizon_teatro"
         },
         {
           "title": {
@@ -654,8 +631,8 @@
         },
         {
           "title": {
-            "es": "El Duende Valiente (Gira)",
-            "es": "El Follet Valent (Gira)"
+            "es": "El Duende Valiente",
+            "es": "El Follet Valent"
           },
           "company_id": "unics_produccions",
           "years": [2010],
@@ -674,7 +651,7 @@
         },
         {
           "title": {
-            "es": "Papanotes (Gira)"
+            "es": "Papanotes"
           },
           "company_id": "unics_produccions",
           "years": [2009],
@@ -706,16 +683,16 @@
         },
         {
           "title": {
-            "es": "La Cennicienta (Gira)",
-            "es": "La Ventafocs (Gira)"
+            "es": "La Cennicienta",
+            "es": "La Ventafocs"
           },
           "years": [2006],
           "company_id": "catacrac"
         },
         {
           "title": {
-            "es": "Monstruos y otras bestias (Gira)",
-            "ca": "Monstres i altres bèsties (Gira)"
+            "es": "Monstruos y otras bestias",
+            "ca": "Monstres i altres bèsties"
           },
           "years": [2005],
           "company_id": "teresa_roig"
@@ -752,7 +729,7 @@
           "title": {
             "es": "Sysiphus"
           },
-          "years": [2018],
+          "years": [2019, 2018],
           "company_id": "actua_produccions"
         },
         {
@@ -760,7 +737,7 @@
             "es": "Los gigantes",
             "ca": "Els gegants"
           },
-          "years": [2018],
+          "years": [2019, 2018],
           "company_id": "actua_produccions"
         },
         {
@@ -768,7 +745,7 @@
             "es": "Los nómadas",
             "ca": "Les nòmades"
           },
-          "years": [2018],
+          "years": [2019, 2018],
           "company_id": "actua_produccions"
         },
         {
@@ -776,7 +753,7 @@
             "es": "El pequeño Lilo",
             "ca": "El petit Lilo"
           },
-          "years": [2017],
+          "years": [2019, 2018, 2017],
           "company_id": "actua_produccions"
         },
         {
@@ -784,13 +761,13 @@
             "es": "El campamento del Embajador",
             "ca": "El campament de l'Ambaixador"
           },
-          "years": [2005],
+          "years": [2008],
           "company_id": "de_la_crem_produccions"
         },
         {
           "title": {
-            "es": "Rambla's show. Management y diseño de espectáculos",
-            "ca": "Rambla's show. Management i disseny d'espectacles"
+            "es": "Rambla's show",
+            "ca": "Rambla's show"
           },
           "years": [2002],
           "company_id": "royal_caribbean"
@@ -809,14 +786,6 @@
           },
           "years": [2000],
           "company_id": "setekrit_teatre"
-        },
-        {
-          "title": {
-            "es": "Una visita a los monumentos modernistas de la Caja de ahorros de Sabadell",
-            "ca": "Una visita als monuments modernistes de la Caixa d'estalvis de Sabadell"
-          },
-          "years": [2000],
-          "company_id": "de_la_crem_produccions"
         }
       ]
     },
@@ -829,8 +798,8 @@
       "items": [
         {
           "title": {
-            "es": "Ketchup (Lectura dramatizada de la novela)",
-            "ca": "Ketchup (Lectura dramatitzada de la novela)"
+            "es": "Ketchup (Lectura dramatizada)",
+            "ca": "Ketchup (Lectura dramatitzada)"
           },
           "years": [2006],
           "author": "Xavier Gual",
@@ -847,7 +816,8 @@
         },
         {
           "title": {
-            "es": "Edmond"
+            "es": "Edmond (Lectura dramatitzada)",
+            "ca": "Edmond (Lectura dramatitzada)"
           },
           "years": [2000],
           "author": "David Mamet",
@@ -859,14 +829,15 @@
             "ca": "Un espai per al somni (Recital de poemes)"
           },
           "years": [2000],
-          "author": "Martí i Pol y Benedetti",
+          "author": "Miquel Martí i Pol y Mario Benedetti",
           "company_id": "de_la_crem_produccions"
         },
         {
           "title": {
-            "es": "Lecturas Dramatizadas",
-            "ca": "Lectures Dramatitzades"
+            "es": "Lecturas Dramatizadas VV.AA.",
+            "ca": "Lectures Dramatitzades VV.AA."
           },
+          "years": [2004],
           "author": "Varis autors",
           "director": "David Plana",
           "played": [
@@ -878,8 +849,20 @@
             "es": "La guerra dentro de la guerra (Recital de canciones y textos)",
             "ca": "La guerra dins la guerra (Recital de cançons i textos)"
           },
+          "years": [2011],
           "played": [
             { "entity_id": "blanc_i_negre" }
+          ]
+        },
+        {
+          "title": {
+            "es": "Pero la ciutat m'ha protegit"
+          },
+          "author": "Tanja Šljivar",
+          "company_id": "la_minimal_teatre",
+          "years": [2017],
+          "played": [
+            { "entity_id": "nau_ivanow" }
           ]
         }
       ]
@@ -893,36 +876,36 @@
       "items": [
         {
           "title": {
-            "es": "La Dogaresa"
+            "es": "La Dogaresa (gira)"
           },
           "years": [2009],
           "company_id": "lirica_bcn"
         },
         {
           "title": {
-            "es": "Agua, azucarillos y aguardiente",
-            "ca": "Aigua, azucarillos i aguardiente"
+            "es": "Agua, azucarillos y aguardiente (gira)",
+            "ca": "Aigua, azucarillos i aguardiente (gira)"
           },
           "years": [2008],
           "company_id": "lirica_bcn"
         },
         {
           "title": {
-            "es": "Luisa Fernanda"
+            "es": "Luisa Fernanda (gira)"
           },
           "years": [2008],
           "company_id": "lirica_bcn"
         },
         {
           "title": {
-            "es": "La Corte del Faraón"
+            "es": "La Corte del Faraón (gira)"
           },
           "years": [2008],
           "company_id": "lirica_bcn"
         },
         {
           "title": {
-            "es": "La Leyenda del Beso"
+            "es": "La Leyenda del Beso (gira)"
           },
           "years": [2007],
           "company_id": "lirica_bcn"
@@ -949,6 +932,13 @@
     },
     {
       "title": {
+        "es": "Acting in English"
+      },
+      "teacher": "Lucy Lenox",
+      "years": [2018]
+    },
+    {
+      "title": {
         "es": "El actor y la cámara",
         "ca": "L'actor i la càmera"
       },
@@ -961,13 +951,6 @@
         "ca": "Graduat en interpretació pel Col·legi del Teatre de Barcelona"
       },
       "is_career": true,
-      "years": [1999]
-    },
-    {
-      "title": {
-        "es": "Acting in English"
-      },
-      "teacher": "Lucy Lenox",
       "years": [2002]
     },
     {

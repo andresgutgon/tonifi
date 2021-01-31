@@ -7,16 +7,21 @@
     },
     {
       "id": "02",
+      "es": "videobook",
+      "ca": "/videobook"
+    },
+    {
+      "id": "03",
       "es": "curriculum",
       "ca": "/curriculum"
     },
     {
-      "id": "03",
+      "id": "04",
       "es": "fotos",
       "ca": "/fotos"
     },
     {
-      "id": "04",
+      "id": "05",
       "es": "contacto",
       "ca": "/contacte"
     }

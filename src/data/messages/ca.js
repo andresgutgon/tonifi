@@ -4,6 +4,7 @@ module.exports = {
   'languages.ca': 'Català',
   'mainMenu.cv': 'CV',
   'mainMenu.photos': 'Fotos',
+  'mainMenu.videobook': 'Video Book',
   'mainMenu.contact': 'Contacte',
   'footer.downloadCv': 'Descarregar CV (PDF)',
   'curriculum.education': 'Estudis',

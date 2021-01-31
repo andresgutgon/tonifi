@@ -10,10 +10,9 @@
   {
     "id": "associacio_la_remencada",
     "name": {
-      "es": "Associaciaón la Remençada (Diputación de Barcelona)",
-      "ca": "Associaciaó la Remençada (Diputació de Barcelona)"
-    },
-    "location": "Ajuntament de Montornès del Vallès"
+      "es": "Associación la Remençada y Ajuntament de Montornès del Vallès",
+      "ca": "Associaciaó la Remençada i Ajuntament de Montornès del Vallès"
+    }
   },
   {
     "id": "fira_tarrega",
@@ -76,6 +75,13 @@
     },
     "location": "Barcelona",
     "url": "http://www.barts.cat"
+  },
+  {
+    "id": "sala_atrium",
+    "name": {
+      "es": "Sala Atrium"
+    },
+    "location": "Barcelona"
   },
   {
     "id": "sala_beckett",
@@ -232,6 +238,18 @@
       "es": "Tibidabo"
     },
     "url": "https://www.tibidabo.cat"
+  },
+  {
+    "id": "viu_el_teatre",
+    "name": {
+      "es": "Viu el teatre"
+    }
+  },
+  {
+    "id": "nau_ivanow",
+    "name": {
+      "es": "Nau Ivanow"
+    }
   },
   {
     "id": "polizon_teatro",

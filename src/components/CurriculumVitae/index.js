@@ -36,9 +36,12 @@ function MetaLink ({ metaKey, url, name }) {
   return (
     <div className={styles.metadata}>
       <strong>{METADATA[metaKey]}</strong>
-      <a href={url} target='_bkank'>
-        <TranslatedMessage text={name} />
-      </a>
+      {!!url &&
+        <a href={url} target='_bkank'>
+          <TranslatedMessage text={name} />
+        </a>
+      }
+      {!url && <TranslatedMessage text={name} />}
     </div>
   )
 }
@@ -64,7 +67,7 @@ function MetadataItem ({ metaKey, item }) {
 
   if (metaKey !== 'company') {
     name = content
-  } else if (metaKey === 'company' && content.url) {
+  } else if (metaKey === 'company') {
     return (
       <MetaLink
         metaKey={metaKey}
@@ -112,7 +115,7 @@ const CurriculumVitae = ({ title, content, cvPdfPath }) => {
           <div key={index}>
             <div
               className={styles.category}
-              style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)), url(${group.image.childImageSharp.fluid.src})` }}
+              style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${group.image.childImageSharp.fluid.src})` }}
             >
               <h3 className={styles.categoryTitle}>
                 <TranslatedMessage text={group.category} />
@@ -147,9 +150,6 @@ const CurriculumVitae = ({ title, content, cvPdfPath }) => {
                                 <div key={index} className={styles.place}>
                                   <TranslatedMessage text={place.name} />
                                   {place.location && <span>&nbsp;({place.location})</span>}
-                                  {place.tags.length > 0 && place.tags.map(
-                                    (tag, i) => <span key={i} className={styles.tag}>{tag}</span>
-                                  )}
                                 </div>
                               )}
                             </div>

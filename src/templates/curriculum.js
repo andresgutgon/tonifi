@@ -69,7 +69,6 @@ export const pageQuery = graphql`
               }
               played {
                 id
-                tags
                 name { es ca }
                 location
               }

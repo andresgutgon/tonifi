@@ -89,7 +89,7 @@ module.exports = function ProccesData () {
   })
   cv.education = cv.education.sort((edu1, edu2) => {
       const year1 = latestYear(edu1.years)
-      const year2 = latestYear(edu1.years)
+      const year2 = latestYear(edu2.years)
       return year2 - year1
     })
     .map(proccessEducation)

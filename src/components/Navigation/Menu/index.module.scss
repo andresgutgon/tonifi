@@ -15,16 +15,27 @@
     flex-direction: row;
     margin-bottom: -1px;
     position: relative;
+
+    // Horizontal scroll
+    flex-wrap: nowrap;
+    overflow: auto;
+    white-space: nowrap;
+    justify-content: space-between;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &Item {
-    flex: 1;
+    flex: 0 0 auto;
     margin: 0;
   }
 
   &Link {
     display: block;
-    padding: 1.5rem 0;
+    padding: 1.5rem;
     font-size: 2rem;
     text-decoration: none;
     text-align: center;
