@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet }from 'react-helmet'
 
 const GOOGLE_FONTS_SITE = 'https://fonts.googleapis.com/css?family='
 

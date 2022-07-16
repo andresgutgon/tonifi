@@ -3685,6 +3685,11 @@ babel-extract-comments@^1.0.0:
   dependencies:
     babylon "^6.18.0"
 
+babel-jsx-utils@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/babel-jsx-utils/-/babel-jsx-utils-1.1.0.tgz#304ce4fce0c86cbeee849551a45eb4ed1036381a"
+  integrity sha512-Mh1j/rw4xM9T3YICkw22aBQ78FhsHdsmlb9NEk4uVAFBOg+Ez9ZgXXHugoBPCZui3XLomk/7/JBBH4daJqTkQQ==
+
 babel-loader@^8.2.3:
   version "8.2.5"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.2.5.tgz#d45f585e654d5a5d90f5350a779d7647c5ed512e"
@@ -6984,6 +6989,26 @@ gatsby-plugin-i18n@1.0.1:
     graphql "^0.11.7"
     ptz-i18n "^1.0.0"
 
+gatsby-plugin-image@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.18.1.tgz#4e3f525c8e138368527c7bf17f839e774522908f"
+  integrity sha512-PsNIWq5bVALRRshbKOL97tqZTT2r0iILlP+K26YHfd+54DOUPqjESGZ/x7rnv2WMBVFd+Xtkmrx6M1rW86g1Rw==
+  dependencies:
+    "@babel/code-frame" "^7.14.0"
+    "@babel/parser" "^7.15.5"
+    "@babel/runtime" "^7.15.4"
+    "@babel/traverse" "^7.15.4"
+    babel-jsx-utils "^1.1.0"
+    babel-plugin-remove-graphql-queries "^4.18.1"
+    camelcase "^5.3.1"
+    chokidar "^3.5.3"
+    common-tags "^1.8.2"
+    fs-extra "^10.1.0"
+    gatsby-core-utils "^3.18.1"
+    gatsby-plugin-utils "^3.12.1"
+    objectFitPolyfill "^2.3.5"
+    prop-types "^15.8.1"
+
 gatsby-plugin-manifest@4.18.1:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-4.18.1.tgz#e99bacadbf8af8f81e5d32df2612bd0110623288"
@@ -7220,7 +7245,7 @@ gatsby-transformer-remark@5.18.1:
     unist-util-select "^3.0.4"
     unist-util-visit "^2.0.3"
 
-gatsby-transformer-sharp@4.18.1:
+gatsby-transformer-sharp@^4.18.1:
   version "4.18.1"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-4.18.1.tgz#b06eb62468dbd43f906ad8fc729cb7505d972718"
   integrity sha512-YqY3dWdUmRzhE2DBbOtJygL/bWKFXDQf3ARn6tSEt0WqPRFGLGbsSpT/xU5makHugdO/Wc30x3x85FhwysvH6Q==
@@ -10299,6 +10324,11 @@ object.values@^1.1.5:
     call-bind "^1.0.2"
     define-properties "^1.1.3"
     es-abstract "^1.19.1"
+
+objectFitPolyfill@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/objectFitPolyfill/-/objectFitPolyfill-2.3.5.tgz#be8c83064aabfa4e88780f776c2013c48ce1f745"
+  integrity sha512-8Quz071ZmGi0QWEG4xB3Bv5Lpw6K0Uca87FLoLMKMWjB6qIq9IyBegP3b/VLNxv2WYvIMGoeUQ+c6ibUkNa8TA==
 
 omggif@^1.0.10, omggif@^1.0.9:
   version "1.0.10"

@@ -15,25 +15,22 @@ const ImagesPage = ({ data }) => {
 
 export default ImagesPage
 
-export const pageQuery = graphql`
-  query {
-    allPhotosJson {
-      edges {
-        node {
-          images {
-            title
-            alt
-            src {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`{
+  allPhotosJson {
+    edges {
+      node {
+        images {
+          title
+          alt
+          src {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
             }
-            full
           }
+          full
         }
       }
     }
   }
+}
 `
