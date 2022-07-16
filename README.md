@@ -2,7 +2,7 @@
 This is code for personal page of Toni Figuera.
 
 ## Node
-`v8.11.0`
+`v16.13.2`
 
 ### Development
 ```sh
