@@ -7,18 +7,18 @@ import styles from './index.module.scss'
 export default class StickyComponent extends React.Component {
   positionerFn
   state = {
-    fixedStyles: null
+    fixedStyles: null,
   }
   _statusNode
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.positionerFn = positionerFactory(props.position)
     this.updateDimensions = this._updateDimensions.bind(this)
     this.handleScroll = this._handleScroll.bind(this)
   }
 
-  componentDidMount () {
+  componentDidMount() {
     // Initial setup of sticky before listeners
     this.updateDimensions()
     this.handleScroll()
@@ -26,13 +26,15 @@ export default class StickyComponent extends React.Component {
     window.addEventListener('scroll', this.handleScroll)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   }
 
-  _updateDimensions () {
+  _updateDimensions() {
     const node = this._statusNode
+
     if (!node) return // flow
+
     const measurements = node.getBoundingClientRect()
     const scrollY = window.scrollY
     if (scrollY > 0) {
@@ -43,11 +45,11 @@ export default class StickyComponent extends React.Component {
     this.measurements = {
       ...measurements.toJSON(),
       scrollHeight: document.body.scrollHeight,
-      innerHeight: window.innerHeight
+      innerHeight: window.innerHeight,
     }
   }
 
-  _handleScroll () {
+  _handleScroll() {
     const { fixedStyles: styles } = this.state
     const measurements = this.measurements
 
@@ -61,7 +63,7 @@ export default class StickyComponent extends React.Component {
     this.setState({ fixedStyles })
   }
 
-  render () {
+  render() {
     const { children } = this.props
     const { fixedStyles } = this.state
     const inlineStyles = fixedStyles || {}
@@ -71,7 +73,7 @@ export default class StickyComponent extends React.Component {
     return (
       <div
         className={styles.root}
-        ref={node => {
+        ref={(node) => {
           this._statusNode = node
         }}
         style={outStyles}

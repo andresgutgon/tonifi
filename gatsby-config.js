@@ -11,7 +11,7 @@ module.exports = {
     twitterUsername: config.twitterUsername,
     copyright: config.copyright,
     fonts: config.fonts,
-    languages: config.languages
+    languages: config.languages,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -20,7 +20,7 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
-      }
+      },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -30,7 +30,7 @@ module.exports = {
         plugins: [
           {
             resolve: 'gatsby-remark-images',
-             options: {
+            options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
@@ -41,10 +41,10 @@ module.exports = {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'static',
-            }
-          }
-        ]
-      }
+            },
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -55,11 +55,19 @@ module.exports = {
         background_color: '#222222',
         theme_color: '#222222',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png'
-      }
+        icon: 'src/images/favicon.png',
+      },
     },
     {
-      resolve: `gatsby-plugin-sass`
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          esModule: false,
+          modules: {
+            namedExport: false,
+          },
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -79,16 +87,16 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/data`
-      }
+        path: `${__dirname}/src/data`,
+      },
     },
     {
       resolve: 'gatsby-plugin-i18n',
       options: {
         langKeyDefault: config.languages.defaultLangKey,
         prefixDefault: false, // No locale prefix for default locale URLs
-        useLangKeyLayout: false
-      }
-    }
-  ]
+        useLangKeyLayout: false,
+      },
+    },
+  ],
 }
