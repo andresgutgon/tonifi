@@ -69,6 +69,21 @@
     "url": "http://escenaribrossa.cat"
   },
   {
+    "id": "sala_ars",
+    "name": {
+      "es": "Sala ARS"
+    },
+    "location": "Barcelona",
+    "url": "https://www.salaarsteatre.com/"
+  },
+  {
+    "id": "mondocane_producciones",
+    "name": {
+      "es": "Mondocane Producciones"
+    },
+    "location": "Barcelona"
+  },
+  {
     "id": "sala_barts",
     "name": {
       "es": "Sala Barts"
@@ -124,7 +139,7 @@
   },
   {
     "id": "at_productions",
-    "name":{
+    "name": {
       "es": "AT productions"
     }
   },
@@ -137,7 +152,7 @@
   },
   {
     "id": "xtlc",
-    "name":{
+    "name": {
       "es": "XTLC"
     }
   },
@@ -171,20 +186,20 @@
   },
   {
     "id": "maynetto_producciones",
-    "name":{
+    "name": {
       "es": "Producciones Maynetto",
       "ca": "Maynetto produccions"
     }
   },
   {
     "id": "roy_baritten",
-    "name":{
+    "name": {
       "es": "Roy Baritten"
     }
   },
   {
     "id": "francisco_amezcua",
-    "name":{
+    "name": {
       "es": "Francisco Amezcua"
     }
   },
@@ -205,13 +220,13 @@
   },
   {
     "id": "brunet_films",
-    "name":{
+    "name": {
       "es": "Brunet Films"
     }
   },
   {
     "id": "imatge_sl_produccions",
-    "name":{
+    "name": {
       "es": "Producciones Imatge SL",
       "ca": "Imatge SL Produccions"
     }
