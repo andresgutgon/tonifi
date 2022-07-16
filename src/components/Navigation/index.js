@@ -12,8 +12,8 @@ const Navigation = ({
   surname,
   copyright,
   cvPdfPath,
-  instagramUsername,
-  langsMenu
+  phone,
+  langsMenu,
 }) => (
   <nav className={styles.navigation}>
     <div className={styles.navigationInner}>
@@ -26,7 +26,7 @@ const Navigation = ({
           langsMenu={langsMenu}
           copyright={copyright}
           cvPdfPath={cvPdfPath}
-          instagramUsername={instagramUsername}
+          phone={phone}
         />
       </div>
     </div>

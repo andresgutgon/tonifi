@@ -15,17 +15,24 @@
       margin: 0;
       display: flex;
       .separator {
-        margin: 0 .5rem;
+        margin: 0 0.5rem;
         &:before {
-          content: '|'
+          content: '|';
         }
       }
     }
   }
 }
 
+.phone {
+  color: $gray-dark-4;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  display: block;
+  text-decoration: none;
+}
 .link {
-  transition: all .3s;
+  transition: all 0.3s;
   color: $gray-mid-9;
   svg {
     fill: $gray-mid-9;
@@ -50,9 +57,9 @@
 }
 
 .button {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   &.linkSelected {
-    padding: .5rem .8rem;
+    padding: 0.5rem 0.8rem;
     background-color: $gray-dark-3;
     color: white;
     border-radius: 100px;

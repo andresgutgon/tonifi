@@ -7,6 +7,7 @@ module.exports = {
     surname: config.surname,
     title: config.siteTitle,
     siteUrl: config.siteUrl,
+    phone: config.phone,
     instagramUsername: config.instagramUsername,
     twitterUsername: config.twitterUsername,
     copyright: config.copyright,

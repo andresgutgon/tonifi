@@ -17,18 +17,18 @@ import '../../styles/index.scss'
 import styles from './index.module.scss'
 
 export const urlForId = (pageId, langKey, urls) => {
-  const id = Number(pageId) - 1;
+  const id = Number(pageId) - 1
   const locale = langKey === 'es' ? '' : langKey
   return `/${locale}${urls[id][langKey]}`
 }
 
 class Content extends React.Component {
   static defaultProps = {
-    hideFooter: false
+    hideFooter: false,
   }
 
   constructor(props) {
-    super(props);
+    super(props)
     const { locarion, urls, metadata, location } = props
     const { langs, defaultLangKey } = metadata.languages
 
@@ -37,12 +37,14 @@ class Content extends React.Component {
     this.homeLink = `/${this.langKey}`.replace(`/${defaultLangKey}/`, '/')
     if (metadata.page.id) {
       this.langsMenu = getLangs(
-        langs, this.langKey, getUrlForLang(this.homeLink, this.pathname)
+        langs,
+        this.langKey,
+        getUrlForLang(this.homeLink, this.pathname)
       ).map((item) => {
-        return ({
+        return {
           ...item,
-          link: urlForId(metadata.page.id, item.langKey, urls)
-        })
+          link: urlForId(metadata.page.id, item.langKey, urls),
+        }
       })
     }
 
@@ -51,11 +53,11 @@ class Content extends React.Component {
     this.appContext = {
       locale: this.langKey,
       defaultLocale: defaultLangKey,
-      locales: langs
+      locales: langs,
     }
   }
 
-  render () {
+  render() {
     const { children, metadata, cvPdfPath, urls, hideFooter } = this.props
     return (
       <IntlProvider locale={this.langKey} messages={this.i18nMessages}>
@@ -81,26 +83,24 @@ class Content extends React.Component {
                 langsMenu={this.langsMenu}
                 name={metadata.name}
                 surname={metadata.surname}
-                instagramUsername={metadata.instagramUsername}
+                phone={metadata.phone}
                 cvPdfPath={cvPdfPath}
                 copyright={metadata.copyright}
               />
             </div>
 
-            <main className={styles.main}>
-              {children({ cvPdfPath })}
-            </main>
+            <main className={styles.main}>{children({ cvPdfPath })}</main>
 
-            {!hideFooter &&
+            {!hideFooter && (
               <div className={styles.footer}>
                 <Footer
                   langsMenu={this.langsMenu}
-                  instagramUsername={metadata.instagramUsername}
+                  phone={metadata.phone}
                   cvPdfPath={cvPdfPath}
                   copyright={metadata.copyright}
                 />
               </div>
-            }
+            )}
           </div>
         </AppProvider>
       </IntlProvider>
