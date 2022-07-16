@@ -1,7 +1,7 @@
 {
   "contact": {
-    "phone": "606 97 97 35",
-    "email": "tonifiguera@hotmail.com"
+    "phone": "+34 618 059 259",
+    "email": "toni@tonifiguera.com"
   },
   "languages": ["Castellano", "Català", "English"],
   "work": [
@@ -14,15 +14,43 @@
       "items": [
         {
           "title": {
+            "es": "Crimen Perfecto",
+            "ca": "Crim Perfecte"
+          },
+          "years": [2019, 2020, 2021, 2022],
+          "author": "Frederick Knott",
+          "company_id": "sala_ars_teatre",
+          "played": [{ "entity_id": "sala_ars" }]
+        },
+        {
+          "title": {
+            "es": "Colegas",
+            "ca": "Colegas"
+          },
+          "years": [2020, 2021, 2022],
+          "author": "Xavi Fuster",
+          "company_id": "sala_ars_teatre",
+          "played": [{ "entity_id": "mondocane_producciones" }]
+        },
+        {
+          "title": {
+            "es": "Pareja X",
+            "ca": "Pareja X"
+          },
+          "years": [2019, 2020],
+          "author": "Esteve Marín",
+          "company_id": "sala_ars_teatre",
+          "played": [{ "entity_id": "mondocane_producciones" }]
+        },
+        {
+          "title": {
             "es": "Los reyes de Shakespeare escriben el discurso de Phillipe the sixth",
             "ca": "Els reis de Shakespeare escriuen el discurs de Phillipe the sixth"
           },
           "years": [2019],
           "author": "Albert Pijuan",
           "company_id": "la_minimal_teatre",
-          "played": [
-            { "entity_id": "sala_barts"}
-          ]
+          "played": [{ "entity_id": "sala_barts" }]
         },
         {
           "title": {
@@ -38,9 +66,7 @@
           },
           "author": "Albert Pijuan y LaminimaL",
           "years": [2017],
-          "played": [
-            { "entity_id": "festival_santiago_off" }
-          ]
+          "played": [{ "entity_id": "festival_santiago_off" }]
         },
         {
           "title": {
@@ -117,7 +143,7 @@
               "premiere": true
             },
             { "entity_id": "sala_seca_espai_brosa" },
-            { "entity_id": "sala_barts"}
+            { "entity_id": "sala_barts" }
           ]
         },
         {
@@ -137,9 +163,7 @@
           "company_id": "la_minimal_teatre",
           "author": "David Eudave",
           "years": [2011],
-          "played": [
-            { "entity_id": "sala_atrium" }
-          ]
+          "played": [{ "entity_id": "sala_atrium" }]
         },
         {
           "title": {
@@ -167,9 +191,7 @@
           "author": "Carlo Goldoni",
           "years": [2009],
           "company_id": "mondocane_produccions",
-          "played": [
-            { "entity_id": "sala_muntaner" }
-          ]
+          "played": [{ "entity_id": "sala_muntaner" }]
         },
         {
           "title": {
@@ -178,9 +200,7 @@
           },
           "author": "Edward Albee.",
           "years": [2008],
-          "played": [
-            { "entity_id": "teatre_del_sol" }
-          ]
+          "played": [{ "entity_id": "teatre_del_sol" }]
         },
         {
           "title": {
@@ -190,9 +210,7 @@
           "author": "Martin Sheerman",
           "years": [2002],
           "company_id": "de_la_crem_produccions",
-          "played": [
-            { "entity_id": "versus_teatre" }
-          ]
+          "played": [{ "entity_id": "versus_teatre" }]
         },
         {
           "title": {
@@ -250,9 +268,7 @@
             "ca": "Mira lo que has hecho (serie / secundari capitular)"
           },
           "years": [2018],
-          "played": [
-            { "entity_id": "movistar_plus_mira_lo_que_has_hecho" }
-          ]
+          "played": [{ "entity_id": "movistar_plus_mira_lo_que_has_hecho" }]
         },
         {
           "title": {
@@ -260,9 +276,7 @@
             "ca": "Fes-te soci! (anunci per a CE Sabadell / protagonista)"
           },
           "years": [2018],
-          "played": [
-            { "entity_id": "at_productions"}
-          ]
+          "played": [{ "entity_id": "at_productions" }]
         },
         {
           "title": {
@@ -270,9 +284,7 @@
             "ca": "Els Abans de Déu. (serie / secundari capitular)"
           },
           "years": [2011],
-          "played": [
-            { "entity_id": "xtlc" }
-          ]
+          "played": [{ "entity_id": "xtlc" }]
         },
         {
           "title": {
@@ -280,9 +292,7 @@
             "ca": "Mi experiencia (anunci San Miguel / protagonista)"
           },
           "years": [2011],
-          "played": [
-            { "entity_id": "san_miguel_landia_films" }
-          ]
+          "played": [{ "entity_id": "san_miguel_landia_films" }]
         },
         {
           "title": {
@@ -290,9 +300,7 @@
             "ca": "El cor de la ciutat (serie / secundari)"
           },
           "years": [2009],
-          "played": [
-            { "entity_id": "tv3_el_cor_de_la_ciutat" }
-          ]
+          "played": [{ "entity_id": "tv3_el_cor_de_la_ciutat" }]
         },
         {
           "title": {
@@ -311,9 +319,7 @@
             "ca": "Safe the Rock Stars (anunci per a Hard Rock Café / protagonista)"
           },
           "years": [2008],
-          "played": [
-            { "entity_id": "pavoreal_films" }
-          ]
+          "played": [{ "entity_id": "pavoreal_films" }]
         },
         {
           "title": {
@@ -321,18 +327,14 @@
             "ca": "Negra noche (curtmetratge / secundari)"
           },
           "years": [2008],
-          "played": [
-            { "entity_id": "cecc" }
-          ]
+          "played": [{ "entity_id": "cecc" }]
         },
         {
           "title": {
             "es": "Mila (curtmetratge / secundari)"
           },
           "years": [2007],
-          "played": [
-            { "entity_id": "escac" }
-          ]
+          "played": [{ "entity_id": "escac" }]
         },
         {
           "title": {
@@ -362,10 +364,7 @@
             "ca": "Deux ex Machina (curtmetratge / secundari)"
           },
           "years": [2007],
-          "played": [
-            { "entity_id": "cecc" },
-            { "entity_id": "roy_baritten" }
-          ]
+          "played": [{ "entity_id": "cecc" }, { "entity_id": "roy_baritten" }]
         },
         {
           "title": {
@@ -395,9 +394,7 @@
             "ca": "Som (curtmetratge / protagonista)"
           },
           "years": [2006],
-          "played": [
-            { "entity_id": "uab_el_grinyol_producciones" }
-          ]
+          "played": [{ "entity_id": "uab_el_grinyol_producciones" }]
         },
         {
           "title": {
@@ -405,9 +402,7 @@
             "ca": "¿Por dónde empiezo? (anunci per a M2 Construccions / protagonista)"
           },
           "years": [2006],
-          "played": [
-            { "entity_id": "brunet_films" }
-          ]
+          "played": [{ "entity_id": "brunet_films" }]
         },
         {
           "title": {
@@ -415,9 +410,7 @@
             "ca": "Quieren matar a Francesco! (curtmetratge / protagonista)"
           },
           "years": [2006],
-          "played": [
-            { "entity_id": "escac" }
-          ]
+          "played": [{ "entity_id": "escac" }]
         },
         {
           "title": {
@@ -425,18 +418,14 @@
             "ca": "Viajando (anunci per a SEAT Sarsa / protagonista)"
           },
           "years": [2005],
-          "played": [
-            { "entity_id": "brunet_films" }
-          ]
+          "played": [{ "entity_id": "brunet_films" }]
         },
         {
           "title": {
             "es": "Revival (Programa videoclips)"
           },
           "years": [2002],
-          "played": [
-            { "entity_id": "flaix_tv" }
-          ]
+          "played": [{ "entity_id": "flaix_tv" }]
         },
         {
           "title": {
@@ -444,9 +433,7 @@
             "ca": "Pack (curtmetratge / protagonista)"
           },
           "years": [1997],
-          "played": [
-            { "entity_id": "imatge_sl_produccions" }
-          ]
+          "played": [{ "entity_id": "imatge_sl_produccions" }]
         }
       ]
     },
@@ -455,7 +442,7 @@
         "es": "Dirección / guión",
         "ca": "Direcció / guió"
       },
-      "image": "teatro.jpg",
+      "image": "direccion-teatro.jpg",
       "items": [
         {
           "title": {
@@ -494,9 +481,7 @@
             "ca": "Els llibres màgics (Guió / músiques)"
           },
           "years": [2010],
-          "played": [
-            { "entity_id": "polizon_teatro" }
-          ]
+          "played": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -504,9 +489,7 @@
             "ca": "Els zombies no miren la televisió (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
           "years": [2012],
-          "played": [
-            { "entity_id": "polizon_teatro" }
-          ]
+          "played": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -514,9 +497,7 @@
             "ca": "Game Over (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
           "years": [2011],
-          "played": [
-            { "entity_id": "polizon_teatro" }
-          ]
+          "played": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -541,9 +522,7 @@
           },
           "years": [2017],
           "author": "Viu el Teatre i Tibidabo",
-          "played": [
-            { "entity_id": "parc_tibidabo" }
-          ]
+          "played": [{ "entity_id": "parc_tibidabo" }]
         },
         {
           "title": {
@@ -552,9 +531,7 @@
           },
           "years": [2017],
           "company_id": "teatritus",
-          "played": [
-            { "entity_id": "teatre_apolo" }
-          ]
+          "played": [{ "entity_id": "teatre_apolo" }]
         },
         {
           "title": {
@@ -563,9 +540,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2016],
-          "played": [
-            { "entity_id": "parc_tibidabo" }
-          ]
+          "played": [{ "entity_id": "parc_tibidabo" }]
         },
         {
           "title": {
@@ -574,9 +549,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2015],
-          "played": [
-            { "entity_id": "parc_tibidabo" }
-          ]
+          "played": [{ "entity_id": "parc_tibidabo" }]
         },
         {
           "title": {
@@ -585,9 +558,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2015],
-          "played": [
-            { "entity_id": "parc_tibidabo" }
-          ]
+          "played": [{ "entity_id": "parc_tibidabo" }]
         },
         {
           "title": {
@@ -595,9 +566,7 @@
           },
           "years": [2015],
           "company_id": "unics_produccions",
-          "played": [
-            { "entity_id": "teatre_romea" }
-          ]
+          "played": [{ "entity_id": "teatre_romea" }]
         },
         {
           "title": {
@@ -625,9 +594,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2011],
-          "played": [
-            { "entity_id": "parc_tibidabo" }
-          ]
+          "played": [{ "entity_id": "parc_tibidabo" }]
         },
         {
           "title": {
@@ -636,18 +603,14 @@
           },
           "company_id": "unics_produccions",
           "years": [2010],
-          "played": [
-            { "entity_id": "teatre_poliorama" }
-          ]
+          "played": [{ "entity_id": "teatre_poliorama" }]
         },
         {
           "title": {
             "es": "The Fruits (Gira)"
           },
           "years": [2010],
-          "played": [
-            { "entity_id": "polizon_teatro" }
-          ]
+          "played": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -655,9 +618,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2009],
-          "played": [
-            { "entity_id": "teatre_poliorama" }
-          ]
+          "played": [{ "entity_id": "teatre_poliorama" }]
         },
         {
           "title": {
@@ -666,9 +627,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2009],
-          "played": [
-            { "entity_id": "teatre_poliorama" }
-          ]
+          "played": [{ "entity_id": "teatre_poliorama" }]
         },
         {
           "title": {
@@ -677,9 +636,7 @@
           },
           "company_id": "unics_produccions",
           "years": [2009],
-          "played": [
-            { "entity_id": "parc_tibidabo" }
-          ]
+          "played": [{ "entity_id": "parc_tibidabo" }]
         },
         {
           "title": {
@@ -712,9 +669,7 @@
           },
           "years": [2003],
           "company_id": "recrea_accions",
-          "played": [
-            { "entity_id": "museo_art_sabadel" }
-          ]
+          "played": [{ "entity_id": "museo_art_sabadel" }]
         }
       ]
     },
@@ -840,9 +795,7 @@
           "years": [2004],
           "author": "Varis autors",
           "director": "David Plana",
-          "played": [
-            { "entity_id": "sala_beckett" }
-          ]
+          "played": [{ "entity_id": "sala_beckett" }]
         },
         {
           "title": {
@@ -850,9 +803,7 @@
             "ca": "La guerra dins la guerra (Recital de cançons i textos)"
           },
           "years": [2011],
-          "played": [
-            { "entity_id": "blanc_i_negre" }
-          ]
+          "played": [{ "entity_id": "blanc_i_negre" }]
         },
         {
           "title": {
@@ -861,9 +812,7 @@
           "author": "Tanja Šljivar",
           "company_id": "la_minimal_teatre",
           "years": [2017],
-          "played": [
-            { "entity_id": "nau_ivanow" }
-          ]
+          "played": [{ "entity_id": "nau_ivanow" }]
         }
       ]
     },

@@ -8,6 +8,14 @@
     "url": "http://www.laminimalteatre.cat/"
   },
   {
+    "id": "sala_ars_teatre",
+    "name": {
+      "es": "Sala Ars teatre"
+    },
+    "location": "Barcelona",
+    "url": "https://www.salaarsteatre.com/"
+  },
+  {
     "id": "chamber_theater_company",
     "name": {
       "es": "Chamber Theater Company"
@@ -49,14 +57,14 @@
   },
   {
     "id": "de_la_crem_produccions",
-    "name":{
+    "name": {
       "es": "Producciones De La Crem",
       "ca": "De La Crem produccions"
     }
   },
   {
     "id": "setekrit_teatre",
-    "name":{
+    "name": {
       "es": "Setekrit Teatre"
     }
   },
@@ -83,7 +91,7 @@
   },
   {
     "id": "teresa_roig",
-    "name":{
+    "name": {
       "es": "Teresa Roig"
     }
   },
@@ -96,25 +104,25 @@
   },
   {
     "id": "recrea_accions",
-    "name":{
+    "name": {
       "es": "Recrea-Accions"
     }
   },
   {
     "id": "propellers",
-    "name":{
+    "name": {
       "es": "Propellers"
     }
   },
   {
     "id": "studi_karloff",
-    "name":{
+    "name": {
       "es": "Studi Karloff"
     }
   },
   {
     "id": "ruben_sanchez_productions",
-    "name":{
+    "name": {
       "es": "Ruben Sanchez productions"
     }
   }
