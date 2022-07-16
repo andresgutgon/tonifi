@@ -16,10 +16,10 @@ const METADATA = {
   author: 'Autor',
   years: 'Anys',
   company: 'Companyia',
-  production: 'Productora'
+  production: 'Productora',
 }
 
-function itemsGrouped (items) {
+function itemsGrouped(items) {
   return items.reduce((memo, item) => {
     const lastRowIndex = memo.length - 1
     const lastRow = memo[lastRowIndex]
@@ -32,25 +32,25 @@ function itemsGrouped (items) {
   }, [])
 }
 
-function MetaLink ({ metaKey, url, name }) {
+function MetaLink({ metaKey, url, name }) {
   return (
     <div className={styles.metadata}>
       <strong>{METADATA[metaKey]}</strong>
-      {!!url &&
-        <a href={url} target='_bkank'>
+      {!!url && (
+        <a href={url} target="_bkank">
           <TranslatedMessage text={name} />
         </a>
-      }
+      )}
       {!url && <TranslatedMessage text={name} />}
     </div>
   )
 }
 
 function hasMetadata(item) {
-  return !!Object.keys(METADATA).map(meta => !item.meta)
+  return !!Object.keys(METADATA).map((_meta) => !item.meta)
 }
 
-function Title ({ title }) {
+function Title({ title }) {
   return (
     <h4 className={styles.title}>
       <TranslatedMessage text={title} />
@@ -58,7 +58,7 @@ function Title ({ title }) {
   )
 }
 
-function MetadataItem ({ metaKey, item }) {
+function MetadataItem({ metaKey, item }) {
   const content = item[metaKey]
   const isCareer = item['is_career']
   let name
@@ -68,13 +68,7 @@ function MetadataItem ({ metaKey, item }) {
   if (metaKey !== 'company') {
     name = content
   } else if (metaKey === 'company') {
-    return (
-      <MetaLink
-        metaKey={metaKey}
-        url={content.url}
-        name={content.name}
-      />
-    )
+    return <MetaLink metaKey={metaKey} url={content.url} name={content.name} />
   } else {
     name = content.name
   }
@@ -87,9 +81,7 @@ function MetadataItem ({ metaKey, item }) {
   name = isArray ? name.join(', ') : name
   return (
     <div className={styles.metadata}>
-      {metaKey !== 'years' &&
-       <strong>{meta}</strong>
-      }
+      {metaKey !== 'years' && <strong>{meta}</strong>}
       <TranslatedMessage text={name} />
     </div>
   )
@@ -103,88 +95,92 @@ const CurriculumVitae = ({ title, content, cvPdfPath }) => {
         <div className={styles.infoLine}>
           <ul>
             <li>
-              <a href={cvPdfPath} target='_blank' rel='noopener noreferrer'>
-                <FormattedMessage id='footer.downloadCv' />
+              <a href={cvPdfPath} target="_blank" rel="noopener noreferrer">
+                <FormattedMessage id="footer.downloadCv" />
               </a>
             </li>
           </ul>
         </div>
       </Header>
       <Content>
-        {work.map((group, index) =>
+        {work.map((group, index) => (
           <div key={index}>
             <div
               className={styles.category}
-              style={{ backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${group.image.childImageSharp.fluid.src})` }}
+              style={{
+                backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${group.image.childImageSharp.gatsbyImageData.images.fallback.src})`,
+              }}
             >
               <h3 className={styles.categoryTitle}>
                 <TranslatedMessage text={group.category} />
               </h3>
             </div>
             <div className={styles.items}>
-              {itemsGrouped(group.items).map((itemGroup, ig) =>
+              {itemsGrouped(group.items).map((itemGroup, ig) => (
                 <div
-                  className={cx('row', { incompleted: itemGroup.length < 2})}
+                  className={cx('row', { incompleted: itemGroup.length < 2 })}
                   key={ig}
                 >
-                  {itemGroup.map((item, index) =>
+                  {itemGroup.map((item, index) => (
                     <div key={index} className={styles.col}>
                       <div className={styles.item}>
                         <Title title={item.title} />
-                        {hasMetadata(item) &&
+                        {hasMetadata(item) && (
                           <div className={styles.metadataList}>
-                            {Object.keys(METADATA).map(metaKey =>
+                            {Object.keys(METADATA).map((metaKey) => (
                               <MetadataItem
                                 key={metaKey}
                                 metaKey={metaKey}
                                 item={item}
                               />
-                            )}
+                            ))}
                           </div>
-                        }
-                        {item.played.length > 0 &&
+                        )}
+                        {item.played.length > 0 && (
                           <div className={styles.places}>
                             <strong>Productora:</strong>
                             <div className={styles.placeList}>
-                              {item.played.map((place, index)=>
+                              {item.played.map((place, index) => (
                                 <div key={index} className={styles.place}>
                                   <TranslatedMessage text={place.name} />
-                                  {place.location && <span>&nbsp;({place.location})</span>}
+                                  {place.location && (
+                                    <span>&nbsp;({place.location})</span>
+                                  )}
                                 </div>
-                              )}
+                              ))}
                             </div>
                           </div>
-                        }
+                        )}
                       </div>
                     </div>
-                  )}
+                  ))}
                 </div>
-              )}
+              ))}
             </div>
           </div>
-        )}
+        ))}
         <h2 className={styles.sectionTitle}>
-          <FormattedMessage id='curriculum.education' />
+          <FormattedMessage id="curriculum.education" />
         </h2>
         <ul className={styles.education}>
-          {education.map((item, index) =>
+          {education.map((item, index) => (
             <li key={index}>
               <div className={styles.educationItem}>
                 <Title title={item.title} />
-                {hasMetadata(item) &&
-                 <div className={styles.metadataList}>
-                   {Object.keys(METADATA).map(metaKey =>
+                {hasMetadata(item) && (
+                  <div className={styles.metadataList}>
+                    {Object.keys(METADATA).map((metaKey) => (
                       <MetadataItem
                         key={metaKey}
                         metaKey={metaKey}
                         item={item}
                       />
-                    )}
-                 </div>
-                }
+                    ))}
+                  </div>
+                )}
               </div>
             </li>
-          )}
+          ))}
         </ul>
       </Content>
     </>

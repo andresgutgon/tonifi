@@ -8,14 +8,14 @@
   align-items: flex-start;
   margin: $content-padding;
   margin: $content-padding-vw;
-  margin-bottom: $bottom-header / 2;
+  margin-bottom: calc($bottom-header / 2);
   margin-top: 0;
   &:after {
     content: '';
     height: 3px;
     width: 100px;
     background-color: $gray-light-8;
-    top: $bottom-header / 2;
+    top: calc($bottom-header / 2);
     position: relative;
   }
 

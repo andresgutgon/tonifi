@@ -1,14 +1,8 @@
 import * as React from 'react'
-import { Formik, Field, Form } from 'formik'
-import Textarea from 'react-textarea-autosize'
-import cn from 'classnames/bind'
 
-import { FormattedMessage } from 'react-intl'
-import useFormatMessage from '../../hooks/useFormatMessage'
 import Header from '../Header'
 import Content from '../Content'
 import styles from './index.module.scss'
-const cx = cn.bind(styles)
 
 const VideBook = ({ title, description }) => (
   <>

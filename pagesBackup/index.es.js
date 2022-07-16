@@ -11,25 +11,22 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage
 
-export const pageQuery = graphql`
-  query {
-    allHomeJson {
-      edges {
-        node {
-          images {
-            title
-            alt
-            src {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+export const pageQuery = graphql`{
+  allHomeJson {
+    edges {
+      node {
+        images {
+          title
+          alt
+          src {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
             }
-            full
           }
+          full
         }
       }
     }
   }
+}
 `

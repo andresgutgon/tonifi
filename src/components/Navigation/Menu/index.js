@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import { FormattedMessage } from 'react-intl'
 
 import { urlForId } from '../../Layout/Content'
-import StickyComponent from '../../StickyComponent'
 import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
@@ -23,13 +22,13 @@ const MENU_ITEMS = [
   },
   {
     textKey: 'mainMenu.contact',
-    id: '05'
-  }
+    id: '05',
+  },
 ]
 const MenuComponent = ({ urls, langKey, fixed = false, inlineStyles = {} }) => (
   <nav className={cx('menu', { fixed })} style={inlineStyles}>
     <ul className={styles.list}>
-      {MENU_ITEMS.map((link, index) =>
+      {MENU_ITEMS.map((link, index) => (
         <li key={index} className={styles.menuItem}>
           <Link
             to={urlForId(link.id, langKey, urls)}
@@ -39,12 +38,12 @@ const MenuComponent = ({ urls, langKey, fixed = false, inlineStyles = {} }) => (
             <FormattedMessage id={link.textKey} />
           </Link>
         </li>
-      )}
+      ))}
     </ul>
   </nav>
 )
 
-function isBigScreen () {
+function isBigScreen() {
   if (typeof window === 'undefined') return true
   return window.matchMedia('(min-width: 400px)').matches
 }
@@ -54,13 +53,7 @@ const Menu = (props) => {
 
   if (bigScreen) return <MenuComponent {...props} />
 
-  return (
-    <StickyComponent position='top'>
-      {({ fixed, inlineStyles }) => (
-        <MenuComponent {...props} fixed={fixed} inlineStyles={inlineStyles} />
-      )}
-    </StickyComponent>
-  )
+  return <MenuComponent {...props} />
 }
 
 export default Menu

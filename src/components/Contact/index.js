@@ -19,7 +19,7 @@ const INITIAL_STATE = {
   name: '',
   subject: '',
   message: '',
-  answer: ''
+  answer: '',
 }
 
 /**
@@ -39,7 +39,7 @@ function requiredValidation(value) {
 
 function emailValidation(errorMesssage) {
   return (value) => {
-    let error = requiredValidation(value);
+    let error = requiredValidation(value)
     if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
       error = errorMesssage
     }
@@ -47,19 +47,17 @@ function emailValidation(errorMesssage) {
   }
 }
 
-function Row ({ children }) {
-  return (
-    <div className={styles.row}>{children}</div>
-  )
+function Row({ children }) {
+  return <div className={styles.row}>{children}</div>
 }
-function LabelInput ({
+function LabelInput({
   children,
   label,
   name,
   type,
   validate,
   errors,
-  touched
+  touched,
 }) {
   let attrs = { type, name }
   if (validate) {
@@ -72,19 +70,16 @@ function LabelInput ({
         const fieldProps = {
           ...field,
           id: name,
-          type
+          type,
         }
         return (
-          <label
-            htmlFor={name}
-            className={cx('labelInput', { hasErrors })}
-          >
+          <label htmlFor={name} className={cx('labelInput', { hasErrors })}>
             {children({ fieldProps })}
             <span className={styles.label}>
               {label}
-              {hasErrors &&
-               <span className={styles.errors}> - {errors[name]}</span>
-              }
+              {hasErrors && (
+                <span className={styles.errors}> - {errors[name]}</span>
+              )}
             </span>
             <span className={styles.border} />
           </label>
@@ -94,7 +89,7 @@ function LabelInput ({
   )
 }
 
-function TextInput ({ label, name, type, validate, errors, touched }) {
+function TextInput({ label, name, type, validate, errors, touched }) {
   return (
     <LabelInput
       type={type}
@@ -105,17 +100,13 @@ function TextInput ({ label, name, type, validate, errors, touched }) {
       touched={touched}
     >
       {({ fieldProps }) => (
-        <input
-          {...fieldProps}
-          className={styles.input}
-          placeholder='&nbsp;'
-        />
+        <input {...fieldProps} className={styles.input} placeholder="&nbsp;" />
       )}
     </LabelInput>
   )
 }
 
-function TextAreaInput ({ label, name, type, validate, errors, touched }) {
+function TextAreaInput({ label, name, type, validate, errors, touched }) {
   return (
     <LabelInput
       type={type}
@@ -129,22 +120,24 @@ function TextAreaInput ({ label, name, type, validate, errors, touched }) {
         <Textarea
           {...fieldProps}
           className={styles.input}
-          placeholder='&nbsp;'
+          placeholder="&nbsp;"
         />
       )}
     </LabelInput>
   )
 }
 
-function FormComponent ({ sent, errors, touched, isSubmitting }) {
+function FormComponent({ sent, errors, touched, isSubmitting }) {
   const effect = sent === null ? null : sent ? 'bounceOutDown' : 'bounceInUp'
-  const invalidEmailErrorMessage = useFormatMessage('contact.fields.email.invalidFormat')
+  const invalidEmailErrorMessage = useFormatMessage(
+    'contact.fields.email.invalidFormat'
+  )
   return (
     <Form className={cx('form', 'animated', effect)}>
       <Row>
         <TextInput
-          type='email'
-          name='email'
+          type="email"
+          name="email"
           label={useFormatMessage('contact.fields.email.label')}
           errors={errors}
           touched={touched}
@@ -153,9 +146,9 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
       </Row>
       <Row>
         <TextInput
-          type='text'
-          name='name'
-          label='Tu nombre'
+          type="text"
+          name="name"
+          label="Tu nombre"
           label={useFormatMessage('contact.fields.name.label')}
           errors={errors}
           touched={touched}
@@ -164,8 +157,8 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
       </Row>
       <Row>
         <TextInput
-          type='text'
-          name='subject'
+          type="text"
+          name="subject"
           label={useFormatMessage('contact.fields.subject.label')}
           errors={errors}
           touched={touched}
@@ -174,8 +167,8 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
       </Row>
       <Row>
         <TextAreaInput
-          type='textarea'
-          name='message'
+          type="textarea"
+          name="message"
           label={useFormatMessage('contact.fields.comments.label')}
           errors={errors}
           touched={touched}
@@ -185,22 +178,18 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
       <Row>
         <div className={styles.answer}>
           <TextInput
-            type='text'
-            name='answer'
-            label='Put here your answer'
+            type="text"
+            name="answer"
+            label="Put here your answer"
             errors={errors}
             touched={touched}
             validate={emptyAnswerValidation}
           />
         </div>
-        <button
-          className={styles.button}
-          type='submit'
-          disabled={isSubmitting}
-        >
+        <button className={styles.button} type="submit" disabled={isSubmitting}>
           <span>
-            {isSubmitting && <FormattedMessage id='contact.fields.sending' />}
-            {!isSubmitting && <FormattedMessage id='contact.fields.send' />}
+            {isSubmitting && <FormattedMessage id="contact.fields.sending" />}
+            {!isSubmitting && <FormattedMessage id="contact.fields.send" />}
           </span>
         </button>
       </Row>
@@ -208,11 +197,11 @@ function FormComponent ({ sent, errors, touched, isSubmitting }) {
   )
 }
 
-function onSubmit (data, actions) {
+function onSubmit(data, actions) {
   const xhr = new XMLHttpRequest()
   xhr.open('POST', URL)
-  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
-  xhr.onreadystatechange = function() {
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+  xhr.onreadystatechange = function () {
     actions.setSubmitting(false)
     actions.setStatus({ sent: true })
     setTimeout(() => {
@@ -221,43 +210,46 @@ function onSubmit (data, actions) {
     }, 4000) // 4 seconds
     return
   }
-  const encoded = Object
-    .keys(data)
-    .map((k) => (encodeURIComponent(k) + "=" + encodeURIComponent(data[k])))
+  const encoded = Object.keys(data)
+    .map((k) => encodeURIComponent(k) + '=' + encodeURIComponent(data[k]))
     .join('&')
   return xhr.send(encoded)
 }
 
 const Contact = ({ title, description }) => (
   <>
-    <Header
-      title={title}
-      description={description}
-    />
+    <Header title={title} description={description} />
     <Content>
       <div className={styles.contact}>
         <Formik
           initialStatus={{ sent: null }}
           initialValues={INITIAL_STATE}
           onSubmit={onSubmit}
-          render={({ errors, values, status, touched, isSubmitting }) => {
+        >
+          {({ errors, values, status, touched, isSubmitting }) => {
             const { sent } = status
             const { name, email } = values
             const messageSuccess = sent ? 'bounceInDown' : 'bounceOutUp'
 
             return (
               <>
-                <div className={cx('success', 'animated', messageSuccess, { sent })}>
+                <div
+                  className={cx('success', 'animated', messageSuccess, {
+                    sent,
+                  })}
+                >
                   <h3>
-                    <div className={styles.successIcon}><TickIcon /></div>
-                    <FormattedMessage id='contact.messageSent' />
+                    <div className={styles.successIcon}>
+                      <TickIcon />
+                    </div>
+                    <FormattedMessage id="contact.messageSent" />
                   </h3>
                   <p>
                     <FormattedMessage
-                      id='contact.thanks'
+                      id="contact.thanks"
                       values={{
                         name: <strong>{name}</strong>,
-                        email: <strong>{email}</strong>
+                        email: <strong>{email}</strong>,
                       }}
                     />
                   </p>
@@ -271,7 +263,7 @@ const Contact = ({ title, description }) => (
               </>
             )
           }}
-        />
+        </Formik>
       </div>
     </Content>
   </>

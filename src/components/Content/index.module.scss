@@ -6,8 +6,8 @@
   justify-content: center;
   padding: $content-padding;
   padding: $content-padding-vw;
-  padding-top: $content-padding / 2;
-  padding-top: $content-padding-vw / 2;
+  padding-top: calc($content-padding / 2);
+  padding-top: calc($content-padding-vw / 2);
   &Inner {
     width: 100%;
   }

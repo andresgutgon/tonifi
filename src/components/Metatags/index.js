@@ -1,17 +1,7 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet }from 'react-helmet'
 
 const GOOGLE_FONTS_SITE = 'https://fonts.googleapis.com/css?family='
-
-function CanonicalLink ({ langs }) {
-  debugger
-  if (!langs) return null
-
-  return (
-    <>
-    </>
-  )
-}
 
 function Metatags({
   url,
@@ -20,17 +10,15 @@ function Metatags({
   baseTitle,
   pageTitle,
   description,
-  keywords,
   thumbnail,
   twitter,
   langs,
-  locale
+  locale,
 }) {
-
   const title = pageTitle ? `${pageTitle} - ${baseTitle}` : baseTitle
   const thumbnailUrl = thumbnail ? `${url}/${thumbnail}` : null
-  const canonical = langs ? langs.find(l => l.selected) : null
-  const alternates = langs ? langs.filter(l => !l.selected) : []
+  const canonical = langs ? langs.find((l) => l.selected) : null
+  const alternates = langs ? langs.filter((l) => !l.selected) : []
   return (
     <Helmet
       title={title}
@@ -43,7 +31,7 @@ function Metatags({
         { property: 'og:image', content: thumbnailUrl && thumbnailUrl },
         {
           property: 'og:image:secure_url',
-          content: thumbnailUrl && thumbnailUrl
+          content: thumbnailUrl && thumbnailUrl,
         },
         { property: 'og:site_name', content: baseTitle },
         { property: 'og:description', content: description },
@@ -58,29 +46,26 @@ function Metatags({
         { name: 'twitter:image', content: thumbnailUrl && thumbnailUrl },
         { name: 'twitter:creator', content: `@${twitter}` },
 
-        { name: 'robots', content: 'index, follow' }
+        { name: 'robots', content: 'index, follow' },
       ]}
     >
       <html lang={locale} />
-      {canonical &&
+      {canonical && (
         <link
           href={`${url}${canonical.link}`}
           hreflang={canonical.langKey}
-          rel='canonical'
+          rel="canonical"
         />
-      }
+      )}
       {alternates.map((alternate) => (
         <link
           key={alternate.langKey}
           href={`${url}${alternate.link}`}
           hreflang={alternate.langKey}
-          rel='alternate'
+          rel="alternate"
         />
       ))}
-      <link
-        href={`${GOOGLE_FONTS_SITE}${fonts}`}
-        rel='stylesheet'
-      />
+      <link href={`${GOOGLE_FONTS_SITE}${fonts}`} rel="stylesheet" />
     </Helmet>
   )
 }

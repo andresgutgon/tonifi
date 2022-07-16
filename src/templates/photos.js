@@ -6,7 +6,7 @@ import Photos from '../components/Photos'
 
 const PhotosTemplate = ({ data, location }) => {
   const { title, description, images, locale } = data.markdownRemark.frontmatter
-  const metaImage = images[0].src.childImageSharp.fluid.src
+  const metaImage = images[0].src.childImageSharp.gatsbyImageData.src
   return (
     <Layout pageData={{ ...data, metaImage, locale }} location={location}>
       {() => (
@@ -18,29 +18,26 @@ const PhotosTemplate = ({ data, location }) => {
 
 export default PhotosTemplate
 
-export const pageQuery = graphql`
-  query PhotosPageQuery($id: String!) {
-    markdownRemark(id: {eq: $id}) {
-      frontmatter {
-        id
+export const pageQuery = graphql`query PhotosPageQuery($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    frontmatter {
+      id
+      title
+      description
+      keywords
+      locale
+      path
+      images {
         title
-        description
-        keywords
-        locale
-        path
-        images {
-          title
-          alt
-          src {
-            childImageSharp {
-              fluid(maxWidth: 1000) {
-                ...GatsbyImageSharpFluid
-              }
-            }
+        alt
+        src {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
-          full
         }
+        full
       }
     }
   }
+}
 `

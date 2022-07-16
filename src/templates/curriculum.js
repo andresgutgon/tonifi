@@ -7,7 +7,7 @@ import CurriculumVitae from '../components/CurriculumVitae'
 const CVPage = ({ data, cvPdfPath, location }) => {
   const { title, locale } = data.markdownRemark.frontmatter
   const content = data.allCvJson.edges[0].node
-  const metaImage = content.work[0].image.childImageSharp.fluid.src
+  const metaImage = content.work[0].image.childImageSharp.gatsbyImageData.src
   return (
     <Layout pageData={{ ...data, metaImage, locale }} location={location}>
       {({ cvPdfPath }) => (
@@ -23,59 +23,71 @@ const CVPage = ({ data, cvPdfPath, location }) => {
 
 export default CVPage
 
-export const pageQuery = graphql`
-  query CvPageQuery($id: String!) {
-    markdownRemark(id: {eq: $id}) {
-      frontmatter {
-        id
-        title
-        description
-        keywords
-        locale
-      }
+export const pageQuery = graphql`query CvPageQuery($id: String!) {
+  markdownRemark(id: {eq: $id}) {
+    frontmatter {
+      id
+      title
+      description
+      keywords
+      locale
     }
-    allCvJson {
-      edges {
-        node {
-          education {
-            title { es ca }
-            teacher
-            is_career
-            years
+  }
+  allCvJson {
+    edges {
+      node {
+        education {
+          title {
+            es
+            ca
           }
-          contact {
-            email
-            phone
-          }
-          work {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+          teacher
+          is_career
+          years
+        }
+        contact {
+          email
+          phone
+        }
+        work {
+          image {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
             }
-            category { es ca }
-            items {
-              title { es ca }
-              years
-              director
-              production
-              author
-              company {
-                name { es ca }
-                url
-                id
+          }
+          category {
+            es
+            ca
+          }
+          items {
+            title {
+              es
+              ca
+            }
+            years
+            director
+            production
+            author
+            company {
+              name {
+                es
+                ca
               }
-              played {
-                id
-                name { es ca }
-                location
+              url
+              id
+            }
+            played {
+              id
+              name {
+                es
+                ca
               }
+              location
             }
           }
         }
       }
     }
   }
+}
 `
