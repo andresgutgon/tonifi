@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import { FormattedMessage } from 'react-intl'
 
 import { urlForId } from '../../Layout/Content'
-import StickyComponent from '../../StickyComponent'
 import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
