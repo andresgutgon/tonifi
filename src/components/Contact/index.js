@@ -12,7 +12,8 @@ import TickIcon from './TickIcon'
 const cx = cn.bind(styles)
 
 const BASE_API = 'https://script.google.com/macros/s'
-const VERSION = 'AKfycbzKC8m1Gu1zP0ihCK9EVEUu1xcg0ZXzlqvpmXP-AQ-tIxfYWl76'
+const VERSION =
+  'AKfycbz06mg_HTQLXmp95os8yaVST5KdoiskTJq8fTR5KT98Nb76Ik7pl--b2upe57aSnWQw'
 const URL = `${BASE_API}/${VERSION}/exec`
 const INITIAL_STATE = {
   email: '',
