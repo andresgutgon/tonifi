@@ -13,7 +13,7 @@ const cx = cn.bind(styles)
 
 const BASE_API = 'https://script.google.com/macros/s'
 const VERSION =
-  'AKfycbz06mg_HTQLXmp95os8yaVST5KdoiskTJq8fTR5KT98Nb76Ik7pl--b2upe57aSnWQw'
+  'AKfycbxIJcuDaVeChFLR6DGlC6ki9Kood2XGMzdms_uNws7IB3oKAUO3usuXEbtm9G9VxiWcsw'
 const URL = `${BASE_API}/${VERSION}/exec`
 const INITIAL_STATE = {
   email: '',
