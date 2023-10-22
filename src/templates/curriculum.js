@@ -12,11 +12,11 @@ const CVPage = ({ data, location }) => {
   const metaImage = work[0].image.childImageSharp.gatsbyImageData.src
   return (
     <Layout pageData={{ ...data, metaImage, locale }} location={location}>
-      {({ cvPdfPath }) => (
+      {({ pdfFiles }) => (
         <CurriculumVitae
           title={title}
           pdf={{
-            filepath: cvPdfPath,
+            filepath: pdfFiles.cv,
             i18n: 'footer.downloadCv',
           }}
           work={work}
@@ -28,9 +28,8 @@ const CVPage = ({ data, location }) => {
 }
 
 export default CVPage
-
 export const pageQuery = graphql`
-  query CvPageQuery($id: String!) {
+  query CvCurriculumQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         id
@@ -58,6 +57,10 @@ export const pageQuery = graphql`
           }
           work {
             identifier
+            description {
+              es
+              ca
+            }
             image {
               childImageSharp {
                 gatsbyImageData(layout: FULL_WIDTH)
@@ -91,6 +94,13 @@ export const pageQuery = graphql`
                   ca
                 }
                 location
+              }
+              producers {
+                id
+                name {
+                  es
+                  ca
+                }
               }
             }
           }

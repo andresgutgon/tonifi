@@ -3,8 +3,8 @@ const fontBuilder = require('pdfmake/build/vfs_fonts.js')
 const fs = require('fs')
 const path = require('path')
 
-const rootPath = path.join(__dirname, '../..')
-const srcPath = path.join(rootPath, 'src')
+const ROOT_PATH = path.join(__dirname, '../..')
+const BASE_PATH = path.join(ROOT_PATH, 'src')
 
 const WEIGHTS = {
   normal: 'Regular',
@@ -25,7 +25,7 @@ function buildFont() {
 module.exports = function createPdf({ content, filename }) {
   const maker = new pdfmake({ Roboto: buildFont() })
   const doc = maker.createPdfKitDocument(content)
-  const pdfFile = path.join(srcPath, 'pdfs', `${filename}.pdf`)
+  const pdfFile = path.join(BASE_PATH, 'pdfs', `${filename}.pdf`)
 
   doc.pipe(fs.createWriteStream(pdfFile))
   doc.end()

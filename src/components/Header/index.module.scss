@@ -6,9 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin: $content-padding;
-  margin: $content-padding-vw;
-  margin-bottom: calc($bottom-header / 2);
+  margin-left: $content-padding-vw;
+  margin-right: $content-padding-vw;
   margin-top: 0;
   &:after {
     content: '';

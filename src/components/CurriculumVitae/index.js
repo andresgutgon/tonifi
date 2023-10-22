@@ -102,6 +102,7 @@ const CurriculumVitae = ({
   work,
   pdf,
   showYears = false,
+  descriptions = [],
 }) => {
   const pdfText = useFormatMessage(pdf.i18n)
   const sections = getSections(showYears)
@@ -120,6 +121,11 @@ const CurriculumVitae = ({
         </div>
       </Header>
       <Content>
+        <div className={styles.description}>
+          {descriptions.map((item, i) => (
+            <p key={i}>{item}</p>
+          ))}
+        </div>
         {work.map((group, index) => (
           <div key={index}>
             <div
