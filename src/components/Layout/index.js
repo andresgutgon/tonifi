@@ -12,6 +12,8 @@ const query = graphql`
           in: [
             "toni-figuera-curriculum-castellano"
             "toni-figuera-curriculum-catala"
+            "toni-figuera-direccio"
+            "toni-figuera-direccion"
           ]
         }
       }
@@ -61,17 +63,13 @@ const FILE_NAMES = {
 }
 
 function findCvFiles(files, locale) {
-  console.log('FILES', files)
   return files.reduce((memo, file) => {
     const node = file.node
     const descriptor = FILE_NAMES[node.name]
-    console.log('DESCRIPTOR', descriptor)
 
     if (descriptor.locale !== locale) return memo
 
     memo[descriptor.key] = node.publicURL
-
-    console.log('MEMo', memo)
     return memo
   }, {})
 }
@@ -93,7 +91,6 @@ const Layout = ({ children, location, pageData, hideFooter }) => {
         }
         const urls = data.allPageMappingsJson.edges[0].node.pageUrlMappings
         const pdfFiles = findCvFiles(data.allFile.edges, pageData.locale)
-        console.log('FILES', pdfFiles)
         return (
           <Content
             children={children}
