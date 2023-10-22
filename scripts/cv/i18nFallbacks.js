@@ -4,20 +4,20 @@ const locales = config.languages.langs
 const defaultLocale = config.languages.defaultLangKey
 const PLAIN_TYPES = ['string', 'number']
 
-function isObject (content) {
+function isObject(content) {
   return typeof content === 'object'
 }
 
-function isPlainType (content) {
+function isPlainType(content) {
   const type = typeof content
   return PLAIN_TYPES.includes(type)
 }
 
-function isNestedType (content) {
+function isNestedType(content) {
   return Array.isArray(content) || isObject(content)
 }
 
-function canBeTranslated (keys) {
+function canBeTranslated(keys) {
   return !keys.find((key) => !locales.includes(key))
 }
 
@@ -30,7 +30,7 @@ function translateKeys(data, keys) {
 
   if (!keys.includes(defaultLocale)) {
     const dataString = JSON.stringify(data)
-    raise `It must contain default locale translated: ${dataString}`
+    raise`It must contain default locale translated: ${dataString}`
   }
 
   const defaultTranslation = data[defaultLocale]
@@ -44,7 +44,7 @@ function translateKeys(data, keys) {
   return { keys: newKeys, data: newData }
 }
 
-function recursiveFallback (input) {
+function recursiveFallback(input) {
   if (isPlainType(input)) return input
 
   if (Array.isArray(input)) {
@@ -69,6 +69,6 @@ function recursiveFallback (input) {
   }, {})
 }
 
-module.exports = function i18nFallbacks (data) {
+module.exports = function i18nFallbacks(data) {
   return recursiveFallback(data)
 }

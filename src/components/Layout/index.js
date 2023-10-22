@@ -12,6 +12,8 @@ const query = graphql`
           in: [
             "toni-figuera-curriculum-castellano"
             "toni-figuera-curriculum-catala"
+            "toni-figuera-direccio"
+            "toni-figuera-direccion"
           ]
         }
       }
@@ -52,15 +54,24 @@ const query = graphql`
   }
 `
 
+const FILE_KEYS = { direction: 'direction', cv: 'cv' }
 const FILE_NAMES = {
-  'toni-figuera-curriculum-castellano': 'es',
-  'toni-figuera-curriculum-catala': 'ca',
+  'toni-figuera-direccio': { locale: 'ca', key: FILE_KEYS.direction },
+  'toni-figuera-curriculum-catala': { locale: 'ca', key: FILE_KEYS.cv },
+  'toni-figuera-direccion': { locale: 'es', key: FILE_KEYS.direction },
+  'toni-figuera-curriculum-castellano': { locale: 'es', key: FILE_KEYS.cv },
 }
 
-function findCvFile(files, locale) {
-  return files
-    .map((f) => f.node)
-    .find((data) => FILE_NAMES[data.name] === locale).publicURL
+function findCvFiles(files, locale) {
+  return files.reduce((memo, file) => {
+    const node = file.node
+    const descriptor = FILE_NAMES[node.name]
+
+    if (descriptor.locale !== locale) return memo
+
+    memo[descriptor.key] = node.publicURL
+    return memo
+  }, {})
 }
 
 const Layout = ({ children, location, pageData, hideFooter }) => {
@@ -79,8 +90,7 @@ const Layout = ({ children, location, pageData, hideFooter }) => {
           },
         }
         const urls = data.allPageMappingsJson.edges[0].node.pageUrlMappings
-        const cvPdfPath = findCvFile(data.allFile.edges, pageData.locale)
-
+        const pdfFiles = findCvFiles(data.allFile.edges, pageData.locale)
         return (
           <Content
             children={children}
@@ -88,7 +98,7 @@ const Layout = ({ children, location, pageData, hideFooter }) => {
             location={location}
             metadata={metadata}
             urls={urls}
-            cvPdfPath={cvPdfPath}
+            pdfFiles={pdfFiles}
           />
         )
       }}

@@ -6,6 +6,7 @@
   "languages": ["Castellano", "Català", "English"],
   "work": [
     {
+      "identifier": "theater",
       "category": {
         "es": "Teatro",
         "ca": "Teatre"
@@ -54,6 +55,7 @@
         },
         {
           "title": {
+            "ca": "Frankenstein, musical (Gira)",
             "es": "Frankenstein, musical (Gira)"
           },
           "author": "Cristina Esteve y Jaume Carreras",
@@ -62,6 +64,7 @@
         },
         {
           "title": {
+            "ca": "Espejismo 53: Arrojarse al vacío",
             "es": "Espejismo 53: Arrojarse al vacío"
           },
           "author": "Albert Pijuan y LaminimaL",
@@ -70,6 +73,7 @@
         },
         {
           "title": {
+            "ca": "Apocalypse/Uploaded",
             "es": "Apocalypse/Uploaded"
           },
           "company_id": "la_minimal_teatre",
@@ -83,6 +87,7 @@
         },
         {
           "title": {
+            "ca": "Jekyll & Hide, musical (Gira)",
             "es": "Jekyll & Hide, musical (Gira)"
           },
           "author": "Cristina Esteve y Jaume Carreras",
@@ -107,6 +112,7 @@
         },
         {
           "title": {
+            "ca": "The Crimes on the rue morgue, musical. (Gira)",
             "es": "The Crimes on the rue morgue, musical. (Gira)"
           },
           "years": [2015],
@@ -115,6 +121,7 @@
         },
         {
           "title": {
+            "ca": "Fam de llibertat",
             "es": "Fam de llibertat"
           },
           "company_id": "blanc_i_negre",
@@ -123,6 +130,7 @@
         },
         {
           "title": {
+            "ca": "The Phantom of the Opera, musical (Gira)",
             "es": "The Phantom of the Opera, musical (Gira)"
           },
           "author": "Cristina Esteve y Jaume Carreras",
@@ -158,6 +166,7 @@
         },
         {
           "title": {
+            "ca": "La Grandesa d'ésser un entre tants",
             "es": "La Grandesa d'ésser un entre tants"
           },
           "company_id": "la_minimal_teatre",
@@ -233,7 +242,9 @@
       ]
     },
     {
+      "identifier": "audiovisual",
       "category": {
+        "ca": "Audiovisual",
         "es": "Audiovisual"
       },
       "image": "audiovisual.jpg",
@@ -331,6 +342,7 @@
         },
         {
           "title": {
+            "ca": "Mila (curtmetratge / secundari)",
             "es": "Mila (curtmetratge / secundari)"
           },
           "years": [2007],
@@ -422,6 +434,7 @@
         },
         {
           "title": {
+            "ca": "Revival (Programa videoclips)",
             "es": "Revival (Programa videoclips)"
           },
           "years": [2002],
@@ -438,21 +451,103 @@
       ]
     },
     {
+      "identifier": "direction",
       "category": {
         "es": "Dirección / guión",
         "ca": "Direcció / guió"
+      },
+      "description": {
+        "ca": [
+          "Arribo a director de teatre després de l’experiència adquirida durant més de 20 anys treballant com actor per escenaris de tot el país en teatre, musicals, teatre familiar, teatre de carrer i sarsuela; de treballar directament amb directors de renom, d’investigar en noves dramaturgies, de participar en laboratoris de creativitat teatral i de treballar en diferents companyies amb maneres de fer molt diverses. La capacitat de dirigir, crear i escriure, ha aflorit de manera natural i ara també n’és una necessitat. D’una banda dirigint teatre professional, i de l’altre dirigint teatre popular, que és on vaig començar la meva carrera teatral quan només tenia 6 anys. Dues experiències diferents però amb molts punts en comú, doncs al final, un director ha de ser capaç de crear una bona posta en escena i saber transmetre el que vol als seus intèrprets per treure el millor de cadascun d’ells i elles.",
+          "La direcció de teatre és una feina meravellosa que em dóna molta satisfacció i moltes alegries. La possibilitat de dirigir i veure crèixer durant anys els projectes de teatre popular en els que m’implico donen sentit a la meva professió."
+        ],
+        "es": [
+          "Llego a director de teatro después de la experiencia adquirida durante más de 20 años trabajando como actor por escenarios de todo el país en teatro, musicales, teatro familiar, teatro de calle y zarzuela; de trabajar directamente con directores de renombre, de investigar en nuevas dramaturgias, de participar en laboratorios de investigación y creatividad teatral y de trabajar en diferentes compañías con maneras de hacer muy diversas. La capacidad de dirigir, crear y escribir, ha surgido de manera natural y ahora también es una necesidad. Por un banda dirigiendo teatro profesional, y por la otra dirigiendo teatro popular, que es dónde empecé mi carrera teatral cuando sólo tenía 6 años. Dos experiencias diferentes pero con muchos puntos en común, pues al final, un director tiene que ser capaz de crear una buena puesta en escena y saber transmitir lo que quiere a sus intérpretes para sacar lo mejor de cada uno de ellos y ellas.",
+          "La dirección de teatro es un trabajo maravilloso que me da muchas satisfacciones y muchas alegrias. La posibilidad de dirigir i ver crecer durante años los proyectos de teatro popular en los que me implico dan sentido a mi profesión."
+        ]
       },
       "image": "direccion-teatro.jpg",
       "items": [
         {
           "title": {
+            "es": "El Reino de las anguilas,",
+            "ca": "El Regne de les Anguiles"
+          },
+          "author": "Albert Pijuan",
+          "years": [2023],
+          "company_id": "la_minimal_teatre",
+          "played": [{ "entity_id": "versus_teatre", "role": "place" }]
+        },
+        {
+          "title": {
+            "es": "Las Leyendas",
+            "ca": "Les Llegendes"
+          },
+          "author": "VVAA",
+          "years": [2023],
+          "producers": [
+            {
+              "entity_id": "fem_bir"
+            },
+            {
+              "entity_id": "ayuntament_bigues_i_riells"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "El Pregón (Dirección y guión)",
+            "ca": "El Pregó (Direcció i guió)"
+          },
+          "author": "Toni Figuera",
+          "years": [2023],
+          "producers": [
+            {
+              "entity_id": "fem_bir"
+            },
+            {
+              "entity_id": "ayuntament_bigues_i_riells"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Las Pastorcillas de Montornès",
+            "ca": "Les Pastoretes de Montornès"
+          },
+          "author": "Xavier Bertran",
+          "years": [2023],
+          "producers": [
+            {
+              "entity_id": "associacio_la_remencada"
+            }
+          ]
+        },
+        {
+          "title": {
             "es": "La Remençada, el musical histórico del Vallès (Dirección)",
             "ca": "La Remençada, el musical històric del Vallès (Direcció)"
           },
-          "years": [2019, 2018, 2017, 2016, 2015],
-          "played": [
+          "years": [2023, 2021, 2019, 2018, 2017, 2016, 2015],
+          "producers": [
             {
               "entity_id": "associacio_la_remencada"
+            }
+          ]
+        },
+        {
+          "title": {
+            "ca": "Els Pastorets,",
+            "es": "Los Pastorcitos"
+          },
+          "author": "JM Folch i Torres",
+          "years": [2022],
+          "producers": [
+            {
+              "entity_id": "fem_bir"
+            },
+            {
+              "entity_id": "ayuntament_bigues_i_riells"
             }
           ]
         },
@@ -470,7 +565,7 @@
             "ca": "Les mascotes del Tibidabo fan la volta al món (Direcció / guió)"
           },
           "years": [2017],
-          "played": [
+          "producers": [
             { "entity_id": "viu_el_teatre" },
             { "entity_id": "parc_tibidabo" }
           ]
@@ -481,7 +576,7 @@
             "ca": "Els llibres màgics (Guió / músiques)"
           },
           "years": [2010],
-          "played": [{ "entity_id": "polizon_teatro" }]
+          "producers": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -489,7 +584,7 @@
             "ca": "Els zombies no miren la televisió (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
           "years": [2012],
-          "played": [{ "entity_id": "polizon_teatro" }]
+          "producers": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -497,7 +592,7 @@
             "ca": "Game Over (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
           "years": [2011],
-          "played": [{ "entity_id": "polizon_teatro" }]
+          "producers": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -510,6 +605,7 @@
       ]
     },
     {
+      "identifier": "family_theater",
       "category": {
         "es": "Teatro familiar",
         "ca": "Teatre familiar"
@@ -518,6 +614,7 @@
       "items": [
         {
           "title": {
+            "ca": "La família monstre",
             "es": "La família monstre"
           },
           "years": [2017],
@@ -562,6 +659,7 @@
         },
         {
           "title": {
+            "ca": "Patatu",
             "es": "Patatu"
           },
           "years": [2015],
@@ -582,6 +680,7 @@
         },
         {
           "title": {
+            "ca": "The Magic Books (Gira)",
             "es": "The Magic Books (Gira)"
           },
           "years": [2011],
@@ -598,7 +697,7 @@
         },
         {
           "title": {
-            "es": "El Duende Valiente",
+            "ca": "El Duende Valiente",
             "es": "El Follet Valent"
           },
           "company_id": "unics_produccions",
@@ -607,6 +706,7 @@
         },
         {
           "title": {
+            "ca": "The Fruits (Gira)",
             "es": "The Fruits (Gira)"
           },
           "years": [2010],
@@ -614,6 +714,7 @@
         },
         {
           "title": {
+            "ca": "Papanotes",
             "es": "Papanotes"
           },
           "company_id": "unics_produccions",
@@ -640,8 +741,8 @@
         },
         {
           "title": {
-            "es": "La Cennicienta",
-            "es": "La Ventafocs"
+            "ca": "La Ventafocs",
+            "es": "La Cennicienta"
           },
           "years": [2006],
           "company_id": "catacrac"
@@ -674,6 +775,7 @@
       ]
     },
     {
+      "identifier": "street_theater",
       "category": {
         "es": "Teatro de calle",
         "ca": "Teatre de carrer"
@@ -682,6 +784,7 @@
       "items": [
         {
           "title": {
+            "ca": "Sysiphus",
             "es": "Sysiphus"
           },
           "years": [2019, 2018],
@@ -737,6 +840,7 @@
         },
         {
           "title": {
+            "ca": "Spiders",
             "es": "Spiders"
           },
           "years": [2000],
@@ -745,6 +849,7 @@
       ]
     },
     {
+      "identifier": "lectures_recitals",
       "category": {
         "es": "Lecturas y recitales",
         "ca": "Lectures i recitals"
@@ -807,6 +912,7 @@
         },
         {
           "title": {
+            "ca": "Pero la ciutat m'ha protegit",
             "es": "Pero la ciutat m'ha protegit"
           },
           "author": "Tanja Šljivar",
@@ -817,6 +923,7 @@
       ]
     },
     {
+      "identifier": "zarzuela",
       "category": {
         "es": "Zarzuela",
         "ca": "Sarsuela"
@@ -825,6 +932,7 @@
       "items": [
         {
           "title": {
+            "ca": "La Dogaresa (gira)",
             "es": "La Dogaresa (gira)"
           },
           "years": [2009],
@@ -840,6 +948,7 @@
         },
         {
           "title": {
+            "ca": "Luisa Fernanda (gira)",
             "es": "Luisa Fernanda (gira)"
           },
           "years": [2008],
@@ -847,6 +956,7 @@
         },
         {
           "title": {
+            "ca": "La Corte del Faraón (gira)",
             "es": "La Corte del Faraón (gira)"
           },
           "years": [2008],
@@ -854,6 +964,7 @@
         },
         {
           "title": {
+            "ca": "La Leyenda del Beso (gira)",
             "es": "La Leyenda del Beso (gira)"
           },
           "years": [2007],
@@ -881,6 +992,7 @@
     },
     {
       "title": {
+        "ca": "Acting in English",
         "es": "Acting in English"
       },
       "teacher": "Lucy Lenox",
@@ -913,7 +1025,7 @@
     {
       "title": {
         "es": "Técnicas de improvisación",
-        "es": "Técniques d'improvització"
+        "ca": "Técniques d'improvització"
       },
       "teacher": "Mercè Lleixà",
       "years": [2002]

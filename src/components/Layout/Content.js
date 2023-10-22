@@ -18,8 +18,7 @@ import styles from './index.module.scss'
 
 export const urlForId = (pageId, langKey, urls) => {
   const id = Number(pageId) - 1
-  const locale = langKey === 'es' ? '' : langKey
-  return `/${locale}${urls[id][langKey]}`
+  return `${urls[id][langKey]}`
 }
 
 class Content extends React.Component {
@@ -29,7 +28,7 @@ class Content extends React.Component {
 
   constructor(props) {
     super(props)
-    const { locarion, urls, metadata, location } = props
+    const { urls, metadata, location } = props
     const { langs, defaultLangKey } = metadata.languages
 
     this.pathname = location.pathname
@@ -58,7 +57,14 @@ class Content extends React.Component {
   }
 
   render() {
-    const { children, metadata, cvPdfPath, urls, hideFooter } = this.props
+    const {
+      children,
+      metadata,
+      pdfFiles,
+      cvDirectionPdfPath,
+      urls,
+      hideFooter,
+    } = this.props
     return (
       <IntlProvider locale={this.langKey} messages={this.i18nMessages}>
         <AppProvider value={this.appContext}>
@@ -84,19 +90,19 @@ class Content extends React.Component {
                 name={metadata.name}
                 surname={metadata.surname}
                 phone={metadata.phone}
-                cvPdfPath={cvPdfPath}
+                cvPdfPath={pdfFiles.cv}
                 copyright={metadata.copyright}
               />
             </div>
 
-            <main className={styles.main}>{children({ cvPdfPath })}</main>
+            <main className={styles.main}>{children({ pdfFiles })}</main>
 
             {!hideFooter && (
               <div className={styles.footer}>
                 <Footer
                   langsMenu={this.langsMenu}
                   phone={metadata.phone}
-                  cvPdfPath={cvPdfPath}
+                  cvPdfPath={pdfFiles.cv}
                   copyright={metadata.copyright}
                 />
               </div>

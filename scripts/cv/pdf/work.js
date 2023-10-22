@@ -5,7 +5,7 @@ const {
   splitInColumns,
   renderSubitem,
   translate,
-  translateContent
+  translateContent,
 } = utils
 
 const translations = {
@@ -13,24 +13,36 @@ const translations = {
     year: 'Año',
     author: 'Autor',
     director: 'Director',
+    producer: 'Productora',
     perform_in: 'Representado en',
-    company: 'Compañía'
+    company: 'Compañía',
   },
   ca: {
     year: 'Any',
     author: 'Autor',
     director: 'Director',
+    producer: 'Productora',
     perform_in: 'Representat en',
-    company: 'Companya'
-  }
+    company: 'Companyia',
+  },
 }
 
-function renderSubitems (i18n, i18nContent) {
-  return function (item) {
+function buildEntityList(entities, i18nContent) {
+  return entities
+    .map((entity) => {
+      const translatedName = i18nContent(entity.name)
+      if (!entity.location) return translatedName
+      return `${translatedName} (${entity.location})`
+    })
+    .join(' / ')
+}
+
+function renderSubitems(i18n, i18nContent, renderYears) {
+  return function(item) {
     let items = []
 
     const years = renderSubitem(item.years, `${i18n('year')}: `)
-    if (years) items.push(years)
+    if (years && renderYears) items.push(years)
 
     const author = renderSubitem(item.author, `${i18n('author')}: `)
     if (author) items.push(author)
@@ -38,20 +50,21 @@ function renderSubitems (i18n, i18nContent) {
     const director = renderSubitem(item.director, `${i18n('director')}: `)
     if (director) items.push(director)
 
-    let played
-    const playedContent = item.played.map(place => {
-      const translatedName = i18nContent(place.name)
-      if (!place.location) return translatedName
-      return `${translatedName} (${place.location})`
-    }).join(' / ')
-
-    if (playedContent.length > 0) {
-      played = renderSubitem(playedContent, `${i18n('perform_in')}: `)
+    const playedPlaces = buildEntityList(item.played, i18nContent)
+    if (playedPlaces.length > 0) {
+      items.push(renderSubitem(playedPlaces, `${i18n('perform_in')}: `))
     }
-    if (played) items.push(played)
+
+    const producers = buildEntityList(item.producers, i18nContent)
+    if (producers.length > 0) {
+      items.push(renderSubitem(producers, `${i18n('producer')}: `))
+    }
 
     if (item.company) {
-      const company = renderSubitem(i18nContent(item.company.name), `${i18n('company')}: `)
+      const company = renderSubitem(
+        i18nContent(item.company.name),
+        `${i18n('company')}: `
+      )
       if (company) items.push(company)
     }
 
@@ -61,36 +74,38 @@ function renderSubitems (i18n, i18nContent) {
     // Add space before each text
     let restWithSpace = []
     if (rest.length > 0) {
-      restWithSpace = rest.map(item => ({
-        text: [
-          ' ',
-          ...item.text
-        ]
+      restWithSpace = rest.map((item) => ({
+        text: [' ', ...item.text],
       }))
     }
 
     return {
       style: 'textSmaller',
-      text: [first, ...restWithSpace]
+      text: [first, ...restWithSpace],
     }
   }
 }
 
-function translateTitle (i18nContent) {
+function translateTitle(i18nContent) {
   return (item) => i18nContent(item.title)
 }
 
-module.exports = function buildWork (work, locale, isFirst) {
-  const columns = splitInColumns(work.items, 2)
+module.exports = function buildWork({
+  work,
+  locale,
+  isFirst = false,
+  renderYears = false,
+  overrideTitle = null,
+}) {
+  const columns = splitInColumns(work.items, 1)
   const i18n = translate(translations, locale)
   const i18nContent = translateContent(locale)
-  const renderItemsFn = renderSubitems(i18n, i18nContent)
+  const renderItemsFn = renderSubitems(i18n, i18nContent, renderYears)
   const renderTextFn = translateTitle(i18nContent)
-
   return [
     {
       layout: styles.layoutWithDashedHeader,
-      style: isFirst? 'workTableRowFirst' : 'workTableRow',
+      style: isFirst ? 'workTableRowFirst' : 'workTableRow',
       table: {
         headerRows: 1,
         widths: ['*'],
@@ -98,18 +113,18 @@ module.exports = function buildWork (work, locale, isFirst) {
           [
             {
               style: 'tableHeader',
-              text: i18nContent(work.category)
-            }
+              text: overrideTitle ?? i18nContent(work.category),
+            },
           ],
           [
             {
               columns: columns.map((column) =>
                 column.map(renderItem(renderTextFn, renderItemsFn))
-              )
-            }
-          ]
-        ]
-      }
-    }
+              ),
+            },
+          ],
+        ],
+      },
+    },
   ]
 }

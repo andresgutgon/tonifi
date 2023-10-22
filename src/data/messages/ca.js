@@ -1,12 +1,14 @@
 module.exports = {
-  'chooseLanguage': 'Tria idioma',
+  chooseLanguage: 'Tria idioma',
   'languages.es': 'Castellà',
   'languages.ca': 'Català',
-  'mainMenu.cv': 'CV',
+  'mainMenu.cv': 'Actor',
+  'mainMenu.direction': 'Director de Teatre',
   'mainMenu.photos': 'Fotos',
   'mainMenu.videobook': 'Videobook',
   'mainMenu.contact': 'Contacte',
   'footer.downloadCv': 'Descarregar CV (PDF)',
+  'footer.downloadDirectorCv': 'Descarregar CV com a director (PDF)',
   'curriculum.education': 'Estudis',
   'curriculum.teacher': 'Professor/a',
   'curriculum.director': 'Director',
@@ -22,6 +24,6 @@ module.exports = {
   'contact.fields.send': 'Enviar missatge',
   'contact.fields.email.invalidFormat': 'Email no vàlid',
   'contact.messageSent': 'Missatge enviat',
-  'contact.thanks': 'Gràcies {name}, com el rebi et contesto al teu email: {email}'
+  'contact.thanks':
+    'Gràcies {name}, com el rebi et contesto al teu email: {email}',
 }
-

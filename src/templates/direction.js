@@ -4,32 +4,34 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import CurriculumVitae from '../components/CurriculumVitae'
 
-const CVPage = ({ data, location }) => {
+const Direction = ({ data, location }) => {
   const { title, locale } = data.markdownRemark.frontmatter
   const content = data.allCvJson.edges[0].node
-  const education = content.education
-  const work = content.work.filter((work) => work.identifier !== 'direction')
-  const metaImage = work[0].image.childImageSharp.gatsbyImageData.src
+  const direction = content.work.filter(
+    (work) => work.identifier === 'direction'
+  )[0]
+  const descriptions = direction.description[locale]
+  const metaImage = content.work[0].image.childImageSharp.gatsbyImageData.src
   return (
     <Layout pageData={{ ...data, metaImage, locale }} location={location}>
       {({ pdfFiles }) => (
         <CurriculumVitae
           title={title}
+          descriptions={descriptions}
           pdf={{
-            filepath: pdfFiles.cv,
-            i18n: 'footer.downloadCv',
+            filepath: pdfFiles.direction,
+            i18n: 'footer.downloadDirectorCv',
           }}
-          work={work}
-          education={education}
+          work={[direction]}
         />
       )}
     </Layout>
   )
 }
 
-export default CVPage
+export default Direction
 export const pageQuery = graphql`
-  query CvCurriculumQuery($id: String!) {
+  query CvDirectionQuery($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         id

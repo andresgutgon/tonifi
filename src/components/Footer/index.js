@@ -7,13 +7,13 @@ import styles from './index.module.scss'
 const cx = cn.bind(styles)
 
 function LangItem({ lang }) {
-  let linkAttrs = { to: lang.link }
-  linkAttrs = lang.selected
-    ? { ...linkAttrs, activeClassName: styles.linkSelected }
-    : linkAttrs
-
   return (
-    <Link className={cx('button', 'link')} {...linkAttrs}>
+    <Link
+      to={lang.link}
+      className={cx('button', 'link', {
+        [styles.linkSelected]: lang.selected,
+      })}
+    >
       <FormattedMessage id={`languages.${lang.langKey}`} />
     </Link>
   )
@@ -37,27 +37,27 @@ function LanguagePicker({ langsMenu }) {
   )
 }
 
-const Footer = ({ copyright, cvPdfPath, phone, langsMenu }) => (
-  <div className={styles.footer}>
-    <ul className={styles.links}>
-      <li className={styles.separator} />
-      <li>
-        <a
-          className={styles.link}
-          href={cvPdfPath}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FormattedMessage id="footer.downloadCv" />
-        </a>
-      </li>
-    </ul>
-    <a href={`tel:${phone}`} className={styles.phone}>
-      +34 {phone}
-    </a>
-    <LanguagePicker langsMenu={langsMenu} />
-    <div className={styles.copyright}>{copyright}</div>
-  </div>
-)
-
-export default Footer
+export default function Footer({ copyright, cvPdfPath, phone, langsMenu }) {
+  return (
+    <div className={styles.footer}>
+      <ul className={styles.links}>
+        <li className={styles.separator} />
+        <li>
+          <a
+            className={styles.link}
+            href={cvPdfPath}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FormattedMessage id="footer.downloadCv" />
+          </a>
+        </li>
+      </ul>
+      <a href={`tel:${phone}`} className={styles.phone}>
+        +34 {phone}
+      </a>
+      <LanguagePicker langsMenu={langsMenu} />
+      <div className={styles.copyright}>{copyright}</div>
+    </div>
+  )
+}

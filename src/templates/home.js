@@ -9,35 +9,34 @@ const HomeTemplate = ({ data, location }) => {
   const metaImage = images[0].src.childImageSharp.gatsbyImageData.src
   return (
     <Layout pageData={{ ...data, metaImage, locale }} location={location}>
-      {() => (
-        <Home title={title} description={description} images={images} />
-      )}
+      {() => <Home title={title} description={description} images={images} />}
     </Layout>
   )
 }
 
 export default HomeTemplate
 
-export const pageQuery = graphql`query HomePageQuery($id: String!) {
-  markdownRemark(id: {eq: $id}) {
-    frontmatter {
-      id
-      title
-      description
-      keywords
-      locale
-      path
-      images {
+export const pageQuery = graphql`
+  query HomePageQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      frontmatter {
+        id
         title
-        alt
-        src {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+        description
+        keywords
+        locale
+        path
+        images {
+          title
+          alt
+          src {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
           }
+          full
         }
-        full
       }
     }
   }
-}
 `

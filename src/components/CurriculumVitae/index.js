@@ -14,7 +14,6 @@ const METADATA = {
   teacher: 'Professor/a',
   director: 'Director',
   author: 'Autor',
-  years: 'Anys',
   company: 'Companyia',
   production: 'Productora',
 }
@@ -60,7 +59,6 @@ function Title({ title }) {
 
 function MetadataItem({ metaKey, item }) {
   const content = item[metaKey]
-  const isCareer = item['is_career']
   let name
 
   if (!content) return null
@@ -76,8 +74,7 @@ function MetadataItem({ metaKey, item }) {
   const type = typeof name
   const isArray = Array.isArray(name)
   if (type !== 'string' && type !== 'number' && !isArray) return null
-  const contentMeta = useFormatMessage(`curriculum.${metaKey}`)
-  const meta = metaKey === 'years' && isCareer ? 'Promoció' : contentMeta
+  const meta = useFormatMessage(`curriculum.${metaKey}`)
   name = isArray ? name.join(', ') : name
   return (
     <div className={styles.metadata}>
@@ -87,22 +84,48 @@ function MetadataItem({ metaKey, item }) {
   )
 }
 
-const CurriculumVitae = ({ title, content, cvPdfPath }) => {
-  const { education, work } = content
+function getSections(showYears = false) {
+  const base = METADATA
+  if (!showYears) return base
+
+  return { ...base, years: 'Anys' }
+}
+
+// NOTE: Discusting code just to avoid refactoring much
+function getEntities(item) {
+  return [...item.played, ...(item.producers || [])]
+}
+
+const CurriculumVitae = ({
+  title,
+  education,
+  work,
+  pdf,
+  showYears = false,
+  descriptions = [],
+}) => {
+  const pdfText = useFormatMessage(pdf.i18n)
+  const sections = getSections(showYears)
+  const sectionKeys = Object.keys(sections)
   return (
     <>
       <Header title={title}>
         <div className={styles.infoLine}>
           <ul>
             <li>
-              <a href={cvPdfPath} target="_blank" rel="noopener noreferrer">
-                <FormattedMessage id="footer.downloadCv" />
+              <a href={pdf.filepath} target="_blank" rel="noopener noreferrer">
+                {pdfText}
               </a>
             </li>
           </ul>
         </div>
       </Header>
       <Content>
+        <div className={styles.description}>
+          {descriptions.map((item, i) => (
+            <p key={i}>{item}</p>
+          ))}
+        </div>
         {work.map((group, index) => (
           <div key={index}>
             <div
@@ -121,67 +144,73 @@ const CurriculumVitae = ({ title, content, cvPdfPath }) => {
                   className={cx('row', { incompleted: itemGroup.length < 2 })}
                   key={ig}
                 >
-                  {itemGroup.map((item, index) => (
-                    <div key={index} className={styles.col}>
-                      <div className={styles.item}>
-                        <Title title={item.title} />
-                        {hasMetadata(item) && (
-                          <div className={styles.metadataList}>
-                            {Object.keys(METADATA).map((metaKey) => (
-                              <MetadataItem
-                                key={metaKey}
-                                metaKey={metaKey}
-                                item={item}
-                              />
-                            ))}
-                          </div>
-                        )}
-                        {item.played.length > 0 && (
-                          <div className={styles.places}>
-                            <strong>Productora:</strong>
-                            <div className={styles.placeList}>
-                              {item.played.map((place, index) => (
-                                <div key={index} className={styles.place}>
-                                  <TranslatedMessage text={place.name} />
-                                  {place.location && (
-                                    <span>&nbsp;({place.location})</span>
-                                  )}
-                                </div>
+                  {itemGroup.map((item, index) => {
+                    const entities = getEntities(item)
+                    return (
+                      <div key={index} className={styles.col}>
+                        <div className={styles.item}>
+                          <Title title={item.title} />
+                          {hasMetadata(item) && (
+                            <div className={styles.metadataList}>
+                              {sectionKeys.map((metaKey) => (
+                                <MetadataItem
+                                  key={metaKey}
+                                  metaKey={metaKey}
+                                  item={item}
+                                />
                               ))}
                             </div>
-                          </div>
-                        )}
+                          )}
+                          {entities.length > 0 && (
+                            <div className={styles.places}>
+                              <div className={styles.placeList}>
+                                {entities.map((place, index) => (
+                                  <div key={index} className={styles.place}>
+                                    <TranslatedMessage text={place.name} />
+                                    {place.location && (
+                                      <span>&nbsp;({place.location})</span>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               ))}
             </div>
           </div>
         ))}
-        <h2 className={styles.sectionTitle}>
-          <FormattedMessage id="curriculum.education" />
-        </h2>
-        <ul className={styles.education}>
-          {education.map((item, index) => (
-            <li key={index}>
-              <div className={styles.educationItem}>
-                <Title title={item.title} />
-                {hasMetadata(item) && (
-                  <div className={styles.metadataList}>
-                    {Object.keys(METADATA).map((metaKey) => (
-                      <MetadataItem
-                        key={metaKey}
-                        metaKey={metaKey}
-                        item={item}
-                      />
-                    ))}
+        {education && (
+          <>
+            <h2 className={styles.sectionTitle}>
+              <FormattedMessage id="curriculum.education" />
+            </h2>
+            <ul className={styles.education}>
+              {education.map((item, index) => (
+                <li key={index}>
+                  <div className={styles.educationItem}>
+                    <Title title={item.title} />
+                    {hasMetadata(item) && (
+                      <div className={styles.metadataList}>
+                        {sectionKeys.map((metaKey) => (
+                          <MetadataItem
+                            key={metaKey}
+                            metaKey={metaKey}
+                            item={item}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </Content>
     </>
   )

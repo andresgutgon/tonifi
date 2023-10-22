@@ -2,28 +2,33 @@
   "pageUrlMappings": [
     {
       "id": "01",
-      "es": "",
-      "ca": ""
+      "ca": "/",
+      "es": "/es"
     },
     {
       "id": "02",
-      "es": "videobook",
-      "ca": "/videobook"
+      "ca": "/videobook",
+      "es": "/es/videobook"
     },
     {
       "id": "03",
-      "es": "curriculum",
-      "ca": "/curriculum"
+      "ca": "/curriculum",
+      "es": "/es/curriculum"
     },
     {
       "id": "04",
-      "es": "fotos",
-      "ca": "/fotos"
+      "ca": "/fotos",
+      "es": "/es/fotos"
     },
     {
       "id": "05",
-      "es": "contacto",
-      "ca": "/contacte"
+      "ca": "/contacte",
+      "es": "/es/contacto"
+    },
+    {
+      "id": "06",
+      "ca": "/director-de-teatre",
+      "es": "/es/director-de-teatro"
     }
   ]
 }

@@ -5,7 +5,7 @@ const {
   splitInColumns,
   renderSubitem,
   translate,
-  translateContent
+  translateContent,
 } = utils
 
 const translations = {
@@ -14,18 +14,18 @@ const translations = {
     course_end: 'Curso fin',
     teacher: 'Profesor',
     company: 'Compañía',
-    education: 'Formación'
+    education: 'Formación',
   },
   ca: {
     course: 'Curs',
     course_end: 'Curs fi',
     teacher: 'Professor',
-    company: 'Companya',
-    education: 'Estudis'
-  }
+    company: 'Companyia',
+    education: 'Estudis',
+  },
 }
-function renderSubitems (i18n, i18nContent) {
-  return function (item) {
+function renderSubitems(i18n, i18nContent) {
+  return function(item) {
     let items = []
 
     const years = renderSubitem(item.years, `${i18n('course')}: `)
@@ -38,7 +38,10 @@ function renderSubitems (i18n, i18nContent) {
     if (teacher) items.push(teacher)
 
     if (item.company) {
-      const company = renderSubitem(i18nContent(item.company.name), `${i18n('company')}: `)
+      const company = renderSubitem(
+        i18nContent(item.company.name),
+        `${i18n('company')}: `
+      )
       if (company) items.push(company)
     }
 
@@ -48,26 +51,23 @@ function renderSubitems (i18n, i18nContent) {
     // Add space before each text
     let restWithSpace = []
     if (rest.length > 0) {
-      restWithSpace = rest.map(item => ({
-        text: [
-          ' ',
-          ...item.text
-        ]
+      restWithSpace = rest.map((item) => ({
+        text: [' ', ...item.text],
       }))
     }
 
     return {
       style: 'textSmaller',
-      text: [first, ...restWithSpace]
+      text: [first, ...restWithSpace],
     }
   }
 }
 
-function translateTitle (i18nContent) {
+function translateTitle(i18nContent) {
   return (item) => i18nContent(item.title)
 }
 
-module.exports = function buildEducation (education, locale) {
+module.exports = function buildEducation(education, locale) {
   const columns = splitInColumns(education, 1)
   const i18n = translate(translations, locale)
   const i18nContent = translateContent(locale)
@@ -85,18 +85,18 @@ module.exports = function buildEducation (education, locale) {
           [
             {
               style: 'tableHeader',
-              text: i18n('education')
-            }
+              text: i18n('education'),
+            },
           ],
           [
             {
               columns: columns.map((column) =>
                 column.map(renderItem(renderTextFn, renderItemsFn))
-              )
-            }
-          ]
-        ]
-      }
-    }
+              ),
+            },
+          ],
+        ],
+      },
+    },
   ]
 }
