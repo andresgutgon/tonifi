@@ -14,8 +14,12 @@ function buildContent(data, locale) {
       content: [
         ...buildHeaderContent(siteData, data, locale),
         ...data.work.map((work, index) => {
-          const isFirst = index === 0
-          return buildWork(work, locale, isFirst)
+          return buildWork({
+            work,
+            locale,
+            isFirst: index === 0,
+            renderYears: false,
+          })
         }),
         ...buildEducation(data.education, locale),
       ],

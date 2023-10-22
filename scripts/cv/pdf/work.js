@@ -25,12 +25,12 @@ const translations = {
   },
 }
 
-function renderSubitems(i18n, i18nContent) {
+function renderSubitems(i18n, i18nContent, renderYears) {
   return function(item) {
     let items = []
 
-    /* const years = renderSubitem(item.years, `${i18n('year')}: `) */
-    /* if (years) items.push(years) */
+    const years = renderSubitem(item.years, `${i18n('year')}: `)
+    if (years && renderYears) items.push(years)
 
     const author = renderSubitem(item.author, `${i18n('author')}: `)
     if (author) items.push(author)
@@ -82,11 +82,16 @@ function translateTitle(i18nContent) {
   return (item) => i18nContent(item.title)
 }
 
-module.exports = function buildWork(work, locale, isFirst) {
+module.exports = function buildWork({
+  work,
+  locale,
+  isFirst = false,
+  renderYears = false,
+}) {
   const columns = splitInColumns(work.items, 2)
   const i18n = translate(translations, locale)
   const i18nContent = translateContent(locale)
-  const renderItemsFn = renderSubitems(i18n, i18nContent)
+  const renderItemsFn = renderSubitems(i18n, i18nContent, renderYears)
   const renderTextFn = translateTitle(i18nContent)
 
   return [

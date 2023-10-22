@@ -312,5 +312,19 @@
       "ca": "Museu d'Art de Sabadel"
     },
     "url": "http://museus.sabadell.cat/museu-art"
+  },
+  {
+    "id": "fem_bir",
+    "name": {
+      "ca": "Fem BiR",
+      "es": "Fem BiR"
+    }
+  },
+  {
+    "id": "ayuntament_bigues_i_riells",
+    "name": {
+      "ca": "Ajuntament de Bigues i Riells",
+      "es": "Ayuntamiento de Bigues i Riells"
+    }
   }
 ]

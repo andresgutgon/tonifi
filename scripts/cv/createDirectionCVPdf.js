@@ -14,7 +14,12 @@ function buildContent(data, locale) {
     {
       content: [
         ...buildHeaderContent(siteData, data, locale),
-        ...buildWork(direction, locale, true),
+        ...buildWork({
+          work: direction,
+          locale,
+          isFirst: true,
+          renderYears: true,
+        }),
       ],
     }
   )

@@ -460,13 +460,84 @@
       "items": [
         {
           "title": {
-            "es": "La Remençada, el musical histórico del Vallès (Dirección)",
-            "ca": "La Remençada, el musical històric del Vallès (Direcció)"
+            "es": "El Reino de las anguilas,",
+            "ca": "El Regne de les Anguiles"
           },
-          "years": [2019, 2018, 2017, 2016, 2015],
+          "author": "Albert Pijuan",
+          "years": [2023],
+          "company_id": "la_minimal_teatre",
+          "played": [{ "entity_id": "versus_teatre" }]
+        },
+        {
+          "title": {
+            "es": "Las Leyendas",
+            "ca": "Les Llegendes"
+          },
+          "author": "VVAA",
+          "years": [2023],
+          "played": [
+            {
+              "entity_id": "fem_bir"
+            },
+            {
+              "entity_id": "ayuntament_bigues_i_riells"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "El Pregón (Dirección y guión)",
+            "ca": "El Pregó (Direcció i guió)"
+          },
+          "author": "Toni Figuera",
+          "years": [2023],
+          "played": [
+            {
+              "entity_id": "fem_bir"
+            },
+            {
+              "entity_id": "ayuntament_bigues_i_riells"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Las Pastorcillas de Montornès",
+            "ca": "Les Pastoretes de Montornès"
+          },
+          "author": "Xavier Bertran",
+          "years": [2023],
           "played": [
             {
               "entity_id": "associacio_la_remencada"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "La Remençada, el musical histórico del Vallès (Dirección)",
+            "ca": "La Remençada, el musical històric del Vallès (Direcció)"
+          },
+          "years": [2023, 2021, 2019, 2018, 2017, 2016, 2015],
+          "played": [
+            {
+              "entity_id": "associacio_la_remencada"
+            }
+          ]
+        },
+        {
+          "title": {
+            "es": "Els Pastorets,",
+            "ca": "Los Pastorets"
+          },
+          "author": "JM Folch i Torres",
+          "years": [2022],
+          "played": [
+            {
+              "entity_id": "fem_bir"
+            },
+            {
+              "entity_id": "ayuntament_bigues_i_riells"
             }
           ]
         },
