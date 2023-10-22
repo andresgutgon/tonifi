@@ -26,8 +26,20 @@ function proccessEducation(education) {
   return education
 }
 
+function buildEntity(entityItem) {
+  const entity = entities.find((item) => item.id === entityItem.entity_id)
+
+  if (!entity) {
+    throw new Error('No entity found')
+  }
+
+  const tags = entityItem.tags || []
+  return Object.assign({ tags }, entity)
+}
+
 function proccessWork(work) {
-  const played = work.played || []
+  const played = work.played ?? []
+  const producers = work.producers ?? []
 
   // Companies
   if (work.company_id) {
@@ -38,17 +50,11 @@ function proccessWork(work) {
     work.company = company
   }
 
-  // Entities
-  work.played = played.map((entityItem) => {
-    const entity = entities.find((item) => item.id === entityItem.entity_id)
+  // Played places
+  work.played = played.map(buildEntity)
 
-    if (!entity) {
-      throw new Error('No entity found')
-    }
-
-    const tags = entityItem.tags || []
-    return Object.assign({ tags }, entity)
-  })
+  // Producers
+  work.producers = producers.map(buildEntity)
 
   return work
 }

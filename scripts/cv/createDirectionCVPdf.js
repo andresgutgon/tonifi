@@ -25,7 +25,13 @@ function buildContent(data, locale) {
     styles.pageImages,
     {
       content: [
-        ...buildHeader({ data, locale, title, showName: true }),
+        ...buildHeader({
+          data,
+          locale,
+          title,
+          showName: true,
+          image: 'toniMaduro',
+        }),
         ...buildDescription(descriptionItems, locale),
         ...buildWork({
           work: direction,

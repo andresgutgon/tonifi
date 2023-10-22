@@ -49,8 +49,8 @@ function buildLanguges(locale) {
 module.exports = function buildHeaderContent({
   data,
   locale,
+  image,
   title,
-  showImage = false,
   showLanguages = false,
   showSkils = false,
   showName = false,
@@ -123,22 +123,20 @@ module.exports = function buildHeaderContent({
             ],
           },
         },
-        showImage
-          ? {
-            width: '*',
-            layout: 'noBorders',
-            table: {
-              body: [
-                [
-                  {
-                    image: 'toni',
-                    width: 180,
-                  },
-                ],
+        {
+          width: '*',
+          layout: 'noBorders',
+          table: {
+            body: [
+              [
+                {
+                  image,
+                  width: 180,
+                },
               ],
-            },
-          }
-          : {},
+            ],
+          },
+        },
       ],
     },
   ]

@@ -1,7 +1,10 @@
 const path = require('path')
 const rootPath = path.join(__dirname, '../../..')
 const srcPath = path.join(rootPath, 'src')
-const profileImagePath = path.join(srcPath, 'images', 'cv', 'profile_image.jpg')
+const BASE_IMG_PATH = path.join(srcPath, 'images', 'cv')
+
+const toni = path.join(BASE_IMG_PATH, 'profile_image.jpg')
+const toniMaduro = path.join(BASE_IMG_PATH, 'profile_image_maduro.jpg')
 
 const colors = {
   black: '#222222',
@@ -79,11 +82,7 @@ module.exports = {
       columnGap: 30,
     },
   },
-  pageImages: {
-    images: {
-      toni: profileImagePath,
-    },
-  },
+  pageImages: { images: { toni, toniMaduro } },
   layoutNoBorders,
   layoutWithDashedHeader: Object.assign(layoutNoBorders, {
     paddingTop: (i) => {

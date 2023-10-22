@@ -476,7 +476,7 @@
           "author": "Albert Pijuan",
           "years": [2023],
           "company_id": "la_minimal_teatre",
-          "played": [{ "entity_id": "versus_teatre" }]
+          "played": [{ "entity_id": "versus_teatre", "role": "place" }]
         },
         {
           "title": {
@@ -485,7 +485,7 @@
           },
           "author": "VVAA",
           "years": [2023],
-          "played": [
+          "producers": [
             {
               "entity_id": "fem_bir"
             },
@@ -501,7 +501,7 @@
           },
           "author": "Toni Figuera",
           "years": [2023],
-          "played": [
+          "producers": [
             {
               "entity_id": "fem_bir"
             },
@@ -517,7 +517,7 @@
           },
           "author": "Xavier Bertran",
           "years": [2023],
-          "played": [
+          "producers": [
             {
               "entity_id": "associacio_la_remencada"
             }
@@ -529,7 +529,7 @@
             "ca": "La Remençada, el musical històric del Vallès (Direcció)"
           },
           "years": [2023, 2021, 2019, 2018, 2017, 2016, 2015],
-          "played": [
+          "producers": [
             {
               "entity_id": "associacio_la_remencada"
             }
@@ -537,12 +537,12 @@
         },
         {
           "title": {
-            "es": "Els Pastorets,",
-            "ca": "Los Pastorets"
+            "ca": "Els Pastorets,",
+            "es": "Los Pastorcitos"
           },
           "author": "JM Folch i Torres",
           "years": [2022],
-          "played": [
+          "producers": [
             {
               "entity_id": "fem_bir"
             },
@@ -565,7 +565,7 @@
             "ca": "Les mascotes del Tibidabo fan la volta al món (Direcció / guió)"
           },
           "years": [2017],
-          "played": [
+          "producers": [
             { "entity_id": "viu_el_teatre" },
             { "entity_id": "parc_tibidabo" }
           ]
@@ -576,7 +576,7 @@
             "ca": "Els llibres màgics (Guió / músiques)"
           },
           "years": [2010],
-          "played": [{ "entity_id": "polizon_teatro" }]
+          "producers": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -584,7 +584,7 @@
             "ca": "Els zombies no miren la televisió (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
           "years": [2012],
-          "played": [{ "entity_id": "polizon_teatro" }]
+          "producers": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {
@@ -592,7 +592,7 @@
             "ca": "Game Over (Direcció / guió / músiques / disseny vestuari i escenografia)"
           },
           "years": [2011],
-          "played": [{ "entity_id": "polizon_teatro" }]
+          "producers": [{ "entity_id": "polizon_teatro" }]
         },
         {
           "title": {

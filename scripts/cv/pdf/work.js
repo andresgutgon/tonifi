@@ -13,6 +13,7 @@ const translations = {
     year: 'Año',
     author: 'Autor',
     director: 'Director',
+    producer: 'Productora',
     perform_in: 'Representado en',
     company: 'Compañía',
   },
@@ -20,9 +21,20 @@ const translations = {
     year: 'Any',
     author: 'Autor',
     director: 'Director',
+    producer: 'Productora',
     perform_in: 'Representat en',
-    company: 'Companya',
+    company: 'Companyia',
   },
+}
+
+function buildEntityList(entities, i18nContent) {
+  return entities
+    .map((entity) => {
+      const translatedName = i18nContent(entity.name)
+      if (!entity.location) return translatedName
+      return `${translatedName} (${entity.location})`
+    })
+    .join(' / ')
 }
 
 function renderSubitems(i18n, i18nContent, renderYears) {
@@ -38,19 +50,15 @@ function renderSubitems(i18n, i18nContent, renderYears) {
     const director = renderSubitem(item.director, `${i18n('director')}: `)
     if (director) items.push(director)
 
-    let played
-    const playedContent = item.played
-      .map((place) => {
-        const translatedName = i18nContent(place.name)
-        if (!place.location) return translatedName
-        return `${translatedName} (${place.location})`
-      })
-      .join(' / ')
-
-    if (playedContent.length > 0) {
-      played = renderSubitem(playedContent, `${i18n('perform_in')}: `)
+    const playedPlaces = buildEntityList(item.played, i18nContent)
+    if (playedPlaces.length > 0) {
+      items.push(renderSubitem(playedPlaces, `${i18n('perform_in')}: `))
     }
-    if (played) items.push(played)
+
+    const producers = buildEntityList(item.producers, i18nContent)
+    if (producers.length > 0) {
+      items.push(renderSubitem(producers, `${i18n('producer')}: `))
+    }
 
     if (item.company) {
       const company = renderSubitem(
@@ -89,7 +97,7 @@ module.exports = function buildWork({
   renderYears = false,
   overrideTitle = null,
 }) {
-  const columns = splitInColumns(work.items, 2)
+  const columns = splitInColumns(work.items, 1)
   const i18n = translate(translations, locale)
   const i18nContent = translateContent(locale)
   const renderItemsFn = renderSubitems(i18n, i18nContent, renderYears)

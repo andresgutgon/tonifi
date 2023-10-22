@@ -5,5 +5,5 @@ description: 'Toni Figuera director de teatro'
 keywords: 'Toni figuera, trajectoria, teatro, dirección de teatro'
 template: direction
 locale: es
-path: /director-de-teatro
+path: /es/director-de-teatro
 ---

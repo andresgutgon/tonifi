@@ -16,6 +16,7 @@ function buildContent(data, locale) {
         ...buildHeaderContent({
           data,
           title,
+          image: 'toni',
           showLanguages: true,
           showSkils: true,
           showImage: true,
