@@ -6,13 +6,21 @@ const buildEducation = require('./pdf/education.js')
 const createPdf = require('./createPdf.js')
 
 function buildContent(data, locale) {
+  const title = `${siteData.name} ${siteData.surname} ${siteData.secondSurname}`
   return Object.assign(
     styles.pageConfig,
     styles.pageStyles,
     styles.pageImages,
     {
       content: [
-        ...buildHeaderContent(siteData, data, locale),
+        ...buildHeaderContent({
+          data,
+          title,
+          showLanguages: true,
+          showSkils: true,
+          showImage: true,
+          locale,
+        }),
         ...data.work.map((work, index) => {
           return buildWork({
             work,

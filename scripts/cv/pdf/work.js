@@ -87,13 +87,13 @@ module.exports = function buildWork({
   locale,
   isFirst = false,
   renderYears = false,
+  overrideTitle = null,
 }) {
   const columns = splitInColumns(work.items, 2)
   const i18n = translate(translations, locale)
   const i18nContent = translateContent(locale)
   const renderItemsFn = renderSubitems(i18n, i18nContent, renderYears)
   const renderTextFn = translateTitle(i18nContent)
-
   return [
     {
       layout: styles.layoutWithDashedHeader,
@@ -105,7 +105,7 @@ module.exports = function buildWork({
           [
             {
               style: 'tableHeader',
-              text: i18nContent(work.category),
+              text: overrideTitle ?? i18nContent(work.category),
             },
           ],
           [

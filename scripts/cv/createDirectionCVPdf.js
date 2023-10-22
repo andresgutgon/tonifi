@@ -1,22 +1,36 @@
 const siteData = require('../../data/siteConfig.js')
 const styles = require('./pdf/styles.js')
-const buildHeaderContent = require('./pdf/header.js')
+const buildHeader = require('./pdf/header.js')
+const buildDescription = require('./pdf/description.js')
 const buildWork = require('./pdf/work.js')
-const buildEducation = require('./pdf/education.js')
 const createPdf = require('./createPdf.js')
 
+const TRANSLATIONS = {
+  es: {
+    title: 'Director de Teatro',
+    cv: 'Currículo',
+  },
+  ca: {
+    title: 'Director de Teatre',
+    cv: 'Currículum',
+  },
+}
 function buildContent(data, locale) {
   const direction = data.work.find((w) => w.identifier === 'direction')
+  const title = TRANSLATIONS[locale].title
+  const descriptionItems = direction.description[locale]
   return Object.assign(
     styles.pageConfig,
     styles.pageStyles,
     styles.pageImages,
     {
       content: [
-        ...buildHeaderContent(siteData, data, locale),
+        ...buildHeader({ data, locale, title, showName: true }),
+        ...buildDescription(descriptionItems, locale),
         ...buildWork({
           work: direction,
           locale,
+          overrideTitle: TRANSLATIONS[locale].cv,
           isFirst: true,
           renderYears: true,
         }),

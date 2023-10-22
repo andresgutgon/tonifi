@@ -8,7 +8,7 @@ const colors = {
   gray: '#444444',
 }
 const layoutNoBorders = {
-  vLineWidth: (i) => 0,
+  vLineWidth: () => 0,
   paddingLeft: (i) => (i && 4) || 0,
   paddingRight: (i, node) => (i < node.table.widths.length - 1 ? 4 : 0),
 }
@@ -30,6 +30,10 @@ module.exports = {
         width: 150,
         bold: true,
         margin: [0, 0, 0, 5],
+      },
+      description: {
+        fontSize: 10,
+        margin: [0, 10, 0, 5],
       },
       contactLast: {
         bold: true,
@@ -83,12 +87,13 @@ module.exports = {
   layoutNoBorders,
   layoutWithDashedHeader: Object.assign(layoutNoBorders, {
     paddingTop: (i) => {
-      if (i === 1) return 10
-      if (i === 0) return 10
+      if (i === 0 || i === 1) return 10
+
       return 0
     },
     paddingBottom: (i) => {
       if (i === 0) return 10
+
       return 0
     },
     hLineWidth: function(i, node) {
