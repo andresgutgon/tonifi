@@ -11,9 +11,8 @@
     "format": "prettier --write \"src/**/*.js\"",
     "generateCv": "node scripts/cv/generate.js",
     "cleanCache": "rm -rf .cache/*",
-    "cleanStart": "npm run cleanDevelop",
     "dev": "gatsby develop",
-    "cleanDevelop": "npm run cleanCache && npm run dev",
+    "cleanDev": "npm run cleanCache && npm run dev",
     "build": "npm run cleanCache && npm run generateCv && gatsby build",
     "deploy": "npm run build && gh-pages -d public",
     "jest:watch": "NODE_ENV=test NODE_PATH=scripts jest --watch"
