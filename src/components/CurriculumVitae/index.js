@@ -14,10 +14,11 @@ const METADATA = {
   teacher: 'Professor/a',
   director: 'Director',
   author: 'Autor',
-  years: 'Anys',
   company: 'Companyia',
   production: 'Productora',
 }
+
+const DIRECTION_METADATA = { ...METADATA, years: 'Anys' }
 
 function itemsGrouped(items) {
   return items.reduce((memo, item) => {
@@ -60,7 +61,6 @@ function Title({ title }) {
 
 function MetadataItem({ metaKey, item }) {
   const content = item[metaKey]
-  const isCareer = item['is_career']
   let name
 
   if (!content) return null
@@ -76,8 +76,7 @@ function MetadataItem({ metaKey, item }) {
   const type = typeof name
   const isArray = Array.isArray(name)
   if (type !== 'string' && type !== 'number' && !isArray) return null
-  const contentMeta = useFormatMessage(`curriculum.${metaKey}`)
-  const meta = metaKey === 'years' && isCareer ? 'Promoció' : contentMeta
+  const meta = useFormatMessage(`curriculum.${metaKey}`)
   name = isArray ? name.join(', ') : name
   return (
     <div className={styles.metadata}>

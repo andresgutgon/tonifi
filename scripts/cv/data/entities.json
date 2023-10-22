@@ -2,6 +2,7 @@
   {
     "id": "festival_santiago_off",
     "name": {
+      "ca": "Festival Santiago Off",
       "es": "Festival Santiago Off"
     },
     "location": "Santiago de Chile",
@@ -17,6 +18,7 @@
   {
     "id": "fira_tarrega",
     "name": {
+      "ca": "FiraTàrrega",
       "es": "FiraTàrrega"
     },
     "url": "https://www.firatarrega.cat"
@@ -24,6 +26,7 @@
   {
     "id": "frinje_madrid",
     "name": {
+      "ca": "Frinje",
       "es": "Frinje"
     },
     "url": "https://www.facebook.com/FrinjeMadrid",
@@ -32,6 +35,7 @@
   {
     "id": "chamber_theater_company",
     "name": {
+      "ca": "Chamber Theater Company",
       "es": "Chamber Theater Company"
     },
     "url": "http://www.chambertheatre.com"
@@ -39,6 +43,7 @@
   {
     "id": "teatre_romea",
     "name": {
+      "ca": "Teatre Romea",
       "es": "Teatre Romea"
     },
     "location": "Barcelona",
@@ -47,6 +52,7 @@
   {
     "id": "blanc_i_negre",
     "name": {
+      "ca": "Plataforma Blanc i Negre",
       "es": "Plataforma Blanc i Negre"
     },
     "location": "Barcelona",
@@ -55,6 +61,7 @@
   {
     "id": "sala_tantarantana",
     "name": {
+      "ca": "Sala Tantarantana",
       "es": "Sala Tantarantana"
     },
     "location": "Barcelona",
@@ -63,6 +70,7 @@
   {
     "id": "sala_seca_espai_brosa",
     "name": {
+      "ca": "La Seca-Espai Brossa",
       "es": "La Seca-Espai Brossa"
     },
     "location": "Barcelona",
@@ -71,6 +79,7 @@
   {
     "id": "sala_ars",
     "name": {
+      "ca": "Sala ARS",
       "es": "Sala ARS"
     },
     "location": "Barcelona",
@@ -79,6 +88,7 @@
   {
     "id": "mondocane_producciones",
     "name": {
+      "ca": "Mondocane Producciones",
       "es": "Mondocane Producciones"
     },
     "location": "Barcelona"
@@ -86,6 +96,7 @@
   {
     "id": "sala_barts",
     "name": {
+      "ca": "Sala Barts",
       "es": "Sala Barts"
     },
     "location": "Barcelona",
@@ -94,6 +105,7 @@
   {
     "id": "sala_atrium",
     "name": {
+      "ca": "Sala Atrium",
       "es": "Sala Atrium"
     },
     "location": "Barcelona"
@@ -101,6 +113,7 @@
   {
     "id": "sala_beckett",
     "name": {
+      "ca": "Sala Beckett",
       "es": "Sala Beckett"
     },
     "location": "Barcelona",
@@ -109,6 +122,7 @@
   {
     "id": "sala_muntaner",
     "name": {
+      "ca": "Sala Muntaner",
       "es": "Sala Muntaner"
     },
     "location": "Barcelona",
@@ -117,6 +131,7 @@
   {
     "id": "teatre_del_sol",
     "name": {
+      "ca": "Teatre del Sol",
       "es": "Teatre del Sol"
     },
     "location": "Sabadell",
@@ -125,6 +140,7 @@
   {
     "id": "versus_teatre",
     "name": {
+      "ca": "Versus Teatre",
       "es": "Versus Teatre"
     },
     "location": "Barcelona",
@@ -133,6 +149,7 @@
   {
     "id": "movistar_plus_mira_lo_que_has_hecho",
     "name": {
+      "ca": "Movistar +",
       "es": "Movistar +"
     },
     "url": "http://ver.movistarplus.es/ficha/mira-lo-que-has-hecho/?id=1433335"
@@ -140,12 +157,14 @@
   {
     "id": "at_productions",
     "name": {
+      "ca": "AT productions",
       "es": "AT productions"
     }
   },
   {
     "id": "tv3_el_cor_de_la_ciutat",
     "name": {
+      "ca": "TV3 serie",
       "es": "TV3 serie"
     },
     "url": "http://www.ccma.cat/tv3/el-cor-de-la-ciutat/"
@@ -153,12 +172,14 @@
   {
     "id": "xtlc",
     "name": {
+      "ca": "XTLC",
       "es": "XTLC"
     }
   },
   {
     "id": "san_miguel_landia_films",
     "name": {
+      "ca": "Ver spot de Landia Films",
       "es": "Ver spot de Landia Films"
     },
     "url": "https://www.youtube.com/watch?v=H4-oJ1n4K7E"
@@ -166,6 +187,7 @@
   {
     "id": "escac",
     "name": {
+      "ca": "ESCAC",
       "es": "ESCAC"
     },
     "url": "https://escac.com"
@@ -173,6 +195,7 @@
   {
     "id": "pavoreal_films",
     "name": {
+      "ca": "Pavoreal Films",
       "es": "Pavoreal Films"
     },
     "url": "http://www.pavoreal.co/nosotros/"
@@ -180,6 +203,7 @@
   {
     "id": "cecc",
     "name": {
+      "ca": "CECC",
       "es": "CECC"
     },
     "url": "https://es.wikipedia.org/wiki/Centre_d%27Estudis_Cinematogr%C3%A0fics_de_Catalunya"
@@ -194,12 +218,14 @@
   {
     "id": "roy_baritten",
     "name": {
+      "ca": "Roy Baritten",
       "es": "Roy Baritten"
     }
   },
   {
     "id": "francisco_amezcua",
     "name": {
+      "ca": "Francisco Amezcua",
       "es": "Francisco Amezcua"
     }
   },
@@ -214,6 +240,7 @@
   {
     "id": "flaix_tv",
     "name": {
+      "ca": "Flaix TV",
       "es": "Flaix TV"
     },
     "url": "https://www.flaixbac.cat"
@@ -221,6 +248,7 @@
   {
     "id": "brunet_films",
     "name": {
+      "ca": "Brunet Films",
       "es": "Brunet Films"
     }
   },
@@ -250,6 +278,7 @@
   {
     "id": "parc_tibidabo",
     "name": {
+      "ca": "Tibidabo",
       "es": "Tibidabo"
     },
     "url": "https://www.tibidabo.cat"
@@ -257,12 +286,14 @@
   {
     "id": "viu_el_teatre",
     "name": {
+      "ca": "Viu el teatre",
       "es": "Viu el teatre"
     }
   },
   {
     "id": "nau_ivanow",
     "name": {
+      "ca": "Nau Ivanow",
       "es": "Nau Ivanow"
     }
   },

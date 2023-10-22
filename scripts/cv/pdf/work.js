@@ -5,7 +5,7 @@ const {
   splitInColumns,
   renderSubitem,
   translate,
-  translateContent
+  translateContent,
 } = utils
 
 const translations = {
@@ -14,23 +14,23 @@ const translations = {
     author: 'Autor',
     director: 'Director',
     perform_in: 'Representado en',
-    company: 'Compañía'
+    company: 'Compañía',
   },
   ca: {
     year: 'Any',
     author: 'Autor',
     director: 'Director',
     perform_in: 'Representat en',
-    company: 'Companya'
-  }
+    company: 'Companya',
+  },
 }
 
-function renderSubitems (i18n, i18nContent) {
-  return function (item) {
+function renderSubitems(i18n, i18nContent) {
+  return function(item) {
     let items = []
 
-    const years = renderSubitem(item.years, `${i18n('year')}: `)
-    if (years) items.push(years)
+    /* const years = renderSubitem(item.years, `${i18n('year')}: `) */
+    /* if (years) items.push(years) */
 
     const author = renderSubitem(item.author, `${i18n('author')}: `)
     if (author) items.push(author)
@@ -39,11 +39,13 @@ function renderSubitems (i18n, i18nContent) {
     if (director) items.push(director)
 
     let played
-    const playedContent = item.played.map(place => {
-      const translatedName = i18nContent(place.name)
-      if (!place.location) return translatedName
-      return `${translatedName} (${place.location})`
-    }).join(' / ')
+    const playedContent = item.played
+      .map((place) => {
+        const translatedName = i18nContent(place.name)
+        if (!place.location) return translatedName
+        return `${translatedName} (${place.location})`
+      })
+      .join(' / ')
 
     if (playedContent.length > 0) {
       played = renderSubitem(playedContent, `${i18n('perform_in')}: `)
@@ -51,7 +53,10 @@ function renderSubitems (i18n, i18nContent) {
     if (played) items.push(played)
 
     if (item.company) {
-      const company = renderSubitem(i18nContent(item.company.name), `${i18n('company')}: `)
+      const company = renderSubitem(
+        i18nContent(item.company.name),
+        `${i18n('company')}: `
+      )
       if (company) items.push(company)
     }
 
@@ -61,26 +66,23 @@ function renderSubitems (i18n, i18nContent) {
     // Add space before each text
     let restWithSpace = []
     if (rest.length > 0) {
-      restWithSpace = rest.map(item => ({
-        text: [
-          ' ',
-          ...item.text
-        ]
+      restWithSpace = rest.map((item) => ({
+        text: [' ', ...item.text],
       }))
     }
 
     return {
       style: 'textSmaller',
-      text: [first, ...restWithSpace]
+      text: [first, ...restWithSpace],
     }
   }
 }
 
-function translateTitle (i18nContent) {
+function translateTitle(i18nContent) {
   return (item) => i18nContent(item.title)
 }
 
-module.exports = function buildWork (work, locale, isFirst) {
+module.exports = function buildWork(work, locale, isFirst) {
   const columns = splitInColumns(work.items, 2)
   const i18n = translate(translations, locale)
   const i18nContent = translateContent(locale)
@@ -90,7 +92,7 @@ module.exports = function buildWork (work, locale, isFirst) {
   return [
     {
       layout: styles.layoutWithDashedHeader,
-      style: isFirst? 'workTableRowFirst' : 'workTableRow',
+      style: isFirst ? 'workTableRowFirst' : 'workTableRow',
       table: {
         headerRows: 1,
         widths: ['*'],
@@ -98,18 +100,18 @@ module.exports = function buildWork (work, locale, isFirst) {
           [
             {
               style: 'tableHeader',
-              text: i18nContent(work.category)
-            }
+              text: i18nContent(work.category),
+            },
           ],
           [
             {
               columns: columns.map((column) =>
                 column.map(renderItem(renderTextFn, renderItemsFn))
-              )
-            }
-          ]
-        ]
-      }
-    }
+              ),
+            },
+          ],
+        ],
+      },
+    },
   ]
 }

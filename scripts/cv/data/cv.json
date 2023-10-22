@@ -54,6 +54,7 @@
         },
         {
           "title": {
+            "ca": "Frankenstein, musical (Gira)",
             "es": "Frankenstein, musical (Gira)"
           },
           "author": "Cristina Esteve y Jaume Carreras",
@@ -62,6 +63,7 @@
         },
         {
           "title": {
+            "ca": "Espejismo 53: Arrojarse al vacío",
             "es": "Espejismo 53: Arrojarse al vacío"
           },
           "author": "Albert Pijuan y LaminimaL",
@@ -70,6 +72,7 @@
         },
         {
           "title": {
+            "ca": "Apocalypse/Uploaded",
             "es": "Apocalypse/Uploaded"
           },
           "company_id": "la_minimal_teatre",
@@ -83,6 +86,7 @@
         },
         {
           "title": {
+            "ca": "Jekyll & Hide, musical (Gira)",
             "es": "Jekyll & Hide, musical (Gira)"
           },
           "author": "Cristina Esteve y Jaume Carreras",
@@ -107,6 +111,7 @@
         },
         {
           "title": {
+            "ca": "The Crimes on the rue morgue, musical. (Gira)",
             "es": "The Crimes on the rue morgue, musical. (Gira)"
           },
           "years": [2015],
@@ -115,6 +120,7 @@
         },
         {
           "title": {
+            "ca": "Fam de llibertat",
             "es": "Fam de llibertat"
           },
           "company_id": "blanc_i_negre",
@@ -123,6 +129,7 @@
         },
         {
           "title": {
+            "ca": "The Phantom of the Opera, musical (Gira)",
             "es": "The Phantom of the Opera, musical (Gira)"
           },
           "author": "Cristina Esteve y Jaume Carreras",
@@ -158,6 +165,7 @@
         },
         {
           "title": {
+            "ca": "La Grandesa d'ésser un entre tants",
             "es": "La Grandesa d'ésser un entre tants"
           },
           "company_id": "la_minimal_teatre",
@@ -234,6 +242,7 @@
     },
     {
       "category": {
+        "ca": "Audiovisual",
         "es": "Audiovisual"
       },
       "image": "audiovisual.jpg",
@@ -331,6 +340,7 @@
         },
         {
           "title": {
+            "ca": "Mila (curtmetratge / secundari)",
             "es": "Mila (curtmetratge / secundari)"
           },
           "years": [2007],
@@ -422,6 +432,7 @@
         },
         {
           "title": {
+            "ca": "Revival (Programa videoclips)",
             "es": "Revival (Programa videoclips)"
           },
           "years": [2002],
@@ -518,6 +529,7 @@
       "items": [
         {
           "title": {
+            "ca": "La família monstre",
             "es": "La família monstre"
           },
           "years": [2017],
@@ -562,6 +574,7 @@
         },
         {
           "title": {
+            "ca": "Patatu",
             "es": "Patatu"
           },
           "years": [2015],
@@ -582,6 +595,7 @@
         },
         {
           "title": {
+            "ca": "The Magic Books (Gira)",
             "es": "The Magic Books (Gira)"
           },
           "years": [2011],
@@ -598,7 +612,7 @@
         },
         {
           "title": {
-            "es": "El Duende Valiente",
+            "ca": "El Duende Valiente",
             "es": "El Follet Valent"
           },
           "company_id": "unics_produccions",
@@ -607,6 +621,7 @@
         },
         {
           "title": {
+            "ca": "The Fruits (Gira)",
             "es": "The Fruits (Gira)"
           },
           "years": [2010],
@@ -614,6 +629,7 @@
         },
         {
           "title": {
+            "ca": "Papanotes",
             "es": "Papanotes"
           },
           "company_id": "unics_produccions",
@@ -640,8 +656,8 @@
         },
         {
           "title": {
-            "es": "La Cennicienta",
-            "es": "La Ventafocs"
+            "ca": "La Ventafocs",
+            "es": "La Cennicienta"
           },
           "years": [2006],
           "company_id": "catacrac"
@@ -682,6 +698,7 @@
       "items": [
         {
           "title": {
+            "ca": "Sysiphus",
             "es": "Sysiphus"
           },
           "years": [2019, 2018],
@@ -737,6 +754,7 @@
         },
         {
           "title": {
+            "ca": "Spiders",
             "es": "Spiders"
           },
           "years": [2000],
@@ -807,6 +825,7 @@
         },
         {
           "title": {
+            "ca": "Pero la ciutat m'ha protegit",
             "es": "Pero la ciutat m'ha protegit"
           },
           "author": "Tanja Šljivar",
@@ -825,6 +844,7 @@
       "items": [
         {
           "title": {
+            "ca": "La Dogaresa (gira)",
             "es": "La Dogaresa (gira)"
           },
           "years": [2009],
@@ -840,6 +860,7 @@
         },
         {
           "title": {
+            "ca": "Luisa Fernanda (gira)",
             "es": "Luisa Fernanda (gira)"
           },
           "years": [2008],
@@ -847,6 +868,7 @@
         },
         {
           "title": {
+            "ca": "La Corte del Faraón (gira)",
             "es": "La Corte del Faraón (gira)"
           },
           "years": [2008],
@@ -854,6 +876,7 @@
         },
         {
           "title": {
+            "ca": "La Leyenda del Beso (gira)",
             "es": "La Leyenda del Beso (gira)"
           },
           "years": [2007],
@@ -881,6 +904,7 @@
     },
     {
       "title": {
+        "ca": "Acting in English",
         "es": "Acting in English"
       },
       "teacher": "Lucy Lenox",
@@ -913,7 +937,7 @@
     {
       "title": {
         "es": "Técnicas de improvisación",
-        "es": "Técniques d'improvització"
+        "ca": "Técniques d'improvització"
       },
       "teacher": "Mercè Lleixà",
       "years": [2002]
