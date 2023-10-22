@@ -18,8 +18,10 @@ import styles from './index.module.scss'
 
 export const urlForId = (pageId, langKey, urls) => {
   const id = Number(pageId) - 1
-  const locale = langKey === 'es' ? '' : langKey
-  return `/${locale}${urls[id][langKey]}`
+  const path = `${urls[id][langKey]}`
+  if (langKey === 'ca') return path === '' ? '/' : path
+
+  return `/${langKey}/${path}`
 }
 
 class Content extends React.Component {
@@ -29,7 +31,7 @@ class Content extends React.Component {
 
   constructor(props) {
     super(props)
-    const { locarion, urls, metadata, location } = props
+    const { urls, metadata, location } = props
     const { langs, defaultLangKey } = metadata.languages
 
     this.pathname = location.pathname

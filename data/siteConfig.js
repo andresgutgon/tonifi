@@ -18,6 +18,6 @@ module.exports = {
   fonts: 'Playfair+Display:400,700|Source+Sans+Pro:300,400,600',
   languages: {
     langs: ['es', 'ca'],
-    defaultLangKey: 'es',
+    defaultLangKey: 'ca',
   },
 }

@@ -5,5 +5,5 @@ description: 'reel 2021'
 keywords: 'Toni Figurea, actor, vídeo book'
 template: videobook
 locale: es
-path: /videobook
+path: /es/videobook
 ---
