@@ -6,21 +6,21 @@ const translations = {
   es: {
     languages: 'idiomas',
     spanish_catalan_level: 'Castellano / Catalán: bilingüe',
-    english_level: 'Inglés: B2'
+    english_level: 'Inglés: B2',
   },
   ca: {
     languages: 'ideomes',
     spanish_catalan_level: 'Castellà / Català: bilingue',
-    english_level: 'Anglès: B2'
-  }
+    english_level: 'Anglès: B2',
+  },
 }
 
-module.exports = function buildHeaderContent (siteData, data, locale) {
+module.exports = function buildHeaderContent(siteData, data, locale) {
   const i18n = translate(translations, locale)
   return [
     {
       text: `${siteData.name} ${siteData.surname} ${siteData.secondSurname}`,
-      style: 'nameHeader'
+      style: 'nameHeader',
     },
     {
       columns: [
@@ -32,10 +32,10 @@ module.exports = function buildHeaderContent (siteData, data, locale) {
               [
                 {
                   layout: {
-                    paddingLeft: (i, node) => 20,
-                    paddingRight: (i, node) => 20,
-                    paddingTop: (i, node) => 15,
-                    paddingBottom: (i, node) => 15
+                    paddingLeft: () => 20,
+                    paddingRight: () => 20,
+                    paddingTop: () => 15,
+                    paddingBottom: () => 15,
                   },
                   table: {
                     body: [
@@ -48,28 +48,28 @@ module.exports = function buildHeaderContent (siteData, data, locale) {
                               [
                                 {
                                   style: 'contact',
-                                  text: `+34 ${data.contact.phone}`
-                                }
+                                  text: `+34 ${data.contact.phone}`,
+                                },
                               ],
                               [
                                 {
                                   style: 'contact',
                                   text: data.contact.email,
-                                }
+                                },
                               ],
                               [
                                 {
                                   style: ['contactLast'],
-                                  text: 'ACTOR / Director'
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      ]
-                    ]
-                  }
-                }
+                                  text: 'ACTOR / Director',
+                                },
+                              ],
+                            ],
+                          },
+                        },
+                      ],
+                    ],
+                  },
+                },
               ],
               [
                 {
@@ -81,27 +81,27 @@ module.exports = function buildHeaderContent (siteData, data, locale) {
                       [
                         {
                           style: 'tableHeader',
-                          text: i18n('languages').toUpperCase()
-                        }
+                          text: i18n('languages').toUpperCase(),
+                        },
                       ],
                       [
                         {
                           text: i18n('spanish_catalan_level'),
-                          style: 'textSmall'
-                        }
+                          style: 'textSmall',
+                        },
                       ],
                       [
                         {
                           text: i18n('english_level'),
-                          style: 'textSmall'
-                        }
-                      ]
-                    ]
-                  }
-                }
-              ]
-            ]
-          }
+                          style: 'textSmall',
+                        },
+                      ],
+                    ],
+                  },
+                },
+              ],
+            ],
+          },
         },
         {
           width: '*',
@@ -111,13 +111,13 @@ module.exports = function buildHeaderContent (siteData, data, locale) {
               [
                 {
                   image: 'toni',
-                  width: 180
-                }
-              ]
-            ]
-          }
-        }
-      ]
-    }
+                  width: 180,
+                },
+              ],
+            ],
+          },
+        },
+      ],
+    },
   ]
 }

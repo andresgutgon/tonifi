@@ -6,6 +6,7 @@
   "languages": ["Castellano", "Català", "English"],
   "work": [
     {
+      "identifier": "theater",
       "category": {
         "es": "Teatro",
         "ca": "Teatre"
@@ -241,6 +242,7 @@
       ]
     },
     {
+      "identifier": "audiovisual",
       "category": {
         "ca": "Audiovisual",
         "es": "Audiovisual"
@@ -449,6 +451,7 @@
       ]
     },
     {
+      "identifier": "direction",
       "category": {
         "es": "Dirección / guión",
         "ca": "Direcció / guió"
@@ -521,6 +524,7 @@
       ]
     },
     {
+      "identifier": "family_theater",
       "category": {
         "es": "Teatro familiar",
         "ca": "Teatre familiar"
@@ -690,6 +694,7 @@
       ]
     },
     {
+      "identifier": "street_theater",
       "category": {
         "es": "Teatro de calle",
         "ca": "Teatre de carrer"
@@ -763,6 +768,7 @@
       ]
     },
     {
+      "identifier": "lectures_recitals",
       "category": {
         "es": "Lecturas y recitales",
         "ca": "Lectures i recitals"
@@ -836,6 +842,7 @@
       ]
     },
     {
+      "identifier": "zarzuela",
       "category": {
         "es": "Zarzuela",
         "ca": "Sarsuela"
