@@ -93,7 +93,7 @@ function getSections(showYears = false) {
 
 // NOTE: Discusting code just to avoid refactoring much
 function getEntities(item) {
-  return [...item.played, ...(item.producers ?? [])]
+  return [...item.played, ...(item.producers || [])]
 }
 
 const CurriculumVitae = ({
