@@ -9,7 +9,7 @@ const translations = {
     english_level: 'Inglés: B2',
   },
   ca: {
-    languages: 'ideomes',
+    languages: 'idiomes',
     spanish_catalan_level: 'Castellà / Català: bilingue',
     english_level: 'Anglès: B2',
   },

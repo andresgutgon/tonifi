@@ -1,8 +1,9 @@
 module.exports = {
-  'chooseLanguage': 'Tria idioma',
+  chooseLanguage: 'Tria idioma',
   'languages.es': 'Castellà',
   'languages.ca': 'Català',
-  'mainMenu.cv': 'CV',
+  'mainMenu.cv': 'Actor',
+  'mainMenu.direction': 'Director de Teatre',
   'mainMenu.photos': 'Fotos',
   'mainMenu.videobook': 'Videobook',
   'mainMenu.contact': 'Contacte',
@@ -22,6 +23,6 @@ module.exports = {
   'contact.fields.send': 'Enviar missatge',
   'contact.fields.email.invalidFormat': 'Email no vàlid',
   'contact.messageSent': 'Missatge enviat',
-  'contact.thanks': 'Gràcies {name}, com el rebi et contesto al teu email: {email}'
+  'contact.thanks':
+    'Gràcies {name}, com el rebi et contesto al teu email: {email}',
 }
-

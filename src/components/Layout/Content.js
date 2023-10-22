@@ -18,10 +18,7 @@ import styles from './index.module.scss'
 
 export const urlForId = (pageId, langKey, urls) => {
   const id = Number(pageId) - 1
-  const path = `${urls[id][langKey]}`
-  if (langKey === 'ca') return path === '' ? '/' : path
-
-  return `/${langKey}/${path}`
+  return `${urls[id][langKey]}`
 }
 
 class Content extends React.Component {

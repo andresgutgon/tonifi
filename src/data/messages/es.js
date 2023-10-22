@@ -1,8 +1,9 @@
 module.exports = {
-  'chooseLanguage': 'Elige idioma',
+  chooseLanguage: 'Elige idioma',
   'languages.es': 'Castellano',
   'languages.ca': 'Catalán',
-  'mainMenu.cv': 'CV',
+  'mainMenu.cv': 'Actor',
+  'mainMenu.direction': 'Director de Teatro',
   'mainMenu.photos': 'Fotos',
   'mainMenu.videobook': 'Videobook',
   'mainMenu.contact': 'Contacto',
@@ -22,6 +23,6 @@ module.exports = {
   'contact.fields.send': 'Enviar mensaje',
   'contact.fields.email.invalidFormat': 'Email no válido',
   'contact.messageSent': 'Mensaje enviado',
-  'contact.thanks': 'Gracias {name} en cuanto lo reciba te contesto a tu email: {email}'
+  'contact.thanks':
+    'Gracias {name} en cuanto lo reciba te contesto a tu email: {email}',
 }
-

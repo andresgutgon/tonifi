@@ -86,16 +86,16 @@ function MetadataItem({ metaKey, item }) {
   )
 }
 
-const CurriculumVitae = ({ title, content, cvPdfPath }) => {
-  const { education, work } = content
+const CurriculumVitae = ({ title, education, work, pdf }) => {
+  const pdfText = useFormatMessage(pdf.i18n)
   return (
     <>
       <Header title={title}>
         <div className={styles.infoLine}>
           <ul>
             <li>
-              <a href={cvPdfPath} target="_blank" rel="noopener noreferrer">
-                <FormattedMessage id="footer.downloadCv" />
+              <a href={pdf.filepath} target="_blank" rel="noopener noreferrer">
+                {pdfText}
               </a>
             </li>
           </ul>
@@ -158,29 +158,33 @@ const CurriculumVitae = ({ title, content, cvPdfPath }) => {
             </div>
           </div>
         ))}
-        <h2 className={styles.sectionTitle}>
-          <FormattedMessage id="curriculum.education" />
-        </h2>
-        <ul className={styles.education}>
-          {education.map((item, index) => (
-            <li key={index}>
-              <div className={styles.educationItem}>
-                <Title title={item.title} />
-                {hasMetadata(item) && (
-                  <div className={styles.metadataList}>
-                    {Object.keys(METADATA).map((metaKey) => (
-                      <MetadataItem
-                        key={metaKey}
-                        metaKey={metaKey}
-                        item={item}
-                      />
-                    ))}
+        {education && (
+          <>
+            <h2 className={styles.sectionTitle}>
+              <FormattedMessage id="curriculum.education" />
+            </h2>
+            <ul className={styles.education}>
+              {education.map((item, index) => (
+                <li key={index}>
+                  <div className={styles.educationItem}>
+                    <Title title={item.title} />
+                    {hasMetadata(item) && (
+                      <div className={styles.metadataList}>
+                        {Object.keys(METADATA).map((metaKey) => (
+                          <MetadataItem
+                            key={metaKey}
+                            metaKey={metaKey}
+                            item={item}
+                          />
+                        ))}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </Content>
     </>
   )

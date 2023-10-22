@@ -13,6 +13,10 @@ const MENU_ITEMS = [
     id: '03',
   },
   {
+    textKey: 'mainMenu.direction',
+    id: '06',
+  },
+  {
     textKey: 'mainMenu.videobook',
     id: '02',
   },
