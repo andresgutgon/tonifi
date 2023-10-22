@@ -7,15 +7,18 @@ import CurriculumVitae from '../components/CurriculumVitae'
 const Direction = ({ data, location }) => {
   const { title, locale } = data.markdownRemark.frontmatter
   const content = data.allCvJson.edges[0].node
-
+  const work = content.work.filter((work) => work.identifier === 'direction')
   const metaImage = content.work[0].image.childImageSharp.gatsbyImageData.src
   return (
     <Layout pageData={{ ...data, metaImage, locale }} location={location}>
       {({ cvPdfPath }) => (
         <CurriculumVitae
           title={title}
-          cvPdfPath={cvPdfPath}
-          content={content}
+          pdf={{
+            filepath: cvPdfPath,
+            i18n: 'footer.downloadDirectorCv',
+          }}
+          work={work}
         />
       )}
     </Layout>
@@ -44,6 +47,10 @@ export const pageQuery = graphql`
           }
           work {
             identifier
+            description {
+              es
+              ca
+            }
             image {
               childImageSharp {
                 gatsbyImageData(layout: FULL_WIDTH)
@@ -77,6 +84,13 @@ export const pageQuery = graphql`
                   ca
                 }
                 location
+              }
+              producers {
+                id
+                name {
+                  es
+                  ca
+                }
               }
             }
           }

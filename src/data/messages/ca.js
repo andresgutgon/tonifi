@@ -8,6 +8,7 @@ module.exports = {
   'mainMenu.videobook': 'Videobook',
   'mainMenu.contact': 'Contacte',
   'footer.downloadCv': 'Descarregar CV (PDF)',
+  'footer.downloadDirectorCv': 'Descarregar CV com a director (PDF)',
   'curriculum.education': 'Estudis',
   'curriculum.teacher': 'Professor/a',
   'curriculum.director': 'Director',

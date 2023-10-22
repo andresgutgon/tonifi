@@ -18,8 +18,6 @@ const METADATA = {
   production: 'Productora',
 }
 
-const DIRECTION_METADATA = { ...METADATA, years: 'Anys' }
-
 function itemsGrouped(items) {
   return items.reduce((memo, item) => {
     const lastRowIndex = memo.length - 1
@@ -86,8 +84,28 @@ function MetadataItem({ metaKey, item }) {
   )
 }
 
-const CurriculumVitae = ({ title, education, work, pdf }) => {
+function getSections(showYears = false) {
+  const base = METADATA
+  if (!showYears) return base
+
+  return { ...base, years: 'Anys' }
+}
+
+// NOTE: Discusting code just to avoid refactoring much
+function getEntities(item) {
+  return [...item.played, ...(item.producers ?? [])]
+}
+
+const CurriculumVitae = ({
+  title,
+  education,
+  work,
+  pdf,
+  showYears = false,
+}) => {
   const pdfText = useFormatMessage(pdf.i18n)
+  const sections = getSections(showYears)
+  const sectionKeys = Object.keys(sections)
   return (
     <>
       <Header title={title}>
@@ -120,39 +138,41 @@ const CurriculumVitae = ({ title, education, work, pdf }) => {
                   className={cx('row', { incompleted: itemGroup.length < 2 })}
                   key={ig}
                 >
-                  {itemGroup.map((item, index) => (
-                    <div key={index} className={styles.col}>
-                      <div className={styles.item}>
-                        <Title title={item.title} />
-                        {hasMetadata(item) && (
-                          <div className={styles.metadataList}>
-                            {Object.keys(METADATA).map((metaKey) => (
-                              <MetadataItem
-                                key={metaKey}
-                                metaKey={metaKey}
-                                item={item}
-                              />
-                            ))}
-                          </div>
-                        )}
-                        {item.played.length > 0 && (
-                          <div className={styles.places}>
-                            <strong>Productora:</strong>
-                            <div className={styles.placeList}>
-                              {item.played.map((place, index) => (
-                                <div key={index} className={styles.place}>
-                                  <TranslatedMessage text={place.name} />
-                                  {place.location && (
-                                    <span>&nbsp;({place.location})</span>
-                                  )}
-                                </div>
+                  {itemGroup.map((item, index) => {
+                    const entities = getEntities(item)
+                    return (
+                      <div key={index} className={styles.col}>
+                        <div className={styles.item}>
+                          <Title title={item.title} />
+                          {hasMetadata(item) && (
+                            <div className={styles.metadataList}>
+                              {sectionKeys.map((metaKey) => (
+                                <MetadataItem
+                                  key={metaKey}
+                                  metaKey={metaKey}
+                                  item={item}
+                                />
                               ))}
                             </div>
-                          </div>
-                        )}
+                          )}
+                          {entities.length > 0 && (
+                            <div className={styles.places}>
+                              <div className={styles.placeList}>
+                                {entities.map((place, index) => (
+                                  <div key={index} className={styles.place}>
+                                    <TranslatedMessage text={place.name} />
+                                    {place.location && (
+                                      <span>&nbsp;({place.location})</span>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               ))}
             </div>
@@ -170,7 +190,7 @@ const CurriculumVitae = ({ title, education, work, pdf }) => {
                     <Title title={item.title} />
                     {hasMetadata(item) && (
                       <div className={styles.metadataList}>
-                        {Object.keys(METADATA).map((metaKey) => (
+                        {sectionKeys.map((metaKey) => (
                           <MetadataItem
                             key={metaKey}
                             metaKey={metaKey}
