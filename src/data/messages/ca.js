@@ -7,6 +7,7 @@ module.exports = {
   'mainMenu.photos': 'Fotos',
   'mainMenu.videobook': 'Videobook',
   'mainMenu.contact': 'Contacte',
+  'mainMenu.events': 'Events',
   'footer.downloadCv': 'Descarregar CV (PDF)',
   'footer.downloadDirectorCv': 'Descarregar CV com a director (PDF)',
   'curriculum.education': 'Estudis',

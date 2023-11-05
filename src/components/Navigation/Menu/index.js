@@ -17,6 +17,10 @@ const MENU_ITEMS = [
     id: '06',
   },
   {
+    textKey: 'mainMenu.events',
+    href: 'https://actorymaestroceremonias.com',
+  },
+  {
     textKey: 'mainMenu.videobook',
     id: '02',
   },
@@ -29,35 +33,34 @@ const MENU_ITEMS = [
     id: '05',
   },
 ]
-const MenuComponent = ({ urls, langKey, fixed = false, inlineStyles = {} }) => (
-  <nav className={cx('menu', { fixed })} style={inlineStyles}>
-    <ul className={styles.list}>
-      {MENU_ITEMS.map((link, index) => (
-        <li key={index} className={styles.menuItem}>
-          <Link
-            to={urlForId(link.id, langKey, urls)}
-            className={styles.menuLink}
-            activeClassName={styles.menuLinkActive}
-          >
-            <FormattedMessage id={link.textKey} />
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </nav>
-)
 
-function isBigScreen() {
-  if (typeof window === 'undefined') return true
-  return window.matchMedia('(min-width: 400px)').matches
+export default function Menu({
+  urls,
+  langKey,
+  fixed = false,
+  inlineStyles = {},
+}) {
+  return (
+    <nav className={cx('menu', { fixed })} style={inlineStyles}>
+      <ul className={styles.list}>
+        {MENU_ITEMS.map((link, index) => (
+          <li key={index} className={styles.menuItem}>
+            {link.href ? (
+              <a href={link.href} className={styles.menuLink} target="_blank">
+                <FormattedMessage id={link.textKey} />
+              </a>
+            ) : (
+              <Link
+                to={urlForId(link.id, langKey, urls)}
+                className={styles.menuLink}
+                activeClassName={styles.menuLinkActive}
+              >
+                <FormattedMessage id={link.textKey} />
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
 }
-
-const Menu = (props) => {
-  const bigScreen = isBigScreen()
-
-  if (bigScreen) return <MenuComponent {...props} />
-
-  return <MenuComponent {...props} />
-}
-
-export default Menu
